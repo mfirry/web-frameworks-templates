@@ -1,0 +1,9 @@
+INF [20150225-16:56:57.507] finatra: finatra process 65564 started
+INF [20150225-16:56:57.509] finatra: http server started on port: :7070
+INF [20150225-16:56:57.953] finatra: admin http server started on port: :9990
+INF [20150225-16:57:21.764] finatra: GET / 200 17ms
+INF [20150225-16:57:21.893] finatra: GET /favicon.ico 404 3ms
+INF [20150225-16:58:10.291] finatra: finatra process 65601 started
+INF [20150225-16:58:10.294] finatra: http server started on port: :7070
+INF [20150225-16:58:10.806] finatra: admin http server started on port: :9990
+INF [20150225-16:58:15.391] finatra: GET / 200 86ms
