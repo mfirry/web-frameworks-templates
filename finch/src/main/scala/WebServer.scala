@@ -23,6 +23,10 @@ object MyEndpoint extends Endpoint[HttpRequest, HttpResponse] {
       Service.mk(req => {
         Ok(Json.arr(1, 2, 3)).toFuture
       })
+    case Method.Get -> Root / "string" / string =>
+      Service.mk(req => {
+        Ok(string).toFuture
+      })
   }
 
 }
