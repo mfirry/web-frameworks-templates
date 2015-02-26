@@ -11,4 +11,8 @@ object Application extends Controller {
     Ok(Json.toJson(list))
   }
 
+  def getString(string: String) = Action {
+    Ok(Json.toJson(string))
+  }
+
 }
