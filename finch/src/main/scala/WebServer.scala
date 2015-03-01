@@ -17,7 +17,7 @@ object WebServer extends App {
   }
 
   val oneTwoThree: io.finch.route.Endpoint[HttpRequest, HttpResponse] = Get /> Ok(Json.arr(1, 2, 3)).toFuture
-  val simpleString: io.finch.route.Endpoint[HttpRequest, HttpResponse] = Get / "string" / string /> simpleStringService
+  val simpleString: io.finch.route.Endpoint[HttpRequest, HttpResponse] = Get / string /> simpleStringService
 
   Await.ready(
     Httpx.serve(
