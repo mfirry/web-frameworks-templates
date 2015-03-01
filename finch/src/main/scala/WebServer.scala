@@ -1,32 +1,28 @@
-import com.twitter.util.Await
 import java.net.InetSocketAddress
+
 import io.finch._
 import io.finch.json._
-import io.finch.request._
+import io.finch.route._
 import io.finch.response._
-import com.twitter.finagle._
+
+import com.twitter.finagle.Service
 import com.twitter.finagle.Httpx
-import com.twitter.finagle.httpx._
-import com.twitter.finagle.httpx.path._
+
+import com.twitter.util.Await
 
 object WebServer extends App {
 
-  Await.ready(
-    Httpx.serve(
-      new InetSocketAddress("localhost", 9000), MyEndpoint))
-}
-
-object MyEndpoint extends Endpoint[HttpRequest, HttpResponse] {
-
-  def route = {
-    case Method.Get -> Root =>
-      Service.mk(req => {
-        Ok(Json.arr(1, 2, 3)).toFuture
-      })
-    case Method.Get -> Root / "string" / string =>
-      Service.mk(req => {
-        Ok(string).toFuture
-      })
+  private[this] def simpleStringService(s: String) = new Service[HttpRequest, HttpResponse] {
+    def apply(req: HttpRequest) = Ok(s"$s").toFuture
   }
 
+  val oneTwoThree: io.finch.route.Endpoint[HttpRequest, HttpResponse] = Get /> Ok(Json.arr(1, 2, 3)).toFuture
+  val simpleString: io.finch.route.Endpoint[HttpRequest, HttpResponse] = Get / "string" / string /> simpleStringService
+
+  Await.ready(
+    Httpx.serve(
+      new InetSocketAddress("localhost", 9000),
+      (oneTwoThree | simpleString)
+    )
+  )
 }
