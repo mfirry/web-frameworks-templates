@@ -12,12 +12,8 @@ import com.twitter.util.Await
 
 object WebServer extends App {
 
-  private[this] def simpleStringService(s: String) = new Service[HttpRequest, HttpResponse] {
-    def apply(req: HttpRequest) = Ok(s"$s").toFuture
-  }
-
   val oneTwoThree: io.finch.route.Endpoint[HttpRequest, HttpResponse] = Get /> Ok(Json.arr(1, 2, 3)).toFuture
-  val simpleString: io.finch.route.Endpoint[HttpRequest, HttpResponse] = Get / string /> simpleStringService
+  val simpleString: io.finch.route.Endpoint[HttpRequest, HttpResponse] = Get / string /> { Ok(_).toFuture }
 
   Await.ready(
     Httpx.serve(
