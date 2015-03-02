@@ -13,10 +13,13 @@ object Main extends App {
 
   implicit val io_system = IOSystem()
 
-  Service.become[Http]("http-echo", 9000) {
+  Service.become[Http]("sample", 9000) {
     case request @ Get on Root => {
       val json = List(1, 2, 3)
       request.ok(compact(render(json)))
+    }
+    case request @ Get on Root / string => {
+      request.ok(compact(render(string)))
     }
   }
 }
