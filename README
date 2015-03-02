@@ -2,5 +2,5 @@ EXPERIMENTS on the look-and-feel of a few frameworks/libraries used to develop w
 
 A the end of the day all the examples should have:
 - a '/' endpoint that would return [1, 2, 3] (json)
-- a '/string' that would return "string" (for any string)
+- a '/:string' that would return "string" (for any string)
 - ...
