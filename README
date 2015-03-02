@@ -4,3 +4,7 @@ A the end of the day all the examples should have:
 - a '/' endpoint that would return [1, 2, 3] (json)
 - a '/:string' that would return "string" (for any string)
 - ...
+
+
+# MISSING
+- akka-http
