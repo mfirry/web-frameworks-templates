@@ -1,0 +1,218 @@
+format version: 5
+output mode:
+1 items
+0 -> single
+output directories:
+1 items
+output dir -> /home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes
+compile options:
+0 items
+javac options:
+0 items
+compiler version:
+1 items
+0 -> 2.11.5
+compile order:
+1 items
+0 -> Mixed
+name hashing:
+1 items
+0 -> true
+products:
+6 items
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$$anonfun$1.class
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$$anonfun$2.class
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$$anonfun$3.class
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$.class
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$delayedInit$body.class
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer.class
+binary dependencies:
+7 items
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.9.jar
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/jars/akka-http-core-experimental_2.11-1.0-M4.jar
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-spray-json-experimental_2.11/jars/akka-http-spray-json-experimental_2.11-1.0-M4.jar
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/jars/akka-stream-experimental_2.11-1.0-M4.jar
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/.ivy2/cache/io.spray/spray-json_2.11/bundles/spray-json_2.11-1.3.1.jar
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /home/andrea/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.5.jar
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> /usr/lib/jvm/java-8-oracle/jre/lib/rt.jar
+direct source dependencies:
+0 items
+direct external dependencies:
+0 items
+public inherited source dependencies:
+0 items
+public inherited external dependencies:
+0 items
+member reference internal dependencies:
+0 items
+member reference external dependencies:
+0 items
+inheritance internal dependencies:
+0 items
+inheritance external dependencies:
+0 items
+class names:
+6 items
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> WebServer
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> WebServer$
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> WebServer$$anonfun$1
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> WebServer$$anonfun$2
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> WebServer$$anonfun$3
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> WebServer$delayedInit$body
+used names:
+99 items
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> +
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> <init>
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> ==
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> ActorFlowMaterializer
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> ActorFlowMaterializerSettings
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> ActorSystem
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> App
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> DefaultJsonProtocol
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> Flow
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> Function1
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> Future
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> GET
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> Http
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> HttpEntity
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> HttpExt
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> HttpMethods
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> HttpRequest
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> HttpResponse
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> IO
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> IntJsonFormat
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> List
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> Path
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> Predef
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> PrettyPrinter
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> Sink
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> SprayJsonSupport
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> StringJsonFormat
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> Timeout
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> Uri
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> WebServer
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> _root_
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> actor
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> akka
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> apply
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> asInstanceOf
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> bind
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> bindingFuture
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> concurrent
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> connection
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> create
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> dispatcher
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> duration
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> foreach
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> get
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> handleWithSyncHandler
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> http
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> immutable
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> io
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> isEmpty
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> isInstanceOf
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> javadsl
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> json
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> listFormat
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> mapAsync
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> marshallers
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> materializer
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> method
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> model
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> ne
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> package
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> path
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> pimpAny
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> println
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> qual$1
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> remoteAddress
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> requestHandler
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> run
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> scala
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> scaladsl
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> serverBinding
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> spray
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> sprayjson
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> str
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> stream
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> successful
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> system
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> tail
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> to
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> toJson
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> toString
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> unapply
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> unary_!
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> unmarshalling
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> uri
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> util
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$1
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$10
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$11
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$12
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$13
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$14
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$2
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$3
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$4
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$5
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$6
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$7
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$8
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> x$9
+product stamps:
+6 items
+/home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$$anonfun$1.class -> lastModified(1425381090000)
+/home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$$anonfun$2.class -> lastModified(1425381090000)
+/home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$$anonfun$3.class -> lastModified(1425381090000)
+/home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$.class -> lastModified(1425381090000)
+/home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer$delayedInit$body.class -> lastModified(1425381090000)
+/home/andrea/workspace/web-frameworks-templates/akka-http/target/scala-2.11/classes/WebServer.class -> lastModified(1425381090000)
+source stamps:
+1 items
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> hash(c3a59302f530af859de93586a11b80e0a67e7d01)
+binary stamps:
+7 items
+/home/andrea/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.9.jar -> lastModified(1421734693000)
+/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/jars/akka-http-core-experimental_2.11-1.0-M4.jar -> lastModified(1425051871000)
+/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-spray-json-experimental_2.11/jars/akka-http-spray-json-experimental_2.11-1.0-M4.jar -> lastModified(1425051922000)
+/home/andrea/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/jars/akka-stream-experimental_2.11-1.0-M4.jar -> lastModified(1425051818000)
+/home/andrea/.ivy2/cache/io.spray/spray-json_2.11/bundles/spray-json_2.11-1.3.1.jar -> lastModified(1414500215000)
+/home/andrea/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.5.jar -> lastModified(1420590731000)
+/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar -> lastModified(1423127823000)
+class names:
+7 items
+/home/andrea/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.9.jar -> akka.io.IO
+/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/jars/akka-http-core-experimental_2.11-1.0-M4.jar -> akka.http.model.HttpMethod
+/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-spray-json-experimental_2.11/jars/akka-http-spray-json-experimental_2.11-1.0-M4.jar -> akka.http.marshallers.sprayjson.SprayJsonSupport$
+/home/andrea/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/jars/akka-stream-experimental_2.11-1.0-M4.jar -> akka.stream.scaladsl.Flow$
+/home/andrea/.ivy2/cache/io.spray/spray-json_2.11/bundles/spray-json_2.11-1.3.1.jar -> spray.json.PrettyPrinter$
+/home/andrea/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.5.jar -> scala.App
+/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar -> java.lang.Object
+internal apis:
+1 items
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> 
+rO0ABXNyABB4c2J0aS5hcGkuU291cmNlFlpwRASfbtoCAAZJAAdhcGlIYXNoWgAIaGFzTWFjcm9MABhfaW50ZXJuYWxPbmx5X25hbWVIYXNoZXN0ACRMeHNidGkvYXBpL19pbnRlcm5hbE9ubHlfTmFtZUhhc2hlcztMAANhcGl0ABVMeHNidGkvYXBpL1NvdXJjZUFQSTtMAAtjb21waWxhdGlvbnQAF0x4c2J0aS9hcGkvQ29tcGlsYXRpb247WwAEaGFzaHQAAltCeHBQ608bAHNyACJ4c2J0aS5hcGkuX2ludGVybmFsT25seV9OYW1lSGFzaGVzVNq+mfrU7EwCAAJbAA9pbXBsaWNpdE1lbWJlcnN0ACNbTHhzYnRpL2FwaS9faW50ZXJuYWxPbmx5X05hbWVIYXNoO1sADnJlZ3VsYXJNZW1iZXJzcQB+AAd4cHVyACNbTHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoO0lagLbdlov0AgAAeHAAAAACc3IAIHhzYnRpLmFwaS5faW50ZXJuYWxPbmx5X05hbWVIYXNoWw71InY4V88CAAJJAARoYXNoTAAEbmFtZXQAEkxqYXZhL2xhbmcvU3RyaW5nO3hwMObYH3QADG1hdGVyaWFsaXplcnNxAH4ACygcjLV0AAZzeXN0ZW11cQB+AAkAAAAbc3EAfgALrSfpqHQABm5vdGlmeXNxAH4AC4iqenR0AAR3YWl0c3EAfgALcegVYHQADSRhc0luc3RhbmNlT2ZzcQB+AAtAmo6CdAAGZXF1YWxzc3EAfgAL0L+/WnQADGFzSW5zdGFuY2VPZnNxAH4AC92wWxJ0AA5leGVjdXRpb25TdGFydHNxAH4AC4YhrgZ0AA1zZXJ2ZXJCaW5kaW5nc3EAfgALViSkInQADHN5bmNocm9uaXplZHNxAH4AC/VUbH90AA0kaXNJbnN0YW5jZU9mc3EAfgALEUoavnQACVdlYlNlcnZlcnNxAH4AC0qOlY10AARtYWluc3EAfgAL/Xe2K3QACW5vdGlmeUFsbHNxAH4AC8yEP6R0AAxpc0luc3RhbmNlT2ZzcQB+AAvFCqODdAACPT1zcQB+AAukhjk7dAANYmluZGluZ0Z1dHVyZXNxAH4AC7iszQF0AAVjbG9uZXNxAH4AC5sZFkl0AA5yZXF1ZXN0SGFuZGxlcnNxAH4AC4mzefp0AAh0b1N0cmluZ3NxAH4AC4fB8vF0AARhcmdzc3EAfgALyn1oC3QAAiE9c3EAfgALqrEKlXQACGdldENsYXNzc3EAfgALwT1IX3QAAm5lc3EAfgALXA+BW3QAAmVxc3EAfgALQ6NWbnQAC2RlbGF5ZWRJbml0c3EAfgALZJcOTXQAAiMjc3EAfgAL9rzHbnQACGZpbmFsaXplc3EAfgALMbyc2XQACGhhc2hDb2Rlc3IAE3hzYnRpLmFwaS5Tb3VyY2VBUEm5Xqf5KSM4pAIAAlsAC2RlZmluaXRpb25zdAAXW0x4c2J0aS9hcGkvRGVmaW5pdGlvbjtbAAhwYWNrYWdlc3QAFFtMeHNidGkvYXBpL1BhY2thZ2U7eHB1cgAXW0x4c2J0aS5hcGkuRGVmaW5pdGlvbjuIyVzntONeDgIAAHhwAAAAAXNyABN4c2J0aS5hcGkuQ2xhc3NMaWtlgzQcod+wl2wCAARMAA5kZWZpbml0aW9uVHlwZXQAGkx4c2J0aS9hcGkvRGVmaW5pdGlvblR5cGU7WwAQc2F2ZWRBbm5vdGF0aW9uc3QAE1tMamF2YS9sYW5nL1N0cmluZztMAAhzZWxmVHlwZXQAEEx4c2J0aS9hcGkvTGF6eTtMAAlzdHJ1Y3R1cmVxAH4AUXhyACF4c2J0aS5hcGkuUGFyYW1ldGVyaXplZERlZmluaXRpb275EW6x1VA84gIAAVsADnR5cGVQYXJhbWV0ZXJzdAAaW0x4c2J0aS9hcGkvVHlwZVBhcmFtZXRlcjt4cgAUeHNidGkuYXBpLkRlZmluaXRpb26HKhvocULjRgIABEwABmFjY2Vzc3QAEkx4c2J0aS9hcGkvQWNjZXNzO1sAC2Fubm90YXRpb25zdAAXW0x4c2J0aS9hcGkvQW5ub3RhdGlvbjtMAAltb2RpZmllcnN0ABVMeHNidGkvYXBpL01vZGlmaWVycztMAARuYW1lcQB+AAx4cHNyABB4c2J0aS5hcGkuUHVibGljulg9rmwtYEICAAB4cgAQeHNidGkuYXBpLkFjY2Vzc91imvgdYzFIAgAAeHB1cgAXW0x4c2J0aS5hcGkuQW5ub3RhdGlvbjvrl+sZEPaNSAIAAHhwAAAAAHNyABN4c2J0aS5hcGkuTW9kaWZpZXJzxxETIWmc3CQCAAFCAAVmbGFnc3hwAHEAfgAldXIAGltMeHNidGkuYXBpLlR5cGVQYXJhbWV0ZXI72W0mDyid8rYCAAB4cAAAAAB+cgAYeHNidGkuYXBpLkRlZmluaXRpb25UeXBlAAAAAAAAAAASAAB4cgAOamF2YS5sYW5nLkVudW0AAAAAAAAAABIAAHhwdAAGTW9kdWxldXIAE1tMamF2YS5sYW5nLlN0cmluZzut0lbn6R17RwIAAHhwAAAAAnQAEHNjYWxhLmRlcHJlY2F0ZWR0ABpzY2FsYS5kZXByZWNhdGVkT3ZlcnJpZGluZ3NyABN4c2J0aS5TYWZlTGF6eSRJbXBsUAIuk5eXQD8CAANaAAhiaXRtYXAkMEwAAl90dAASTGphdmEvbGFuZy9PYmplY3Q7TAAEZXZhbHQAEUxzY2FsYS9GdW5jdGlvbjA7eHIAFnhzYnRpLmFwaS5BYnN0cmFjdExhennTd7UBX7vnoAIAAHhwAXNyABN4c2J0aS5hcGkuRW1wdHlUeXBlvP2eRkk7iSQCAAB4cgAUeHNidGkuYXBpLlNpbXBsZVR5cGVyeGKIISO/QAIAAHhyAA54c2J0aS5hcGkuVHlwZT9q2SEWSarKAgAAeHBwc3EAfgBqAXNyABN4c2J0aS5hcGkuU3RydWN0dXJlqar5gJNv2AACAANMAAhkZWNsYXJlZHEAfgBRTAAJaW5oZXJpdGVkcQB+AFFMAAdwYXJlbnRzcQB+AFF4cQB+AHFzcQB+AGoBdXEAfgBMAAAAAHBzcQB+AGoBdXEAfgBMAAAAAXNyAA14c2J0aS5hcGkuRGVmUr6f4ny0NmkCAAJMAApyZXR1cm5UeXBldAAQTHhzYnRpL2FwaS9UeXBlO1sAD3ZhbHVlUGFyYW1ldGVyc3QAGltMeHNidGkvYXBpL1BhcmFtZXRlckxpc3Q7eHEAfgBScQB+AFt1cQB+AFwAAAABc3IAFHhzYnRpLmFwaS5Bbm5vdGF0aW9u3g6BovZcCrICAAJbAAlhcmd1bWVudHN0AB9bTHhzYnRpL2FwaS9Bbm5vdGF0aW9uQXJndW1lbnQ7TAAEYmFzZXEAfgB7eHB1cgAfW0x4c2J0aS5hcGkuQW5ub3RhdGlvbkFyZ3VtZW50O1Gdpo84JQ94AgAAeHAAAAABc3IAHHhzYnRpLmFwaS5Bbm5vdGF0aW9uQXJndW1lbnTWRbHYAxsXfAIAAkwABG5hbWVxAH4ADEwABXZhbHVlcQB+AAx4cHQAAHQAKigibWFpbiBzaG91bGQgbm90IGJlIG92ZXJyaWRkZW4iLCIyLjExLjAiKXNyABR4c2J0aS5hcGkuUHJvamVjdGlvbvPSjVTpRaQtAgACTAACaWRxAH4ADEwABnByZWZpeHQAFkx4c2J0aS9hcGkvU2ltcGxlVHlwZTt4cQB+AHB0ABRkZXByZWNhdGVkT3ZlcnJpZGluZ3NyABN4c2J0aS5hcGkuU2luZ2xldG9u/Kdf+M9W5EYCAAFMAARwYXRodAAQTHhzYnRpL2FwaS9QYXRoO3hxAH4AcHNyAA54c2J0aS5hcGkuUGF0aJs9XAjOpSeEAgABWwAKY29tcG9uZW50c3QAGltMeHNidGkvYXBpL1BhdGhDb21wb25lbnQ7eHB1cgAaW0x4c2J0aS5hcGkuUGF0aENvbXBvbmVudDtD2gl0LWcWdAIAAHhwAAAAAnNyAAx4c2J0aS5hcGkuSWSYMmyLN1PEQAIAAUwAAmlkcQB+AAx4cgAXeHNidGkuYXBpLlBhdGhDb21wb25lbnRfmiJbLoafvAIAAHhwdAAFc2NhbGFzcgAOeHNidGkuYXBpLlRoaXPbCe2mzFpAXAIAAHhxAH4AlXNxAH4AXgBxAH4AJ3VxAH4AYAAAAABzcQB+AIh0AARVbml0cQB+AI51cgAaW0x4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdDv10zod8rNw7gIAAHhwAAAAAXNyABd4c2J0aS5hcGkuUGFyYW1ldGVyTGlzdNbFvBxkSXTjAgACWgAKaXNJbXBsaWNpdFsACnBhcmFtZXRlcnN0ABxbTHhzYnRpL2FwaS9NZXRob2RQYXJhbWV0ZXI7eHAAdXIAHFtMeHNidGkuYXBpLk1ldGhvZFBhcmFtZXRlcjvPuMVdpd21bQIAAHhwAAAAAXNyABl4c2J0aS5hcGkuTWV0aG9kUGFyYW1ldGVyH0WuF9NJsOoCAARaAApoYXNEZWZhdWx0TAAIbW9kaWZpZXJ0AB1MeHNidGkvYXBpL1BhcmFtZXRlck1vZGlmaWVyO0wABG5hbWVxAH4ADEwAA3RwZXEAfgB7eHAAfnIAG3hzYnRpLmFwaS5QYXJhbWV0ZXJNb2RpZmllcgAAAAAAAAAAEgAAeHEAfgBjdAAFUGxhaW5xAH4AN3NyABd4c2J0aS5hcGkuUGFyYW1ldGVyaXplZBZs7mkDybt/AgACTAAIYmFzZVR5cGVxAH4AiVsADXR5cGVBcmd1bWVudHN0ABFbTHhzYnRpL2FwaS9UeXBlO3hxAH4AcHNxAH4AiHQABUFycmF5cQB+AI51cgARW0x4c2J0aS5hcGkuVHlwZTt0/6Vae/npQQIAAHhwAAAAAXNxAH4AiHQABlN0cmluZ3NxAH4AjHNxAH4Aj3VxAH4AkgAAAANzcQB+AJR0AARqYXZhc3EAfgCUdAAEbGFuZ3EAfgCZcHNxAH4AagF1cQB+ALAAAAAEc3EAfgCIdAADQXBwcQB+AI5zcQB+AIh0AAtEZWxheWVkSW5pdHEAfgCOc3EAfgCIdAAGT2JqZWN0cQB+ALRzcQB+AIh0AANBbnlxAH4AjnBwdXIAFFtMeHNidGkuYXBpLlBhY2thZ2U7WxMZN3CnJ6ECAAB4cAAAAABzcgAVeHNidGkuYXBpLkNvbXBpbGF0aW9u7frgw2rooEICAAJKAAlzdGFydFRpbWVbAAdvdXRwdXRzdAAaW0x4c2J0aS9hcGkvT3V0cHV0U2V0dGluZzt4cAAAAUvfVV78dXIAGltMeHNidGkuYXBpLk91dHB1dFNldHRpbmc7f2rC86eHpUICAAB4cAAAAAFzcgAXeHNidGkuYXBpLk91dHB1dFNldHRpbmd62ZpHdPsdewIAAkwAD291dHB1dERpcmVjdG9yeXEAfgAMTAAPc291cmNlRGlyZWN0b3J5cQB+AAx4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABL3VyAAJbQqzzF/gGCFTgAgAAeHAAAAAUw6WTAvUwr4Wd6TWGoRuA4KZ+fQE=
+external apis:
+0 items
+source infos:
+1 items
+/home/andrea/workspace/web-frameworks-templates/akka-http/src/main/scala/WebServer.scala -> 
+AAAAAAAAAAA=
+compilations:
+15 items
+00 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS98UpuB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+01 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS98p4JZ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+02 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS98rJmN1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+03 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS98tTlt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+04 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS98wxRx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+05 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS988IGt1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+06 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS989Jqh1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+07 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS989Vh51cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+08 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS989X8R1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+09 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS989hEB1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+10 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS989m7t1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+11 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS99Ae+l1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+12 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS99ArrF1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+13 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS99P7FZ1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==
+14 -> rO0ABXNyABV4c2J0aS5hcGkuQ29tcGlsYXRpb27t+uDDauigQgIAAkoACXN0YXJ0VGltZVsAB291dHB1dHN0ABpbTHhzYnRpL2FwaS9PdXRwdXRTZXR0aW5nO3hwAAABS99VXvx1cgAaW0x4c2J0aS5hcGkuT3V0cHV0U2V0dGluZzt/asLzp4elQgIAAHhwAAAAAXNyABd4c2J0aS5hcGkuT3V0cHV0U2V0dGluZ3rZmkd0+x17AgACTAAPb3V0cHV0RGlyZWN0b3J5dAASTGphdmEvbGFuZy9TdHJpbmc7TAAPc291cmNlRGlyZWN0b3J5cQB+AAZ4cHQAUy9ob21lL2FuZHJlYS93b3Jrc3BhY2Uvd2ViLWZyYW1ld29ya3MtdGVtcGxhdGVzL2Fra2EtaHR0cC90YXJnZXQvc2NhbGEtMi4xMS9jbGFzc2VzdAABLw==

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="socko-example"
+		module="socko-example_2.11"
+		revision="0.0.1-SNAPSHOT"
+		conf="compile"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20150303105913"/>
+	<dependencies>
+		<module organisation="com.typesafe.akka" name="akka-http-experimental_2.11">
+			<revision name="1.0-M4" status="release" pubdate="20150227164447" resolver="public" artresolver="public" homepage="http://akka.io/" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="successful" details="" size="1993" time="475" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-experimental_2.11/ivy-1.0-M4.xml" searched="true" original-local-location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-experimental_2.11/ivy-1.0-M4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-experimental_2.11/1.0-M4/akka-http-experimental_2.11-1.0-M4.pom"/>
+				<caller organisation="socko-example" name="socko-example_2.11" conf="compile" rev="1.0-M4" rev-constraint-default="1.0-M4" rev-constraint-dynamic="1.0-M4" callerrev="0.0.1-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="akka-http-experimental_2.11" type="jar" ext="jar" status="successful" details="" size="1466542" time="2192" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-experimental_2.11/jars/akka-http-experimental_2.11-1.0-M4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-experimental_2.11/1.0-M4/akka-http-experimental_2.11-1.0-M4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-http-core-experimental_2.11">
+			<revision name="1.0-M4" status="release" pubdate="20150227164434" resolver="public" artresolver="public" homepage="http://akka.io/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="2">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="successful" details="" size="3264" time="394" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/ivy-1.0-M4.xml" searched="true" original-local-location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/ivy-1.0-M4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core-experimental_2.11/1.0-M4/akka-http-core-experimental_2.11-1.0-M4.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-http-experimental_2.11" conf="default, compile, runtime, master" rev="1.0-M4" rev-constraint-default="1.0-M4" rev-constraint-dynamic="1.0-M4" callerrev="1.0-M4"/>
+				<artifacts>
+					<artifact name="akka-http-core-experimental_2.11" type="jar" ext="jar" status="successful" details="" size="2078028" time="2895" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/jars/akka-http-core-experimental_2.11-1.0-M4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-http-core-experimental_2.11/1.0-M4/akka-http-core-experimental_2.11-1.0-M4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-stream-experimental_2.11">
+			<revision name="1.0-M4" status="release" pubdate="20150227164331" resolver="public" artresolver="public" homepage="http://akka.io/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="5">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="successful" details="" size="3029" time="575" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/ivy-1.0-M4.xml" searched="true" original-local-location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/ivy-1.0-M4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-experimental_2.11/1.0-M4/akka-stream-experimental_2.11-1.0-M4.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-http-core-experimental_2.11" conf="compile, runtime" rev="1.0-M4" rev-constraint-default="1.0-M4" rev-constraint-dynamic="1.0-M4" callerrev="1.0-M4"/>
+				<artifacts>
+					<artifact name="akka-stream-experimental_2.11" type="jar" ext="jar" status="successful" details="" size="4061056" time="5049" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/jars/akka-stream-experimental_2.11-1.0-M4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-stream-experimental_2.11/1.0-M4/akka-stream-experimental_2.11-1.0-M4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.reactivestreams" name="reactive-streams">
+			<revision name="1.0.0.RC1" status="release" pubdate="20141227194348" resolver="public" artresolver="public" homepage="http://www.reactive-streams.org/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="8">
+				<license name="CC0" url="http://creativecommons.org/publicdomain/zero/1.0/"/>
+				<metadata-artifact status="successful" details="" size="1163" time="415" location="/home/andrea/.ivy2/cache/org.reactivestreams/reactive-streams/ivy-1.0.0.RC1.xml" searched="true" original-local-location="/home/andrea/.ivy2/cache/org.reactivestreams/reactive-streams/ivy-1.0.0.RC1.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.0.RC1/reactive-streams-1.0.0.RC1.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-stream-experimental_2.11" conf="compile, runtime" rev="1.0.0.RC1" rev-constraint-default="1.0.0.RC1" rev-constraint-dynamic="1.0.0.RC1" callerrev="1.0-M4"/>
+				<artifacts>
+					<artifact name="reactive-streams" type="jar" ext="jar" status="successful" details="" size="2039" time="462" location="/home/andrea/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.RC1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.0.RC1/reactive-streams-1.0.0.RC1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-actor_2.11">
+			<revision name="2.3.9" status="release" pubdate="20150120071810" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://akka.io/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="6">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2654" time="0" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/ivy-2.3.9.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.3.9/akka-actor_2.11-2.3.9.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-stream-experimental_2.11" conf="compile, runtime" rev="2.3.9" rev-constraint-default="2.3.9" rev-constraint-dynamic="2.3.9" callerrev="1.0-M4"/>
+				<artifacts>
+					<artifact name="akka-actor_2.11" type="jar" ext="jar" status="no" details="" size="2571077" time="0" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.9.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.11/2.3.9/akka-actor_2.11-2.3.9.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe" name="config">
+			<revision name="1.2.1" status="release" pubdate="20140502165416" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/config" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="7">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="no" details="" size="2734" time="0" location="/home/andrea/.ivy2/cache/com.typesafe/config/ivy-1.2.1.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-actor_2.11" conf="compile, runtime" rev="1.2.1" rev-constraint-default="1.2.1" rev-constraint-dynamic="1.2.1" callerrev="2.3.9"/>
+				<artifacts>
+					<artifact name="config" type="bundle" ext="jar" status="no" details="" size="219554" time="0" location="/home/andrea/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/config/1.2.1/config-1.2.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe.akka" name="akka-parsing-experimental_2.11">
+			<revision name="1.0-M4" status="release" pubdate="20150227164350" resolver="public" artresolver="public" homepage="http://akka.io/" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="3">
+				<license name="Apache License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="successful" details="" size="1980" time="408" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-parsing-experimental_2.11/ivy-1.0-M4.xml" searched="true" original-local-location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-parsing-experimental_2.11/ivy-1.0-M4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing-experimental_2.11/1.0-M4/akka-parsing-experimental_2.11-1.0-M4.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-http-core-experimental_2.11" conf="compile, runtime" rev="1.0-M4" rev-constraint-default="1.0-M4" rev-constraint-dynamic="1.0-M4" callerrev="1.0-M4"/>
+				<artifacts>
+					<artifact name="akka-parsing-experimental_2.11" type="jar" ext="jar" status="successful" details="" size="721571" time="2426" location="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-parsing-experimental_2.11/jars/akka-parsing-experimental_2.11-1.0-M4.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/typesafe/akka/akka-parsing-experimental_2.11/1.0-M4/akka-parsing-experimental_2.11-1.0-M4.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.11.5" status="release" pubdate="20150107013224" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.5/" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="4">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2819" time="0" location="/home/andrea/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.11.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-parsing-experimental_2.11" conf="compile, runtime" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="1.0-M4"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="4454732" time="0" location="/home/andrea/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.5/scala-reflect-2.11.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.11.5" status="release" pubdate="20150107013212" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" extra-info.apiURL="http://www.scala-lang.org/api/2.11.5/" downloaded="false" searched="false" default="false" conf="default, master(*), compile, runtime(*), runtime, default(compile), compile(*), master" position="0">
+				<license name="BSD 3-Clause" url="http://www.scala-lang.org/license.html"/>
+				<metadata-artifact status="no" details="" size="2653" time="0" location="/home/andrea/.ivy2/cache/org.scala-lang/scala-library/ivy-2.11.5.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5.pom"/>
+				<caller organisation="com.typesafe.akka" name="akka-stream-experimental_2.11" conf="compile, runtime" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="1.0-M4"/>
+				<caller organisation="com.typesafe.akka" name="akka-http-experimental_2.11" conf="default, compile, runtime, master" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="1.0-M4"/>
+				<caller organisation="socko-example" name="socko-example_2.11" conf="compile" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="0.0.1-SNAPSHOT"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="2.11.5"/>
+				<caller organisation="com.typesafe.akka" name="akka-actor_2.11" conf="compile, runtime" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="2.3.9"/>
+				<caller organisation="com.typesafe.akka" name="akka-parsing-experimental_2.11" conf="compile, runtime" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="1.0-M4"/>
+				<caller organisation="com.typesafe.akka" name="akka-http-core-experimental_2.11" conf="compile, runtime" rev="2.11.5" rev-constraint-default="2.11.5" rev-constraint-dynamic="2.11.5" callerrev="1.0-M4"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="5576839" time="0" location="/home/andrea/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.5.jar">
+						<origin-location is-local="false" location="https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.5/scala-library-2.11.5.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>

@@ -1,0 +1,18 @@
+<classpath>
+  <classpathentry output="target/scala-2.11/classes" kind="src" path="src/main/scala"/>
+  <classpathentry output="target/scala-2.11/classes" kind="src" path="src/main/java"/>
+  <classpathentry output="target/scala-2.11/test-classes" kind="src" path="src/test/scala"/>
+  <classpathentry output="target/scala-2.11/test-classes" kind="src" path="src/test/java"/>
+  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+  <classpathentry kind="lib" path="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-core-experimental_2.11/jars/akka-http-core-experimental_2.11-1.0-M4.jar"/>
+  <classpathentry kind="lib" path="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-parsing-experimental_2.11/jars/akka-parsing-experimental_2.11-1.0-M4.jar"/>
+  <classpathentry kind="lib" path="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-stream-experimental_2.11/jars/akka-stream-experimental_2.11-1.0-M4.jar"/>
+  <classpathentry kind="lib" path="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-actor_2.11/jars/akka-actor_2.11-2.3.9.jar"/>
+  <classpathentry kind="lib" path="/home/andrea/.ivy2/cache/com.typesafe/config/bundles/config-1.2.1.jar"/>
+  <classpathentry kind="lib" path="/home/andrea/.ivy2/cache/org.reactivestreams/reactive-streams/jars/reactive-streams-1.0.0.RC1.jar"/>
+  <classpathentry kind="lib" path="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-spray-json-experimental_2.11/jars/akka-http-spray-json-experimental_2.11-1.0-M4.jar"/>
+  <classpathentry kind="lib" path="/home/andrea/.ivy2/cache/com.typesafe.akka/akka-http-experimental_2.11/jars/akka-http-experimental_2.11-1.0-M4.jar"/>
+  <classpathentry kind="lib" path="/home/andrea/.ivy2/cache/io.spray/spray-json_2.11/bundles/spray-json_2.11-1.3.1.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="output" path="bin"/>
+</classpath>
