@@ -2,3 +2,4 @@ target
 project/target
 logs
 .classpath
+.project
