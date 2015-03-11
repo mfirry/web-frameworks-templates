@@ -6,9 +6,10 @@ import akka.util.Timeout
 import spray.can.Http
 import spray.routing._
 import spray.http._; import MediaTypes._
-import spray.json._
-import spray.json.DefaultJsonProtocol._
-import spray.httpx.SprayJsonSupport._
+import org.json4s._
+import org.json4s.jackson.Serialization.formats
+import spray.httpx.Json4sJacksonSupport
+
 
 import scala.concurrent.duration._
 
@@ -28,16 +29,22 @@ class DemoServiceActor extends Actor with DemoService {
   def receive = runRoute(route)
 }
 
+object Support extends Json4sJacksonSupport {
+  implicit val json4sJacksonFormats = formats(NoTypeHints)
+}
+
 trait DemoService extends HttpService {
+  import Support._
+
   val route =
     path("") {
       get {
-        complete(PrettyPrinter(List(1, 2, 3).toJson))
+        complete(List(1, 2, 3))
       }
     } ~
     path(Segment) { thingy =>
       get {
-        complete(PrettyPrinter(thingy.toJson))
+        complete(thingy)
       }
     }
 }
