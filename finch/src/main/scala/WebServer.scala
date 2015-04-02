@@ -14,13 +14,14 @@ import com.twitter.util.Await
 
 object WebServer extends App {
 
-  val  oneTwoThree = Get /> Ok(Json.arr(1, 2, 3)).toFuture
-  val simpleString = Get / string /> { Ok(_).toFuture }
+  val  oneTwoThree: Endpoint[HttpRequest, HttpResponse] = Get /> Ok(Json.arr(1, 2, 3)).toFuture
+  val simpleString: Endpoint[HttpRequest, HttpResponse] = Get / string /> { Ok(_).toFuture }
+
+  val api: Service[HttpRequest, HttpResponse] = (oneTwoThree | simpleString)
 
   Await.ready(
     Httpx.serve(
-      new InetSocketAddress("localhost", 9000),
-      (oneTwoThree | simpleString)
+      "localhost:9000", api
     )
   )
 }
