@@ -16,10 +16,10 @@ object Main extends App {
   Service.become[Http]("sample", 9000) {
     case request @ Get on Root => {
       val json = List(1, 2, 3)
-      request.ok(compact(render(json)))
+      Callback.successful(request.ok(compact(render(json))))
     }
     case request @ Get on Root / string => {
-      request.ok(compact(render(string)))
+      Callback.successful(request.ok(compact(render(string))))
     }
   }
 }
