@@ -1,14 +1,14 @@
 package com.example
 
 import akka.actor.ActorSystem
-import akka.http.Http
+import akka.http.scaladsl.Http
 
-import akka.http.server.Directives._
-import akka.http.server.Route
-import akka.http.server.RouteResult.route2HandlerFlow
+import akka.http.scaladsl.server.Directives._
+import akka.http.scaladsl.server.Route
+import akka.http.scaladsl.server.RouteResult.route2HandlerFlow
 
 import spray.json._
-import akka.http.marshallers.sprayjson.SprayJsonSupport
+import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 
 import com.typesafe.config.ConfigFactory
 
@@ -39,10 +39,10 @@ object Main extends App with SprayJsonSupport {
 
   val serverSource: Source[Http.IncomingConnection, Future[Http.ServerBinding]] =
     Http(system).bind(interface = "localhost", port = 8080)
-  
-  val bindingFuture: Future[Http.ServerBinding] = 
+
+  val bindingFuture: Future[Http.ServerBinding] =
     serverSource.to(Sink.foreach { connection =>
-      connection handleWith route    
+      connection handleWith route
     }).run()
 
 }
