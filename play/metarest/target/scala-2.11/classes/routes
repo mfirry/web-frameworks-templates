@@ -1,2 +1,0 @@
-GET     /                           controllers.Application.index
-GET     /string/:string             controllers.Application.get(string: String)
