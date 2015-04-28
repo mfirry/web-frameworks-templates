@@ -15,4 +15,12 @@ object Application extends Controller {
     Ok(Json.toJson(string))
   }
 
+  def json = Action {
+    Ok(Json.obj("message" -> "Hello, World!"))
+  }
+
+  def plaintext() = Action {
+    Ok("Hello, World!")
+  }
+
 }
