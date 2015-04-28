@@ -1,6 +1,4 @@
 GET     /               controllers.Application.index
 GET     /string/:string controllers.Application.getString(string: String)
-GET     /f/:name        controllers.Application.f(name: String)
-GET     /p/:name        controllers.Application.p(name: String)
 
 
