@@ -2,7 +2,7 @@ name := """finch-seed"""
 
 version := "0.0.1-SNAPSHOT"
 
-scalaVersion := "2.11.6"
+scalaVersion := "2.11.7"
 
 Revolver.settings
 
