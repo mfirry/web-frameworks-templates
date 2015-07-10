@@ -19,7 +19,7 @@ object Application extends Controller {
     Ok(Json.obj("message" -> "Hello, World!"))
   }
 
-  def plaintext() = Action {
+  def plaintext = Action {
     Ok("Hello, World!")
   }
 
