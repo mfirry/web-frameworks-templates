@@ -9,8 +9,8 @@ Revolver.settings
 mainClass in (Compile, run) := Some("WebServer")
 
 libraryDependencies ++= Seq(
-	  "com.github.finagle" %% "finch-core" % "0.7.1",
-    "com.github.finagle" %% "finch-argonaut" % "0.7.1"
+    "com.github.finagle" %% "finch-core" % "0.8.0-SNAPSHOT" changing(),
+    "com.github.finagle" %% "finch-argonaut" % "0.8.0-SNAPSHOT" changing()
 )
 
 resolvers += Resolver.sonatypeRepo("snapshots")

@@ -17,15 +17,15 @@ import com.twitter.util.Await
 
 object WebServer extends App {
 
-  val json: Endpoint[HttpRequest, HttpResponse] =
-    Get / "json" /> Ok(Json("message" -> jString("Hello, World!"))).toFuture
+  val json: Router[HttpResponse] =
+    Get / "json" /> Ok(Json("message" -> jString("Hello, World!")))
 
-  val list: Endpoint[HttpRequest, HttpResponse] =
-    Get / "list" /> Ok(Json.array(jNumber(1), jNumber(2), jNumber(3))).toFuture
+  val list: Router[HttpResponse] =
+    Get / "list" /> Ok(Json.array(jNumber(1), jNumber(2), jNumber(3)))
 
-  val api: Service[HttpRequest, HttpResponse] = list | json
+  val api: Service[HttpRequest, HttpResponse] = (list :+: json).toService
 
   Await.ready(
-    Httpx.serve(":9000", api)
+    Httpx.serve("localhost:9000", api)
   )
 }
