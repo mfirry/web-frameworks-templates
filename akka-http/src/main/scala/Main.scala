@@ -12,7 +12,7 @@ import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 
 import com.typesafe.config.ConfigFactory
 
-import akka.stream.ActorFlowMaterializer
+import akka.stream.ActorMaterializer
 
 import spray.json.DefaultJsonProtocol._
 
@@ -25,7 +25,7 @@ object Main extends App with SprayJsonSupport {
   implicit val system = ActorSystem.create()
 
   implicit val executionContext = system.dispatcher
-  implicit val materializer = ActorFlowMaterializer()
+  implicit val materializer = ActorMaterializer()
 
   lazy val route =
     get {

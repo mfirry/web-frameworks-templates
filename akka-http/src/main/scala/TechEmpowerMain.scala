@@ -9,7 +9,7 @@ import akka.http.scaladsl.server.RouteResult.route2HandlerFlow
 
 import com.typesafe.config.ConfigFactory
 
-import akka.stream.ActorFlowMaterializer
+import akka.stream.ActorMaterializer
 
 import akka.stream.scaladsl._
 import scala.concurrent._
@@ -20,7 +20,7 @@ object TechEmpowerMain {
   implicit val system = ActorSystem.create()
 
   implicit val executionContext = system.dispatcher
-  implicit val materializer = ActorFlowMaterializer()
+  implicit val materializer = ActorMaterializer()
 
   lazy val route =
     get {
