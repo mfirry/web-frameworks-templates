@@ -1,17 +1,14 @@
 import com.twitter.finatra._
 
-class WebServer extends Controller {
+import com.twitter.finatra.http.HttpServer
+import com.twitter.finatra.routing.HttpRouter
 
-  get("/") { request =>
-    render.json(List(1, 2, 3)).toFuture
+object HelloWorldServerMain extends WebServer
+
+class WebServer extends HttpServer {
+
+  override def configureHttp(router: HttpRouter) = {
+    router.
+      add(new AController)
   }
-  get("/string/:string") { request =>
-    val string = request.routeParams.get("string").getOrElse("")
-    render.json(string).toFuture
-  }
-
-}
-
-object App extends FinatraServer {
-  register(new WebServer())
 }
