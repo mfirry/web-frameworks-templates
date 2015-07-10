@@ -3,7 +3,7 @@ import java.net.InetSocketAddress
 import argonaut._, Argonaut._
 
 import io.finch._
-import io.finch.{Endpoint => _, _}
+import io.finch.{ Endpoint => _, _ }
 import io.finch.argonaut._
 
 import io.finch.route._
@@ -26,8 +26,6 @@ object WebServer extends App {
   val api: Service[HttpRequest, HttpResponse] = list | json
 
   Await.ready(
-    Httpx.serve(
-      "localhost:9000", api
-    )
+    Httpx.serve(":9000", api)
   )
 }
