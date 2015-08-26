@@ -10,10 +10,7 @@ import com.twitter.finagle.httpx.{Response, Request}
 
 import com.twitter.util.Await
 
-import java.util.Calendar
-
 object WebServer extends App {
-  val ok: ResponseBuilder = Ok.withHeaders("Server" -> "finch", "Date" -> Calendar.getInstance().getTime().toString)
 
   val json = get("json") {
     import io.circe._
@@ -38,10 +35,10 @@ object WebServer extends App {
     import io.finch.response.EncodeResponse
     import io.circe.{Decoder, Encoder, Json}
     import io.finch.circe._
-    Ok( List(1, 2, 3).asJson )
+    Ok(List(1, 2, 3).asJson)
   }
 
-  val api: Service[Request, Response] = (plaintext :+: list :+: json).toService
+  val api: Service[Request, Response] = (json :+: plaintext :+: list).toService
 
   Await.ready(
     Httpx.serve("localhost:9000", api)
