@@ -37,12 +37,6 @@ object Main extends App with SprayJsonSupport {
       }
     }
 
-  val serverSource: Source[Http.IncomingConnection, Future[Http.ServerBinding]] =
-    Http(system).bind(interface = "localhost", port = 8080)
-
-  val bindingFuture: Future[Http.ServerBinding] =
-    serverSource.to(Sink.foreach { connection =>
-      connection handleWith route
-    }).run()
+  Http().bindAndHandle(route, interface = "localhost", port = 8080)
 
 }
