@@ -10,15 +10,16 @@ import com.twitter.finagle.httpx.{Response, Request}
 
 import com.twitter.util.Await
 
+import io.circe._
+import io.circe.generic.auto._
+import io.circe.jawn._
+import io.circe.syntax._
+import io.finch.response.EncodeResponse
+import io.circe.{Decoder, Encoder, Json}
+
 object WebServer extends App {
 
   val json = get("json") {
-    import io.circe._
-    import io.circe.generic.auto._
-    import io.circe.jawn._
-    import io.circe.syntax._
-    import io.finch.response.EncodeResponse
-    import io.circe.{Decoder, Encoder, Json}
     import io.finch.circe._
 
     case class Message(message: String)
@@ -28,13 +29,8 @@ object WebServer extends App {
   val plaintext = get("plaintext") { "Hello, World!" }
 
   val list = get("list") {
-    import io.circe._
-    import io.circe.generic.auto._
-    import io.circe.jawn._
-    import io.circe.syntax._
-    import io.finch.response.EncodeResponse
-    import io.circe.{Decoder, Encoder, Json}
     import io.finch.circe._
+
     Ok(List(1, 2, 3).asJson)
   }
 
