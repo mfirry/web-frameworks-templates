@@ -26,7 +26,9 @@ object WebServer extends App {
     Ok(Message("Hello, World!").asJson)
   }
 
-  val plaintext = get("plaintext") { "Hello, World!" }
+  val plaintext = get("plaintext") {
+    "Hello, World!"
+  }
 
   val list = get("list") {
     import io.finch.circe._
