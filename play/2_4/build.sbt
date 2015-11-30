@@ -8,3 +8,7 @@ lazy val root = (project in file("."))
   .disablePlugins(PlayNettyServer)
 
 scalaVersion := "2.11.7"
+
+libraryDependencies ++= Seq(
+  specs2 % Test
+)
