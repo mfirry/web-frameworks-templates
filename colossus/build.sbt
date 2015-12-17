@@ -6,5 +6,6 @@ scalaVersion := "2.11.7"
 
 libraryDependencies ++= Seq(
   "com.tumblr" %% "colossus" % "0.6.8",
-  "net.liftweb" %% "lift-json" % "2.6.2"
+  "io.circe" %% "circe-core" % "0.2.1",
+  "io.circe" %% "circe-generic" % "0.2.1"
 )

@@ -6,8 +6,9 @@ import protocols.http._
 import UrlParsing._
 import HttpMethod._
 
-import net.liftweb.json._
-import JsonDSL._
+import io.circe._
+import io.circe.generic.auto._
+import io.circe.syntax._
 
 object Main extends App {
 
@@ -15,11 +16,11 @@ object Main extends App {
 
   Service.become[Http]("sample", 9000) {
     case request @ Get on Root => {
-      val json = List(1, 2, 3)
-      Callback.successful(request.ok(compact(render(json))))
+      val json = List(1, 2, 3).asJson.toString
+      Callback.successful(request.ok(json))
     }
     case request @ Get on Root / string => {
-      Callback.successful(request.ok(compact(render(string))))
+      Callback.successful(request.ok(((string))))
     }
   }
 }
