@@ -10,7 +10,7 @@ import io.circe._
 import io.circe.generic.auto._
 
 import io.circe.syntax._
-import io.finch.response.EncodeResponse
+import io.finch.EncodeResponse
 
 import com.twitter.io.Buf
 
