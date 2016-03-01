@@ -31,11 +31,15 @@ object WebServer extends App {
     Ok("Hello, World!").withContentType(Some("text/plain"))
   }
 
+  val hello = get("hello" :: string) { string: String =>
+    Ok(s"Hello, ${string}!").withContentType(Some("text/plain"))
+  }
+
   val list = get("list") {
     Ok(List(1, 2, 3).asJson)
   }
 
-  val api = (json :+: plaintext :+: list)
+  val api = (json :+: plaintext :+: list :+: hello)
 
   Await.ready(
     Http.serve("localhost:9000", api.toService)
