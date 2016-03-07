@@ -1,0 +1,6 @@
+[0m[[0minfo[0m] [0mFound 5 dependency updates for play[0m
+[0m[[0minfo[0m] [0m  com.typesafe.play:play-akka-http-server-experimental : 2.4.0-RC1 -> 2.4.0-RC5         [0m
+[0m[[0minfo[0m] [0m  com.typesafe.play:play-omnidoc:docs                  : 2.4.0-RC1 -> 2.4.0-RC5         [0m
+[0m[[0minfo[0m] [0m  com.typesafe.play:play-server                        : 2.4.0-RC1 -> 2.4.0-RC5         [0m
+[0m[[0minfo[0m] [0m  com.typesafe.play:play-test:test                     : 2.4.0-RC1 -> 2.4.0-RC5         [0m
+[0m[[0minfo[0m] [0m  com.typesafe.play:twirl-api                          : 1.0.4                  -> 1.1.1[0m
