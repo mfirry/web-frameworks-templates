@@ -1,5 +1,0 @@
-GET     /                           controllers.Application.index
-GET     /string/:string             controllers.Application.getString(string: String)
-
-GET     /json                  controllers.Application.json
-GET     /plaintext             controllers.Application.plaintext
