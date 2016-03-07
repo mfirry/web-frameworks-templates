@@ -1,9 +1,0 @@
-2016-03-07 10:09:23,449 [INFO] from play.core.server.akkahttp.AkkaHttpServer in pool-7-thread-5 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-03-07 10:09:26,108 [WARN] from application in ForkJoinPool-1-worker-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-03-07 10:09:26,585 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-03-07 10:09:26,633 [WARN] from play.core.server.akkahttp.ModelConversion in play-dev-mode-akka.actor.default-dispatcher-3 - Can't get raw request URI. Please set akka.http.server.raw-request-uri-header = true
-2016-03-07 10:09:32,535 [WARN] from play.core.server.akkahttp.ModelConversion in application-akka.actor.default-dispatcher-5 - Can't get raw request URI. Please set akka.http.server.raw-request-uri-header = true
-2016-03-07 10:09:40,381 [WARN] from play.core.server.akkahttp.ModelConversion in play-dev-mode-akka.actor.default-dispatcher-3 - Can't get raw request URI. Please set akka.http.server.raw-request-uri-header = true
-2016-03-07 10:09:43,079 [WARN] from play.core.server.akkahttp.ModelConversion in play-dev-mode-akka.actor.default-dispatcher-3 - Can't get raw request URI. Please set akka.http.server.raw-request-uri-header = true
-2016-03-07 10:10:26,992 [WARN] from application in pool-1-thread-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
-2016-03-07 10:10:28,444 [WARN] from application in pool-1-thread-1 - Logger configuration in conf files is deprecated and has no effect. Use a logback configuration file instead.
