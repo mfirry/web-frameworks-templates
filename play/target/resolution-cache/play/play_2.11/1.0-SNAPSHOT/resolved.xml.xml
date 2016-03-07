@@ -4,7 +4,7 @@
 		module="play_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20160104152145"
+		publication="20160307101013"
 	>
 		<description>
 		play
@@ -35,10 +35,11 @@
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.7" conf="scala-tool->default,optional(default)"/>
 		<dependency org="org.scala-lang" name="scala-library" rev="2.11.7" conf="scala-tool->default,optional(default);compile->default(compile)"/>
 		<dependency org="com.typesafe.play" name="twirl-api_2.11" rev="1.1.1" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-server_2.11" rev="2.4.6" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-test_2.11" rev="2.4.6" conf="test->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-omnidoc_2.11" rev="2.4.6" conf="docs->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-akka-http-server-experimental_2.11" rev="2.4.6" conf="compile->default(compile)"/>
-		<dependency org="com.typesafe.play" name="play-specs2_2.11" rev="2.4.6" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-server_2.11" rev="2.5.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-test_2.11" rev="2.5.0" conf="test->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-omnidoc_2.11" rev="2.5.0" conf="docs->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-netty-server_2.11" rev="2.5.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-logback_2.11" rev="2.5.0" conf="compile->default(compile)"/>
+		<dependency org="com.typesafe.play" name="play-specs2_2.11" rev="2.5.0" conf="test->default(compile)"/>
 	</dependencies>
 </ivy-module>

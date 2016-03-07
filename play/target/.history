@@ -7,3 +7,8 @@ run
 test
 exit
 run
+compile
+exit
+run
+compile
+run
