@@ -16,27 +16,24 @@ import com.twitter.io.Buf
 
 object WebServer extends App {
 
-  import io.finch.circe._
-  implicit val encodeMap: EncodeResponse[Map[String, String]] =
-    EncodeResponse("text/plain")(map =>
-      Buf.Utf8(map.toSeq.map(kv => "\"" + kv._1 + "\":\"" + kv._2 + "\"").mkString(", "))
-    )
+  case class Message(message: String)
 
-  val json = get("json") {
-    case class Message(message: String)
-    Ok(Message("Hello, World!").asJson)
+  import io.finch.circe._
+
+  val json: Endpoint[Message] = get("json") {
+    Ok(Message("Hello, World!"))
   }
 
   val plaintext = get("plaintext") {
-    Ok("Hello, World!").withContentType(Some("text/plain"))
+    Ok("Hello, World!")
   }
 
   val hello = get("hello" :: string) { string: String =>
-    Ok(s"Hello, ${string}!").withContentType(Some("text/plain"))
+    Ok(s"Hello, ${string}!")
   }
 
-  val list = get("list") {
-    Ok(List(1, 2, 3).asJson)
+  val list: Endpoint[List[Int]] = get("list") {
+    Ok(List(1, 2, 3))
   }
 
   val api = (json :+: plaintext :+: list :+: hello)
