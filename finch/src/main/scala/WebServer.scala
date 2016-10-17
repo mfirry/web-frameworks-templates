@@ -10,9 +10,7 @@ import io.circe._
 import io.circe.generic.auto._
 
 import io.circe.syntax._
-import io.finch.EncodeResponse
 
-import com.twitter.io.Buf
 
 object WebServer extends App {
 
@@ -39,6 +37,6 @@ object WebServer extends App {
   val api = (json :+: plaintext :+: list :+: hello)
 
   Await.ready(
-    Http.serve("localhost:9000", api.toService)
+      Http.serve("localhost:9000", api.toService)
   )
 }
