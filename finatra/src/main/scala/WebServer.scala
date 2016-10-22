@@ -1,7 +1,7 @@
 import com.twitter.finatra._
 
 import com.twitter.finatra.http.HttpServer
-import com.twitter.finatra.routing.HttpRouter
+import com.twitter.finatra.http.routing.HttpRouter
 
 object HelloWorldServerMain extends WebServer
 
