@@ -11,7 +11,7 @@ import io.circe._
 import io.circe.generic.auto._
 import io.circe.syntax._
 
-class HelloService(context: ServerContext) extends HttpService(ServiceConfig(), context) {
+class HelloService(context: ServerContext) extends HttpService(context) {
   def handle = {
     case request @ Get on Root => {
       val json = List(1, 2, 3).asJson.toString
@@ -30,6 +30,9 @@ class HelloInitializer(worker: WorkerRef) extends Initializer(worker) {
 }
 
 object Main extends App {
+
+  import akka.actor._
+  implicit val actorSystem = ActorSystem("COLOSSUS")
 
   implicit val io_system = IOSystem()
 
