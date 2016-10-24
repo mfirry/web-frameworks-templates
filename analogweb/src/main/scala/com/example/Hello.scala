@@ -5,15 +5,16 @@ import org.analogweb.scala.Analogweb
 
 object Hello extends Analogweb {
 
-  def main(args: Array[String]) = Servers.run(8080, "com.example")
+  // default port is 8000
+  def main(args: Array[String]) = Servers.run()
 
   case class Message(message: String)
 
   get("/plaintext") {
-     "Hello, World!"
+    "Hello, World!"
   }
   get("/json") {
-      Ok(asJson(Message("Hello, World!")))
+    Ok(asJson(Message("Hello, World!")))
   }
 
 }
