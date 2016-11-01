@@ -28,7 +28,7 @@ object Main extends App with SprayJsonSupport {
         complete(List(1, 2, 3))
       } ~
       path(Segment) { string =>
-        complete(PrettyPrinter(string.toJson))
+        complete(string)
       }
     }
 
