@@ -26,7 +26,7 @@ object WebServer extends App {
     Ok("Hello, World!")
   }
 
-  val hello = get("hello" :: string) { string: String =>
+  val hello = get(/ :: string) { string: String =>
     Ok(s"Hello, ${string}!")
   }
 
