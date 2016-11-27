@@ -10,7 +10,7 @@ class AController extends Controller {
     response.created(List(1, 2, 3))
   }
 
-  get("/string/:msg") { hello: Hello =>
+  get("/:msg") { hello: Hello =>
     response.created(hello.msg)
   }
 }
