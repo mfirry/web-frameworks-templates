@@ -8,7 +8,7 @@ import io.fintrospect.formats.Circe.ResponseBuilder.implicits._
 
 object JsonList {
 
-  val jsonList = Service.mk { _: Request => Ok(array(number(1), number(2), number(3))) }
+  val jsonList = Service.mk { _: Request => Ok(array(number(1L), number(2L), number(3L))) }
 
   val route = RouteSpec("json list", "marshals a list of ints using circe").at(Get) bindTo jsonList
 }

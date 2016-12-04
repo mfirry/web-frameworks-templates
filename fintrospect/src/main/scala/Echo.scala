@@ -10,7 +10,7 @@ object Echo {
   def echo(value: String) = Service.mk { _: Request => Ok(value) }
 
   val messageParam = Path.string("value")
-  val contract = RouteSpec("echo", "echoes the path string").at(Get) / "echo" / messageParam
+  val contract = RouteSpec("echo", "echoes the path string").at(Get) / messageParam
 
   val route = contract bindTo echo
 }
