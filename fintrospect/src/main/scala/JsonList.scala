@@ -1,10 +1,9 @@
 import com.twitter.finagle.Service
 import com.twitter.finagle.http.Method.Get
 import com.twitter.finagle.http.Request
-import com.twitter.finagle.http.Status.Ok
 import io.fintrospect.RouteSpec
 import io.fintrospect.formats.Circe.JsonFormat._
-import io.fintrospect.formats.Circe.ResponseBuilder.implicits._
+import io.fintrospect.formats.Circe.ResponseBuilder._
 
 object JsonList {
 
