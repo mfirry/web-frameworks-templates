@@ -2,9 +2,9 @@ name := "http4s-example"
 
 version := "0.0.1-SNAPSHOT"
 
-scalaVersion := "2.11.5"
+scalaVersion := "2.11.8"
 
-val http4sVersion = "0.13.0"
+val http4sVersion = "0.15.3a"
 
 libraryDependencies ++= Seq(
 	"org.http4s" %% "http4s-blaze-server" % http4sVersion,
