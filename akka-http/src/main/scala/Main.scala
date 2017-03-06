@@ -1,28 +1,12 @@
 package com.example
 
-import akka.actor.ActorSystem
-import akka.http.scaladsl.Http
-import akka.http.scaladsl.server.Directives._
-import akka.stream.ActorMaterializer
-
-// import akka.http.scaladsl.server.Route
-// import akka.http.scaladsl.server.RouteResult.route2HandlerFlow
-
-import spray.json._
+import akka.http.scaladsl.server.{HttpApp, Route}
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
-
-import com.typesafe.config.ConfigFactory
-
 import spray.json.DefaultJsonProtocol._
 
-object Main extends App with SprayJsonSupport {
-  val config = ConfigFactory.load()
+object Main extends HttpApp with SprayJsonSupport with App {
 
-  implicit val system = ActorSystem.create()
-  implicit val executionContext = system.dispatcher
-  implicit val materializer = ActorMaterializer()
-
-  lazy val route =
+  def route: Route =
     get {
       pathSingleSlash {
         complete(List(1, 2, 3))
@@ -32,6 +16,5 @@ object Main extends App with SprayJsonSupport {
       }
     }
 
-  Http().bindAndHandle(route, interface = "localhost", port = 8080)
-
+  startServer(host = "localhost", port = 8080)
 }
