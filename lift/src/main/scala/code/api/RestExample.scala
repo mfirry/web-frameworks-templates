@@ -18,7 +18,7 @@ object RestExample extends RestHelper{
     case "list" :: Nil JsonGet _ =>
       JArray(List(1,2,3))
 
-    case "echo" :: str :: Nil JsonGet _ =>
+    case "echo" :: str :: Nil Get _ =>
       PlainTextResponse(str)
 
     case "users" :: Nil JsonGet _ =>
