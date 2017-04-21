@@ -1,6 +1,7 @@
 package code.api
 
 import code.model.User
+import net.liftweb.http.PlainTextResponse
 import net.liftweb.http.rest.{RestContinuation, RestHelper}
 import net.liftweb.json.JsonAST._
 import net.liftweb.json.JsonDSL._
@@ -16,6 +17,9 @@ object RestExample extends RestHelper{
 
     case "list" :: Nil JsonGet _ =>
       JArray(List(1,2,3))
+
+    case "echo" :: str :: Nil JsonGet _ =>
+      PlainTextResponse(str)
 
     case "users" :: Nil JsonGet _ =>
       User(412, "Riccardo"): JValue
