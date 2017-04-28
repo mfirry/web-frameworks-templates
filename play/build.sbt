@@ -11,5 +11,7 @@ lazy val root = (project in file("."))
 scalaVersion := "2.11.8"
 
 libraryDependencies ++= Seq(
-  specs2 % Test
+  specs2 % Test,
+  guice,
+  "com.typesafe.play" %% "play-json" % "2.6.0-M4"
 )
