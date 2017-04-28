@@ -7,7 +7,7 @@ import play.api.mvc._
 import play.api.libs.json._
 
 class Application @Inject() (action: DefaultActionBuilder)
-  extends BaseController {
+  extends ControllerHelpers {
 
   def index = action {
     val list = List(1, 2, 3)
