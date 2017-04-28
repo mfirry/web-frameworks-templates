@@ -1,0 +1,42 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title data-lift="Menu.title">App: </title>
+  <style data-lift="CSS.blueprint"></style>
+  <style data-lift="CSS.fancyType"></style>
+  <link href="/assets/css/app.css" rel="stylesheet" type="text/css" />
+  <script id="jquery" src="/classpath/jquery.js" type="text/javascript"></script>
+  <script id="json" src="/classpath/json.js" type="text/javascript"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="column span-12 last ralign">
+      <h1 class="alt">app<img class="spinner" alt="" id="ajax-loader" src="/assets/images/ajax-loader.gif"></h1>
+    </div>
+
+    <hr>
+
+    <div class="column span-6 colborder sidebar">
+      <hr class="space" >
+
+      <span data-lift="Menu.builder"></span>
+
+      <div data-lift="Msgs?showAll=true"></div>
+      <hr class="space">
+    </div>
+
+    <div class="column span-16 last">
+      <div id="content">The main content will get bound here</div>
+    </div>
+
+    <hr>
+
+    <div class="column span-23 last calign">
+      <h4 class="alt">
+        <a href="http://www.liftweb.net"><i>Lift</i></a>
+        is Copyright 2007-2014 WorldWide Conferencing, LLC.
+        Distributed under an Apache 2.0 License.</h4>
+      </div>
+    </div>
+  </body>
+  </html>
