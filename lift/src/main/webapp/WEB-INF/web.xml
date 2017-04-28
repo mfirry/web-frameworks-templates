@@ -11,7 +11,6 @@ PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
   <description>The Filter that intercepts lift calls</description>
   <filter-class>net.liftweb.http.LiftFilter</filter-class>
 </filter>
-  	
 
 <filter-mapping>
   <filter-name>LiftFilter</filter-name>
