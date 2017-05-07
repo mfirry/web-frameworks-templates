@@ -11,7 +11,7 @@ import net.liftweb.json.JsonDSL._
 object RestExample extends RestHelper{
 
   serve{
-    case "list" :: Nil Get _ =>
+    case Nil Get _ =>
       JArray(List(1,2,3))
 
     case str :: Nil Get _ =>

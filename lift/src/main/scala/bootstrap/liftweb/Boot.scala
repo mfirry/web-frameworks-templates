@@ -22,5 +22,17 @@ class Boot {
 
     // Force the request to be UTF-8
     LiftRules.early.append(_.setCharacterEncoding("UTF-8"))
+    
+    def hasTrailingIndex_?(path: ParsePath): Boolean = path.partPath.lastOption.contains("index")
+
+    // Rewriting /index to /
+    LiftRules.statelessRewrite.append {
+      case RewriteRequest(path, _, _) if hasTrailingIndex_?(path) =>
+        RewriteResponse(
+          path.copy(partPath = path.partPath.dropRight(1)),
+          Map(),
+          stopRewriting = true
+        )
+    }
   }
 }
