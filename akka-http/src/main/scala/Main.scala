@@ -18,20 +18,33 @@ import spray.json.DefaultJsonProtocol._
 object Main extends App with SprayJsonSupport {
   val config = ConfigFactory.load()
 
+  case class Message(message: String)
+
+  object MessageProtocol extends DefaultJsonProtocol {
+    implicit val messageFormat = jsonFormat1(Message)
+  }
+
   implicit val system = ActorSystem.create()
   implicit val executionContext = system.dispatcher
   implicit val materializer = ActorMaterializer()
+  import MessageProtocol._
 
   lazy val route =
     get {
       pathSingleSlash {
         complete(List(1, 2, 3))
       } ~
+      path("json") {
+        complete(Message("Hello, World!").toJson)
+      } ~
+      path("plaintext") {
+        complete("Hello, World!")
+      } ~
       path(Segment) { string =>
         complete(string)
       }
     }
 
-  Http().bindAndHandle(route, interface = "localhost", port = 8080)
+  Http().bindAndHandle(route, interface = "localhost", port = 9000)
 
 }
