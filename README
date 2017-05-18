@@ -3,3 +3,26 @@ EXPERIMENTS on the look-and-feel (from the point of view of the *developer exper
 At the end of the day all the examples should have:
 - a '/' endpoint that would return [1, 2, 3] (json)
 - a '/:string' that would return "string" (for any string) (plaintext)
+
+
+--
+
+(335)   akka-http
+(4)     analogweb
+(970)   colossus
+(1572)  finatra
+(1029)  finch
+(40)    fintrospect
+(765)   http4s
+(1074)  lift
+(12)    peregrine
+(9336)  play
+(2162)  scalatra
+(22)    service-container
+(263)   socko
+(2509)  spray
+(674)   unfiltered
+(6093)  vert-x
+
+-- removed frameworks
+mesosphere/chaos (commit/4ae63c239d423d8ab1450cc412c9c58965db055d)
