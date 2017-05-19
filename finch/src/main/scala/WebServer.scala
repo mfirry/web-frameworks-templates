@@ -18,20 +18,21 @@ object WebServer extends App {
 
   import io.finch.circe._
 
+
+  val list: Endpoint[List[Int]] = get(/) {
+    Ok(List(1, 2, 3))
+  }
+
+  val hello = get(/ :: string) { string: String =>
+    Ok(s"${string}")
+  }
+
   val json: Endpoint[Message] = get("json") {
     Ok(Message("Hello, World!"))
   }
 
   val plaintext = get("plaintext") {
     Ok("Hello, World!")
-  }
-
-  val hello = get(/ :: string) { string: String =>
-    Ok(s"Hello, ${string}!")
-  }
-
-  val list: Endpoint[List[Int]] = get("list") {
-    Ok(List(1, 2, 3))
   }
 
   val api = (json :+: plaintext :+: list :+: hello)
