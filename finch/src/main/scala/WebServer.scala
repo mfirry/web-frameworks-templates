@@ -1,10 +1,16 @@
 import java.net.InetSocketAddress
 
+import com.twitter.io.Buf
 import io.finch._
+import com.twitter.finagle.Service
 import com.twitter.finagle.Http
 import com.twitter.finagle.http.{Response, Request}
 
 import com.twitter.util.Await
+
+import io.circe.Json
+import io.finch._
+import io.finch.circe._
 
 import io.circe._
 import io.circe.generic.auto._
@@ -18,26 +24,29 @@ object WebServer extends App {
 
   import io.finch.circe._
 
-
-  val list: Endpoint[List[Int]] = get(/) {
-    Ok(List(1, 2, 3))
+  val list: Endpoint[Json] = get("/") {
+    Ok(List(1, 2, 3).asJson)
   }
 
-  val hello = get(/ :: string) { string: String =>
-    Ok(s"${string}")
+  val hello: Endpoint[Buf] = get("/" :: string) { string: String =>
+    Ok(Buf.Utf8("${string}"))
   }
 
-  val json: Endpoint[Message] = get("json") {
-    Ok(Message("Hello, World!"))
+  val json: Endpoint[Json] = get("json") {
+    Ok(Message("Hello, World!").asJson)
   }
 
-  val plaintext = get("plaintext") {
-    Ok("Hello, World!")
+  val plaintext: Endpoint[Buf] = get("plaintext") {
+    Ok(Buf.Utf8("Hello, World!"))
   }
 
-  val api = (json :+: plaintext :+: list :+: hello)
+  val api: Service[Request, Response] =
+    Bootstrap.configure(includeDateHeader = true, includeServerHeader = true)
+      .serve[Application.Json](json)
+      .serve[Text.Plain](plaintext)
+      .toService
 
   Await.ready(
-      Http.serve("localhost:9000", api.toService)
+      Http.serve("localhost:9000", api)
   )
 }
