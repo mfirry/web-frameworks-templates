@@ -8,4 +8,5 @@ resolvers += "Typesafe repository" at "https://repo.typesafe.com/typesafe/releas
 // addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.10")
 // addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.12")
 //addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.0-M4")
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.0-M5")
+//addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.0-M5")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.0-RC2")
