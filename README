@@ -24,7 +24,7 @@ At the end of the day all the examples should have:
 (263)   socko
 (2509)  spray
 (674)   unfiltered
-(6093)  vert-x
+(53)    vertx-lang-scala
 
 -- removed frameworks
 mesosphere/chaos (commit/4ae63c239d423d8ab1450cc412c9c58965db055d)
