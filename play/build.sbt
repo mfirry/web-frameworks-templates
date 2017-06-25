@@ -13,5 +13,5 @@ scalaVersion := "2.11.8"
 libraryDependencies ++= Seq(
   specs2 % Test,
   guice,
-  "com.typesafe.play" %% "play-json" % "2.6.0-M4"
+  "com.typesafe.play" %% "play-json" % "2.6.0"
 )
