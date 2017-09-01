@@ -9,11 +9,11 @@ Revolver.settings
 mainClass in (Compile, run) := Some("WebServer")
 
 libraryDependencies ++= Seq(
-  "com.github.finagle" %% "finch-core" % "0.16.0-M1",
-  "com.github.finagle" %% "finch-circe" % "0.16.0-M1",
-  "io.circe" %% "circe-core" % "0.8.0",
-  "io.circe" %% "circe-generic" % "0.8.0",
-  "io.circe" %% "circe-jawn" % "0.8.0"
+  "com.github.finagle" %% "finch-core" % "0.16.0-M2",
+  "com.github.finagle" %% "finch-circe" % "0.16.0-M2",
+  "io.circe" %% "circe-core" % "0.9.0-M1",
+  "io.circe" %% "circe-generic" % "0.9.0-M1",
+  "io.circe" %% "circe-jawn" % "0.9.0-M1"
 )
 
 resolvers += Resolver.sonatypeRepo("snapshots")
