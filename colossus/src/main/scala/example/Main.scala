@@ -11,7 +11,7 @@ import io.circe._
 import io.circe.generic.auto._
 import io.circe.syntax._
 
-class HelloService(context: ServerContext) extends HttpService(context) {
+class HelloService(context: ServerContext) extends RequestHandler(context) {
   case class Message(message: String)
   def handle = {
     case request @ Get on Root / "json" => {
@@ -30,12 +30,6 @@ class HelloService(context: ServerContext) extends HttpService(context) {
   }
 }
 
-class HelloInitializer(worker: WorkerRef) extends Initializer(worker) {
-
-  def onConnect = context => new HelloService(context)
-
-}
-
 object Main extends App {
 
   import akka.actor._
@@ -43,6 +37,12 @@ object Main extends App {
 
   implicit val io_system = IOSystem()
 
-  Server.start("hello-world", 9000){ worker => new HelloInitializer(worker) }
+  // HttpServer.start("hello-world", 9000){ worker => new HelloInitializer(worker) }
+  HttpServer.start("hello-world", 9000){ init =>
+    new Initializer(init) {
+      def onConnect = context => new HelloService(context)
+    }
+  }
+
 
 }

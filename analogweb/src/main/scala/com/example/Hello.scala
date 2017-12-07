@@ -1,7 +1,9 @@
 package com.example
 
-import org.analogweb.core.Servers
-import org.analogweb.scala.Analogweb
+import analogweb._, circe._, io.circe._, generic.semiauto._
+import org.analogweb._
+import org.analogweb.core._
+import org.analogweb.scala._
 
 object Hello extends Analogweb {
 
@@ -9,6 +11,8 @@ object Hello extends Analogweb {
   def main(args: Array[String]) = Servers.run()
 
   case class Message(message: String)
+
+  implicit val messageEncoder: Encoder[Message] = deriveEncoder[Message]
 
   get("/json") {
     Ok(asJson(Message("Hello, World!")))
