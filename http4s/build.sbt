@@ -4,12 +4,13 @@ version := "0.0.1-SNAPSHOT"
 
 scalaVersion := "2.11.8"
 
-val http4sVersion = "0.15.3a"
+val http4sVersion = "0.18.0-M5"
 
 libraryDependencies ++= Seq(
 	"org.http4s" %% "http4s-blaze-server" % http4sVersion,
 	"org.http4s" %% "http4s-dsl" % http4sVersion,
-	"org.http4s" %% "http4s-argonaut" % http4sVersion
+	"org.http4s" %% "http4s-argonaut" % http4sVersion,
+  "org.typelevel" %% "cats-effect" % "0.5"
 )
 
 resolvers += "Bintray" at "http://dl.bintray.com/pchiusano/maven/"

@@ -2,16 +2,18 @@ name := """play"""
 
 version := "1.0-SNAPSHOT"
 
-scalacOptions ++= List("-Ybackend:GenBCode", "-Ydelambdafy:method", "-target:jvm-1.8")
-
 lazy val root = (project in file("."))
   .enablePlugins(PlayScala)
-  .disablePlugins(PlayLayoutPlugin)
+  disablePlugins(PlayLayoutPlugin)
 
-scalaVersion := "2.11.8"
+PlayKeys.playMonitoredFiles ++= (sourceDirectories in (Compile, TwirlKeys.compileTemplates)).value
+
+scalaVersion := "2.12.2"
 
 libraryDependencies ++= Seq(
   specs2 % Test,
   guice,
   "com.typesafe.play" %% "play-json" % "2.6.3"
 )
+
+resolvers += Resolver.sonatypeRepo("snapshots")
