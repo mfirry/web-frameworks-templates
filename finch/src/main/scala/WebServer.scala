@@ -1,20 +1,17 @@
 import java.net.InetSocketAddress
 
 import com.twitter.io.Buf
-import io.finch._
 import com.twitter.finagle.Service
 import com.twitter.finagle.Http
 import com.twitter.finagle.http.{Response, Request}
 
 import com.twitter.util.Await
 
-import io.circe.Json
 import io.finch._
-import io.finch.circe._
+import io.finch.syntax._
 
 import io.circe._
 import io.circe.generic.auto._
-
 import io.circe.syntax._
 
 
@@ -28,7 +25,7 @@ object WebServer extends App {
     Ok(List(1, 2, 3).asJson)
   }
 
-  val hello: Endpoint[Buf] = get("/" :: string) { string: String =>
+  val hello: Endpoint[Buf] = get("/" :: param("string")) { string: String =>
     Ok(Buf.Utf8("${string}"))
   }
 
@@ -42,6 +39,8 @@ object WebServer extends App {
 
   val api: Service[Request, Response] =
     Bootstrap.configure(includeDateHeader = true, includeServerHeader = true)
+      .serve[Application.Json](list)
+      .serve[Text.Plain](hello)
       .serve[Application.Json](json)
       .serve[Text.Plain](plaintext)
       .toService
