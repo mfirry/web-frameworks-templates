@@ -9,8 +9,8 @@ At the end of the day all the examples should have:
 
 --
 
-- akka-http
-- analogweb
+- [akka-http](https://doc.akka.io/docs/akka-http/current/)
+- [analogweb](http://analogweb.github.io/)
 - colossus
 - finatra
 - finch
