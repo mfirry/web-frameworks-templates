@@ -5,18 +5,12 @@ import akka.http.scaladsl.Http
 import akka.http.scaladsl.server.Directives._
 import akka.stream.ActorMaterializer
 
-// import akka.http.scaladsl.server.Route
-// import akka.http.scaladsl.server.RouteResult.route2HandlerFlow
-
 import spray.json._
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
-
-import com.typesafe.config.ConfigFactory
 
 import spray.json.DefaultJsonProtocol._
 
 object Main extends App with SprayJsonSupport {
-  val config = ConfigFactory.load()
 
   case class Message(message: String)
 
