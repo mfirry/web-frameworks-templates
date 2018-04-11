@@ -9,22 +9,19 @@ At the end of the day all the examples should have:
 
 --
 
-(335)   akka-http
-(4)     analogweb
-(970)   colossus
-(1572)  finatra
-(1029)  finch
-(40)    fintrospect
-(765)   http4s
-(1074)  lift
-(12)    peregrine
-(9336)  play
-(2162)  scalatra
-(22)    service-container
-(263)   socko
-(2509)  spray
-(674)   unfiltered
-(53)    vertx-lang-scala
-
--- removed frameworks
-mesosphere/chaos (commit/4ae63c239d423d8ab1450cc412c9c58965db055d)
+- akka-http
+- analogweb
+- colossus
+- finatra
+- finch
+- fintrospect
+- http4s
+- lift
+- peregrine
+- play
+- scalatra
+- service-container
+- socko
+- spray
+- unfiltered
+- vertx-lang-scala
