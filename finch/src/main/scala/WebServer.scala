@@ -21,12 +21,8 @@ object WebServer extends App {
 
   import io.finch.circe._
 
-  val list: Endpoint[Json] = get(/) {
+  val list = get(/) {
     Ok(List(1, 2, 3).asJson)
-  }
-
-  val hello: Endpoint[Buf] = get(/ :: param("string")) { string: String =>
-    Ok(Buf.Utf8(s"${string}"))
   }
 
   val json: Endpoint[Json] = get("json") {
@@ -39,10 +35,9 @@ object WebServer extends App {
 
   val api: Service[Request, Response] =
     Bootstrap.configure(includeDateHeader = true, includeServerHeader = true)
-      .serve[Application.Json](list)
-      .serve[Text.Plain](hello)
       .serve[Application.Json](json)
       .serve[Text.Plain](plaintext)
+      .serve[Application.Json](list)
       .toService
 
   Await.ready(
