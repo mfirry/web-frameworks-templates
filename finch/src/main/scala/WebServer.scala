@@ -33,11 +33,16 @@ object WebServer extends App {
     Ok(Buf.Utf8("Hello, World!"))
   }
 
+  val sayHi: Endpoint[Buf] = get("say-hi" :: param[String]("whom")) { whom: String =>
+    Ok(Buf.Utf8(s"Hello $whom"))
+  }
+
   val api: Service[Request, Response] =
     Bootstrap.configure(includeDateHeader = true, includeServerHeader = true)
       .serve[Application.Json](json)
       .serve[Text.Plain](plaintext)
       .serve[Application.Json](list)
+      .serve[Text.Plain](sayHi)
       .toService
 
   Await.ready(
