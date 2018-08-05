@@ -34,7 +34,7 @@ object Main extends App with SprayJsonSupport {
       path("plaintext") {
         complete("Hello, World!")
       } ~
-      path(Segment) { string =>
+      path("say-hi") { string =>
         complete(string)
       }
     }
