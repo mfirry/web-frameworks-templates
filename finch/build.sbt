@@ -9,11 +9,11 @@ scalaVersion := "2.12.6"
 mainClass in (Compile, run) := Some("WebServer")
 
 libraryDependencies ++= Seq(
-  "com.github.finagle" %% "finch-core" % "0.21.0",
-  "com.github.finagle" %% "finch-circe" % "0.21.0",
-  "io.circe" %% "circe-core" % "0.9.3",
-  "io.circe" %% "circe-generic" % "0.9.3",
-  "io.circe" %% "circe-jawn" % "0.9.3"
+  "com.github.finagle" %% "finchx-core" % "0.25.0",
+  "com.github.finagle" %% "finchx-circe" % "0.25.0",
+  "io.circe" %% "circe-core" % "0.10.0",
+  "io.circe" %% "circe-generic" % "0.10.0",
+  "io.circe" %% "circe-jawn" % "0.10.0"
 )
 
 // resolvers += Resolver.sonatypeRepo("snapshots")

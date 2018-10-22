@@ -8,32 +8,32 @@ import com.twitter.finagle.http.{Response, Request}
 import com.twitter.util.Await
 
 import io.finch._
-import io.finch.syntax._
 
 import io.circe._
 import io.circe.generic.auto._
 import io.circe.syntax._
 
+import cats.effect.IO
 
-object WebServer extends App {
+object WebServer extends App with Endpoint.Module[IO] {
 
   case class Message(message: String)
 
   import io.finch.circe._
 
-  val list = get(/) {
+  val list = get("/") {
     Ok(List(1, 2, 3).asJson)
   }
 
-  val json: Endpoint[Json] = get("json") {
+  val json: Endpoint[IO, Json] = get("json") {
     Ok(Message("Hello, World!").asJson)
   }
 
-  val plaintext: Endpoint[Buf] = get("plaintext") {
+  val plaintext: Endpoint[IO, Buf] = get("plaintext") {
     Ok(Buf.Utf8("Hello, World!"))
   }
 
-  val sayHi: Endpoint[Buf] = get("say-hi" :: param[String]("whom")) { whom: String =>
+  val sayHi: Endpoint[IO, Buf] = get("say-hi" :: param[String]("whom")) { whom: String =>
     Ok(Buf.Utf8(s"Hello $whom"))
   }
 
