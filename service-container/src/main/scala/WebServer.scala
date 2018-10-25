@@ -1,8 +1,11 @@
 import akka.actor.{ActorRefFactory, ActorSystem}
 import com.github.vonnagy.service.container.ContainerBuilder
-import com.github.vonnagy.service.container.http.routing.RoutedEndpoints
+import com.github.vonnagy.service.container.http.routing._
+import akka.http.scaladsl.marshalling.{Marshaller, ToEntityMarshaller}
 import com.typesafe.config.ConfigFactory
-import spray.http.MediaTypes._
+import akka.http.scaladsl.model.MediaTypes
+
+import scala.concurrent.ExecutionContext
 
 object WebServer extends App {
 
@@ -18,16 +21,14 @@ object WebServer extends App {
 }
 
 class TestEndpoints(implicit system: ActorSystem,
-                    actorRefFactory: ActorRefFactory) extends RoutedEndpoints {
+                    executor: ExecutionContext) extends RoutedEndpoints {
 
   // Import the default Json marshaller
-  implicit val marshaller = jsonMarshaller
+  implicit val marshaller: ToEntityMarshaller[AnyRef] = jsonMarshaller
 
   val route = {
     path("") {
-      respondWithMediaType(`application/json`) {
-        complete(List(1, 2, 3))
-      }
+      complete(List(1, 2, 3))
     } ~
     path(Segment) { string =>
       complete(string)
