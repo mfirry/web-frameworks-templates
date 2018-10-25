@@ -19,3 +19,5 @@ At the end of the day all the examples should have:
 - [play](https://www.playframework.com/)
 - [service-container](https://github.com/vonnagy/service-container)
 - [unfiltered](http://unfiltered.ws/)
+
+[![Build Status](https://travis-ci.org/mfirry/web-frameworks-templates.png?branch=master)](https://travis-ci.org/mfirry/web-frameworks-templates)
