@@ -34,8 +34,10 @@ object Main extends App with SprayJsonSupport {
       path("plaintext") {
         complete("Hello, World!")
       } ~
-      path("say-hi" / Segment ) { string =>
-        complete(string)
+      path("say-hi") {
+        parameter('whom) { whom =>
+          complete(s"Hello $whom")
+        }
       }
     }
 

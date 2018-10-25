@@ -21,7 +21,7 @@ object WebServer extends App with Endpoint.Module[IO] {
 
   import io.finch.circe._
 
-  val list = get("/") {
+  val list = get(zero) {
     Ok(List(1, 2, 3).asJson)
   }
 
