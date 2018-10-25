@@ -1,4 +1,0 @@
-http://www.scalatra.org/
-
-# running
-sbt jetty:start
