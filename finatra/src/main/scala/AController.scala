@@ -1,16 +1,25 @@
 import com.twitter.finatra.http.Controller
 import com.twitter.finagle.http.Request
+import com.twitter.finatra.request.{QueryParam, RouteParam}
 
-import com.twitter.finatra.request.RouteParam
+case class Message(message: String)
 
-case class Hello(@RouteParam msg: String)
+case class Whom(@QueryParam whom: String)
 
 class AController extends Controller {
-  get("/") { request: Request =>
+  get("/") { _: Request =>
     response.created(List(1, 2, 3))
   }
 
-  get("/:msg") { hello: Hello =>
-    response.created(hello.msg)
+  get("/json") { _: Request =>
+    response.created(Message("Hello, World!"))
+  }
+
+  get("/plaintext") { _: Request =>
+    response.created("Hello, World!")
+  }
+
+  get("/say-hi") { hello: Whom =>
+    response.created(s"Hello, ${hello.whom}")
   }
 }

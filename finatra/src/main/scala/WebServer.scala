@@ -7,6 +7,8 @@ object HelloWorldServerMain extends WebServer
 
 class WebServer extends HttpServer {
 
+  override val defaultHttpPort: String = ":9000"
+
   override def configureHttp(router: HttpRouter) = {
     router.
       add(new AController)
