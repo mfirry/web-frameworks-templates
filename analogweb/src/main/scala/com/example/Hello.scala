@@ -23,8 +23,8 @@ object Hello extends Analogweb {
   get("/") {
     Ok(asJson(List(1,2,3)))
   }
-  get("/{string}") { implicit r =>
-    s"${param("string")}"
+  get("/say-hi") { implicit r =>
+    s"${r.query("whom")}"
   }
 
 }
