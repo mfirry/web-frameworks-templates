@@ -6,7 +6,7 @@ val scalaV = "2.12.7"
 
 val akkaHttpVersion = "10.1.5"
 val analogwebVersion = "0.10.1"
-val http4sVersion = "0.18.12"
+val http4sVersion = "0.18.20"
 val unfilteredVersion = "0.9.1"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
