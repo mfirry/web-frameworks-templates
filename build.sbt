@@ -6,7 +6,7 @@ val scalaV = "2.12.7"
 
 val akkaHttpVersion = "10.1.5"
 val analogwebVersion = "0.10.1"
-val http4sVersion = "0.18.12"
+val http4sVersion = "0.18.20"
 val unfilteredVersion = "0.9.1"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
@@ -61,9 +61,11 @@ lazy val http4s = (project in file("http4s")).settings(
       libraryDependencies ++= Seq(
         "org.http4s" %% "http4s-blaze-server" % http4sVersion,
         "org.http4s" %% "http4s-dsl" % http4sVersion,
-        "org.http4s" %% "http4s-argonaut" % http4sVersion,
-        "org.typelevel" %% "cats-effect" % "0.5"
-      ))
+        "org.http4s" %% "http4s-circe" % http4sVersion,
+        "org.typelevel" %% "cats-effect" % "0.5",
+        "io.circe" %% "circe-generic" % "0.9.3",
+        "io.circe" %% "circe-core" % "0.9.3"
+))
 
 // lazy val lift = (project in file("lift")).settings(
 //       scalaVersion := scalaV,
