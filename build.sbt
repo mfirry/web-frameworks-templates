@@ -29,8 +29,8 @@ lazy val colossus = (project in file("colossus")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
         "com.tumblr"  %% "colossus"       % "0.11.0",
-        "io.circe"    %% "circe-core"     % "0.9.0-M2",
-        "io.circe"    %% "circe-generic"  % "0.9.0-M2"
+        "io.circe"    %% "circe-core"     % "0.9.3",
+        "io.circe"    %% "circe-generic"  % "0.9.3"
       ))
 
 lazy val finatra = (project in file("finatra")).settings(
