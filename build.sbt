@@ -36,7 +36,7 @@ lazy val colossus = (project in file("colossus")).settings(
 lazy val finatra = (project in file("finatra")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.twitter" %% "finatra-http" % "18.10.0"
+        "com.twitter" %% "finatra-http" % "18.11.0"
       ))
 
 lazy val finch = (project in file("finch")).settings(
