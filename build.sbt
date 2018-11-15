@@ -42,8 +42,8 @@ lazy val finatra = (project in file("finatra")).settings(
 lazy val finch = (project in file("finch")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.github.finagle" %% "finchx-core" % "0.25.0",
-        "com.github.finagle" %% "finchx-circe" % "0.25.0",
+        "com.github.finagle" %% "finchx-core" % "0.26.0",
+        "com.github.finagle" %% "finchx-circe" % "0.26.0",
         "io.circe" %% "circe-core" % "0.10.0",
         "io.circe" %% "circe-generic" % "0.10.0",
         "io.circe" %% "circe-jawn" % "0.10.0"
