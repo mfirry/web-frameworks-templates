@@ -63,8 +63,8 @@ lazy val http4s = (project in file("http4s")).settings(
         "org.http4s" %% "http4s-dsl" % http4sVersion,
         "org.http4s" %% "http4s-circe" % http4sVersion,
         "org.typelevel" %% "cats-effect" % "0.10.1",
-        "io.circe" %% "circe-generic" % "0.9.3",
-        "io.circe" %% "circe-core" % "0.9.3"
+        "io.circe" %% "circe-generic" % "0.11.0",
+        "io.circe" %% "circe-core" % "0.11.0"
 ))
 
 // lazy val lift = (project in file("lift")).settings(
