@@ -62,7 +62,7 @@ lazy val http4s = (project in file("http4s")).settings(
         "org.http4s" %% "http4s-blaze-server" % http4sVersion,
         "org.http4s" %% "http4s-dsl" % http4sVersion,
         "org.http4s" %% "http4s-circe" % http4sVersion,
-        "org.typelevel" %% "cats-effect" % "1.2.0",
+        "org.typelevel" %% "cats-effect" % "1.3.0",
         "io.circe" %% "circe-generic" % "0.11.0",
         "io.circe" %% "circe-core" % "0.11.0"
 ))
