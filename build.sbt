@@ -52,8 +52,8 @@ lazy val finch = (project in file("finch")).settings(
 lazy val fintrospect = (project in file("fintrospect")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "io.fintrospect" %% "fintrospect-core" % "14.22.0",
-        "io.fintrospect" %% "fintrospect-circe" % "14.22.0"
+        "io.fintrospect" %% "fintrospect-core" % "15.0.2",
+        "io.fintrospect" %% "fintrospect-circe" % "15.0.2"
       ))
 
 lazy val http4s = (project in file("http4s")).settings(
