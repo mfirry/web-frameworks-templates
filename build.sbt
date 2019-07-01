@@ -2,70 +2,70 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.12.8"
+val scalaV = "2.13.0"
 
-val akkaHttpVersion = "10.1.7"
+val akkaHttpVersion = "10.1.8"
 val analogwebVersion = "0.11.0"
-val http4sVersion = "0.18.23"
-val unfilteredVersion = "0.9.1"
+val http4sVersion = "0.21.0-M1"
+val unfilteredVersion = "0.10.0-M4"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
         "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
         "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
-        "com.typesafe.akka" %% "akka-stream"          % "2.5.22"
+        "com.typesafe.akka" %% "akka-stream"          % "2.6.0-M3"
       ))
 
-lazy val analogweb = (project in file("analogweb")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "org.analogweb" %% "analogweb-scala" % analogwebVersion,
-        "org.analogweb" %% "analogweb-circe" % analogwebVersion,
-        "org.analogweb" %  "analogweb-netty" % analogwebVersion
-      ))
+// lazy val analogweb = (project in file("analogweb")).settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//         "org.analogweb" %% "analogweb-scala" % analogwebVersion,
+//         "org.analogweb" %% "analogweb-circe" % analogwebVersion,
+//         "org.analogweb" %  "analogweb-netty" % analogwebVersion
+//       ))
 
-lazy val colossus = (project in file("colossus")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "com.tumblr"  %% "colossus"       % "0.11.0",
-        "io.circe"    %% "circe-core"     % "0.9.0-M2",
-        "io.circe"    %% "circe-generic"  % "0.9.0-M2"
-      ))
+// lazy val colossus = (project in file("colossus")).settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//         "com.tumblr"  %% "colossus"       % "0.11.0",
+//         "io.circe"    %% "circe-core"     % "0.9.0-M2",
+//         "io.circe"    %% "circe-generic"  % "0.9.0-M2"
+//       ))
 
-lazy val finatra = (project in file("finatra")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "com.twitter" %% "finatra-http" % "19.5.0"
-      ))
+// lazy val finatra = (project in file("finatra")).settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//         "com.twitter" %% "finatra-http" % "19.5.0"
+//       ))
 
-lazy val finch = (project in file("finch")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "com.github.finagle" %% "finchx-core" % "0.28.0",
-        "com.github.finagle" %% "finchx-circe" % "0.28.0",
-        "io.circe" %% "circe-core" % "0.10.0",
-        "io.circe" %% "circe-generic" % "0.10.0",
-        "io.circe" %% "circe-jawn" % "0.10.0"
-      ))
+// lazy val finch = (project in file("finch")).settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//         "com.github.finagle" %% "finchx-core" % "0.28.0",
+//         "com.github.finagle" %% "finchx-circe" % "0.28.0",
+//         "io.circe" %% "circe-core" % "0.10.0",
+//         "io.circe" %% "circe-generic" % "0.10.0",
+//         "io.circe" %% "circe-jawn" % "0.10.0"
+//       ))
 
-lazy val fintrospect = (project in file("fintrospect")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "io.fintrospect" %% "fintrospect-core" % "14.22.0",
-        "io.fintrospect" %% "fintrospect-circe" % "14.22.0"
-      ))
+// lazy val fintrospect = (project in file("fintrospect")).settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//         "io.fintrospect" %% "fintrospect-core" % "14.22.0",
+//         "io.fintrospect" %% "fintrospect-circe" % "14.22.0"
+//       ))
 
-lazy val http4s = (project in file("http4s")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "org.http4s" %% "http4s-blaze-server" % http4sVersion,
-        "org.http4s" %% "http4s-dsl" % http4sVersion,
-        "org.http4s" %% "http4s-circe" % http4sVersion,
-        "org.typelevel" %% "cats-effect" % "1.2.0",
-        "io.circe" %% "circe-generic" % "0.11.0",
-        "io.circe" %% "circe-core" % "0.11.0"
-))
+// lazy val http4s = (project in file("http4s")).settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq(
+//         "org.http4s" %% "http4s-blaze-server" % http4sVersion,
+//         "org.http4s" %% "http4s-dsl" % http4sVersion,
+//         "org.http4s" %% "http4s-circe" % http4sVersion,
+//         "org.typelevel" %% "cats-effect" % "1.2.0",
+//         "io.circe" %% "circe-generic" % "0.11.0",
+//         "io.circe" %% "circe-core" % "0.11.0"
+// ))
 
 // lazy val lift = (project in file("lift")).settings(
 //       scalaVersion := scalaV,
@@ -76,24 +76,24 @@ lazy val http4s = (project in file("http4s")).settings(
 //   resolvers += "Twitter" at "http://maven.twttr.com",
 //   libraryDependencies += "com.github.dvarelap" %% "peregrine" % "1.2.2")
 
-lazy val play = (project in file("play"))
-  .settings(
-    scalaVersion := scalaV,
-    libraryDependencies ++= Seq(
-      guice,
-      "com.typesafe.play" %% "play-json" % "2.7.2"
-    )
-  )
-  .enablePlugins(PlayScala)
-  .disablePlugins(PlayLayoutPlugin)
+// lazy val play = (project in file("play"))
+//   .settings(
+//     scalaVersion := scalaV,
+//     libraryDependencies ++= Seq(
+//       guice,
+//       "com.typesafe.play" %% "play-json" % "2.8.0-M3"
+//     )
+//   )
+//   .enablePlugins(PlayScala)
+//   .disablePlugins(PlayLayoutPlugin)
 
 // lazy val scalatra = (project in file("scalatra")).settings(
 //       scalaVersion := scalaV,
 //       libraryDependencies ++= Seq())
 
-lazy val `service-container` = (project in file("service-container")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq("com.github.vonnagy" %% "service-container" % "2.0.7"))
+// lazy val `service-container` = (project in file("service-container")).settings(
+//       scalaVersion := scalaV,
+//       libraryDependencies ++= Seq("com.github.vonnagy" %% "service-container" % "2.0.7"))
 
 lazy val unfiltered = (project in file("unfiltered")).settings(
       scalaVersion := scalaV,
@@ -104,4 +104,4 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, analogweb, colossus, finatra, finch, fintrospect, http4s, play, `service-container`, unfiltered))
+  aggregate(`akka-http`, unfiltered))
