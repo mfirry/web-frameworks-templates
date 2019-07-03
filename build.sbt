@@ -91,9 +91,9 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
 //       scalaVersion := scalaV,
 //       libraryDependencies ++= Seq())
 
-// lazy val `service-container` = (project in file("service-container")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq("com.github.vonnagy" %% "service-container" % "2.0.7"))
+lazy val `service-container` = (project in file("service-container")).settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq("com.github.vonnagy" %% "service-container" % "2.1.0"))
 
 // lazy val cask = (project in file("csak")).settings(
 //   scalaVersion := scalaV,
@@ -108,4 +108,4 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, unfiltered))
+  aggregate(`akka-http`, unfiltered, `service-container`))
