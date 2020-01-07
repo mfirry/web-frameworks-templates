@@ -85,7 +85,7 @@ lazy val play = (project in file("play"))
     scalaVersion := scalaV,
     libraryDependencies ++= Seq(
       guice,
-      "com.typesafe.play" %% "play-json" % "2.8.0"
+      "com.typesafe.play" %% "play-json" % "2.8.1"
     )
   )
   .enablePlugins(PlayScala)
