@@ -1,52 +1,24 @@
-import cats.effect._
-import org.http4s.HttpService
-import org.http4s.dsl.Http4sDsl
-import org.http4s.server.Router
-import org.http4s.server.blaze.BlazeBuilder
-import org.http4s.util.{ExitCode, StreamApp}
+import cats.effect.{ConcurrentEffect, Timer, ContextShift}
+import cats.effect.ContextShift
+import fs2.Stream
+import org.http4s.server.blaze.BlazeServerBuilder
+import org.http4s.implicits._
 
-import scala.concurrent.ExecutionContext
-import scala.concurrent.ExecutionContext.Implicits.global
+import scala.concurrent.ExecutionContext.global
 
-object WebServerExample extends WebServerApp[IO]
+object WebServer {
 
-case class Message(message: String)
-
-class WebServerApp[F[_] : Effect] extends StreamApp[F] {
-  import fs2._
-  override def stream(args: List[String], requestShutdown: F[Unit]): Stream[F, ExitCode] =
-    Scheduler(corePoolSize = 2).flatMap { implicit scheduler =>
-      BlazeBuilder[F].bindHttp(9000)
-        .mountService(new ExampleService[F].service, "/")
+  def stream[F[_]: ConcurrentEffect](
+      implicit T: Timer[F],
+      C: ContextShift[F]
+  ): Stream[F, Nothing] = {
+    val messengerAlg = Messenger.impl[F]
+    val httpApp = Routes.myRoutes[F](messengerAlg).orNotFound
+    for {
+      exitCode <- BlazeServerBuilder[F]
+        .bindHttp(8080, "0.0.0.0")
+        .withHttpApp(httpApp)
         .serve
-    }
+    } yield exitCode
+  }.drain
 }
-
-class ExampleService[F[_]](implicit F: Effect[F]) extends Http4sDsl[F] {
-
-  object WhomQueryParamMatcher extends QueryParamDecoderMatcher[String]("whom")
-
-  def service(implicit scheduler: fs2.Scheduler,
-      executionContext: ExecutionContext = ExecutionContext.global): HttpService[F] =
-    Router[F](
-      "" -> HttpService[F] {
-        case GET -> Root =>
-          import io.circe.syntax._
-          import org.http4s.circe._
-          Ok((List(1, 2, 3)).asJson)
-
-        case GET -> Root / json =>
-          import io.circe.syntax._
-          import io.circe.generic.auto._
-          import org.http4s.circe._
-          Ok(Message("Hello, World!").asJson)
-
-        case GET -> Root / plaintext =>
-          Ok("Hello, World!")
-        case GET -> Root / sayHi :? WhomQueryParamMatcher(whom) =>
-          Ok(s"Hello, ${whom}!")
-      }
-    )
-
-}
-
