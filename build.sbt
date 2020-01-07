@@ -76,16 +76,16 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
 //   resolvers += "Twitter" at "http://maven.twttr.com",
 //   libraryDependencies += "com.github.dvarelap" %% "peregrine" % "1.2.2")
 
-// lazy val play = (project in file("play"))
-//   .settings(
-//     scalaVersion := scalaV,
-//     libraryDependencies ++= Seq(
-//       guice,
-//       "com.typesafe.play" %% "play-json" % "2.8.0-M3"
-//     )
-//   )
-//   .enablePlugins(PlayScala)
-//   .disablePlugins(PlayLayoutPlugin)
+lazy val play = (project in file("play"))
+  .settings(
+    scalaVersion := scalaV,
+    libraryDependencies ++= Seq(
+      guice,
+      "com.typesafe.play" %% "play-json" % "2.8.0"
+    )
+  )
+  .enablePlugins(PlayScala)
+  .disablePlugins(PlayLayoutPlugin)
 
 // lazy val scalatra = (project in file("scalatra")).settings(
 //       scalaVersion := scalaV,
@@ -95,7 +95,7 @@ lazy val `service-container` = (project in file("service-container")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq("com.github.vonnagy" %% "service-container" % "2.1.0"))
 
-// lazy val cask = (project in file("csak")).settings(
+// lazy val cask = (project in file("cask")).settings(
 //   scalaVersion := scalaV,
 //   libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.1.9"))
 
