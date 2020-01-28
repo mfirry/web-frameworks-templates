@@ -14,7 +14,7 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
       libraryDependencies ++= Seq(
         "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
         "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
-        "com.typesafe.akka" %% "akka-stream"          % "2.6.0"
+        "com.typesafe.akka" %% "akka-stream"          % "2.6.3"
       ))
 
 // lazy val analogweb = (project in file("analogweb")).settings(
