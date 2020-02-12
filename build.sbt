@@ -111,5 +111,13 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
         "ws.unfiltered" %% "unfiltered-json4s"        % unfilteredVersion
       ))
 
+lazy val scalene = (project in file("scalene")).settings(
+      scalacOptions += "-target:jvm-1.9",
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "io.scalene" %% "scalene" % "0.1.0",
+        "io.scalene" %% "scalene-routing" % "0.1.0"
+      ))    
+
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play))
+  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play, scalene))

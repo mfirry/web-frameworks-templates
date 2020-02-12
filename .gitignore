@@ -6,3 +6,5 @@ project/target
 .metals/
 .bloop/
 project/.bloop/
+.java-version
+project/metals.sbt
