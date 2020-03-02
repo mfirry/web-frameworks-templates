@@ -8,6 +8,7 @@ val akkaHttpVersion = "10.1.11"
 val analogwebVersion = "0.11.0"
 val http4sVersion = "0.21.1"
 val unfilteredVersion = "0.10.0-M4"
+val ScalatraVersion = "2.7.0"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
       scalaVersion := scalaV,
@@ -91,9 +92,17 @@ lazy val play = (project in file("play"))
   .enablePlugins(PlayScala)
   .disablePlugins(PlayLayoutPlugin)
 
-// lazy val scalatra = (project in file("scalatra")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq())
+lazy val scalatra = (project in file("scalatra")).settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "org.scalatra" %% "scalatra" % ScalatraVersion,
+        "org.scalatra" %% "scalatra-json" % ScalatraVersion,
+        "org.json4s"   %% "json4s-jackson" % "3.6.7",        
+        "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
+        "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
+        "org.eclipse.jetty" % "jetty-webapp" % "9.4.19.v20190610" % "container;compile",
+        "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
+      ))
 
 lazy val `service-container` = (project in file("service-container")).settings(
       scalaVersion := scalaV,
@@ -120,4 +129,6 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 //       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play))
+  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play, scalatra))
+
+enablePlugins(ScalatraPlugin)
