@@ -40,15 +40,15 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
 //         "com.twitter" %% "finatra-http" % "19.5.0"
 //       ))
 
-// lazy val finch = (project in file("finch")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "com.github.finagle" %% "finchx-core" % "0.28.0",
-//         "com.github.finagle" %% "finchx-circe" % "0.28.0",
-//         "io.circe" %% "circe-core" % "0.10.0",
-//         "io.circe" %% "circe-generic" % "0.10.0",
-//         "io.circe" %% "circe-jawn" % "0.10.0"
-//       ))
+lazy val finch = (project in file("finch")).settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "com.github.finagle" %% "finchx-core" % "0.32.1",
+        "com.github.finagle" %% "finchx-circe" % "0.32.1",
+        "io.circe" %% "circe-core" % "0.13.0",
+        "io.circe" %% "circe-generic" % "0.13.0",
+        "io.circe" %% "circe-jawn" % "0.13.0"
+      ))
 
 // lazy val fintrospect = (project in file("fintrospect")).settings(
 //       scalaVersion := scalaV,
@@ -129,6 +129,6 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 //       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play, scalatra))
+  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play, scalatra, finch))
 
 enablePlugins(ScalatraPlugin)
