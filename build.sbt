@@ -9,6 +9,7 @@ val analogwebVersion = "0.11.0"
 val http4sVersion = "0.21.1"
 val unfilteredVersion = "0.10.0-M4"
 val ScalatraVersion = "2.7.0"
+val finchVersion = "0.32.1"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
       scalaVersion := scalaV,
@@ -43,8 +44,8 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
 lazy val finch = (project in file("finch")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "com.github.finagle" %% "finchx-core" % "0.32.1",
-        "com.github.finagle" %% "finchx-circe" % "0.32.1",
+        "com.github.finagle" %% "finchx-core" % finchVersion,
+        "com.github.finagle" %% "finchx-circe" % finchVersion,
         "io.circe" %% "circe-core" % "0.13.0",
         "io.circe" %% "circe-generic" % "0.13.0",
         "io.circe" %% "circe-jawn" % "0.13.0"
@@ -98,7 +99,6 @@ lazy val scalatra = (project in file("scalatra")).settings(
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-json" % ScalatraVersion,
         "org.json4s"   %% "json4s-jackson" % "3.6.7",        
-        "org.scalatra" %% "scalatra-scalatest" % ScalatraVersion % "test",
         "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
         "org.eclipse.jetty" % "jetty-webapp" % "9.4.19.v20190610" % "container;compile",
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
