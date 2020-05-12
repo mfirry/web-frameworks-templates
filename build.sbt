@@ -13,10 +13,11 @@ val finchVersion = "0.32.1"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
       scalaVersion := scalaV,
+      scalacOptions ++= Seq("-deprecation", "-feature"),
       libraryDependencies ++= Seq(
         "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
         "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
-        "com.typesafe.akka" %% "akka-stream"          % "2.6.0"
+        "com.typesafe.akka" %% "akka-stream"          % "2.6.5"
       ))
 
 // lazy val analogweb = (project in file("analogweb")).settings(
@@ -98,7 +99,7 @@ lazy val scalatra = (project in file("scalatra")).settings(
       libraryDependencies ++= Seq(
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-json" % ScalatraVersion,
-        "org.json4s"   %% "json4s-jackson" % "3.6.7",        
+        "org.json4s"   %% "json4s-jackson" % "3.6.7",
         "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
         "org.eclipse.jetty" % "jetty-webapp" % "9.4.19.v20190610" % "container;compile",
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"

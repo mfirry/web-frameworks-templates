@@ -20,7 +20,7 @@ object Main extends App with SprayJsonSupport {
 
   implicit val system = ActorSystem.create()
   implicit val executionContext = system.dispatcher
-  implicit val materializer = ActorMaterializer()
+
   import MessageProtocol._
 
   lazy val route =
