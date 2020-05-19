@@ -113,7 +113,7 @@ lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
     "com.lihaoyi" %% "cask"     % "0.6.3",
-    "com.lihaoyi" %% "upickle"  % "0.9.5"
+    "com.lihaoyi" %% "upickle"  % "0.9.9"
   ))
 
 lazy val unfiltered = (project in file("unfiltered")).settings(
