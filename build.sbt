@@ -113,7 +113,7 @@ lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
     "com.lihaoyi" %% "cask"     % "0.6.3",
-    "com.lihaoyi" %% "upickle"  % "0.9.5"
+    "com.lihaoyi" %% "upickle"  % "1.1.0"
   ))
 
 lazy val unfiltered = (project in file("unfiltered")).settings(
@@ -129,7 +129,8 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 //       scalaVersion := scalaV,
 //       libraryDependencies ++= Seq(
 //         "io.scalene" %% "scalene" % "0.1.0",
-//         "io.scalene" %% "scalene-routing" % "0.1.0"
+//         "io.scalene" %% "scalene-routing" % "0.1.0" 
+
 //       ))
 
 lazy val uzhttp = (project in file("uzhttp")).settings(
