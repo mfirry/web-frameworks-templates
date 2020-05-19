@@ -111,7 +111,10 @@ lazy val `service-container` = (project in file("service-container")).settings(
 
 lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
-  libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.6.3"))
+  libraryDependencies ++= Seq(
+    "com.lihaoyi" %% "cask"     % "0.6.3",
+    "com.lihaoyi" %% "upickle"  % "0.9.5"
+  ))
 
 lazy val unfiltered = (project in file("unfiltered")).settings(
       scalaVersion := scalaV,
