@@ -33,12 +33,14 @@ object WebServer extends App with Endpoint.Module[IO] {
     Ok(Buf.Utf8("Hello, World!"))
   }
 
-  val sayHi: Endpoint[IO, Buf] = get("say-hi" :: param[String]("whom")) { whom: String =>
-    Ok(Buf.Utf8(s"Hello $whom"))
+  val sayHi: Endpoint[IO, Buf] = get("say-hi" :: param[String]("whom")) {
+    whom: String =>
+      Ok(Buf.Utf8(s"Hello $whom"))
   }
 
   val api: Service[Request, Response] =
-    Bootstrap.configure(includeDateHeader = true, includeServerHeader = true)
+    Bootstrap
+      .configure(includeDateHeader = true, includeServerHeader = true)
       .serve[Application.Json](json)
       .serve[Text.Plain](plaintext)
       .serve[Application.Json](list)
@@ -46,6 +48,6 @@ object WebServer extends App with Endpoint.Module[IO] {
       .toService
 
   Await.ready(
-      Http.serve("localhost:9000", api)
+    Http.serve("localhost:9000", api)
   )
 }

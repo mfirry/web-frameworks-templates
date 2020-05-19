@@ -7,12 +7,16 @@ import uzhttp.websocket.Frame
 import zio.{App, ZIO, Task}
 
 object Main extends App {
-  override def run(args:  List[String]): ZIO[zio.ZEnv, Nothing, Int] =
-    Server.builder(new InetSocketAddress("127.0.0.1", 8080))
+  override def run(args: List[String]): ZIO[zio.ZEnv, Nothing, Int] =
+    Server
+      .builder(new InetSocketAddress("127.0.0.1", 8080))
       .handleSome {
         case req if req.uri.getPath == "/" =>
           ZIO.succeed(Response.plain("Hello, World!"))
-      }.serve.useForever.orDie
+      }
+      .serve
+      .useForever
+      .orDie
 
   def respondToWebsocketFrame(frame: Frame): Task[Frame] = ???
 }

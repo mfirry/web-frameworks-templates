@@ -8,17 +8,18 @@ import scala.concurrent.ExecutionContext.global
 
 object WebServer {
 
-  def stream[F[_]: ConcurrentEffect](
-      implicit T: Timer[F],
+  def stream[F[_]: ConcurrentEffect](implicit
+      T: Timer[F],
       C: ContextShift[F]
   ): Stream[F, Nothing] = {
     val messengerAlg = Messenger.impl[F]
     val httpApp = Routes.myRoutes[F](messengerAlg).orNotFound
     for {
-      exitCode <- BlazeServerBuilder[F]
-        .bindHttp(8080, "0.0.0.0")
-        .withHttpApp(httpApp)
-        .serve
+      exitCode <-
+        BlazeServerBuilder[F]
+          .bindHttp(8080, "0.0.0.0")
+          .withHttpApp(httpApp)
+          .serve
     } yield exitCode
   }.drain
 }

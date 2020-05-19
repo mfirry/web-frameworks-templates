@@ -28,17 +28,17 @@ object Main extends App with SprayJsonSupport {
       pathSingleSlash {
         complete(List(1, 2, 3))
       } ~
-      path("json") {
-        complete(Message("Hello, World!").toJson)
-      } ~
-      path("plaintext") {
-        complete("Hello, World!")
-      } ~
-      path("say-hi") {
-        parameter('whom) { whom =>
-          complete(s"Hello $whom")
+        path("json") {
+          complete(Message("Hello, World!").toJson)
+        } ~
+        path("plaintext") {
+          complete("Hello, World!")
+        } ~
+        path("say-hi") {
+          parameter('whom) { whom =>
+            complete(s"Hello $whom")
+          }
         }
-      }
     }
 
   Http().bindAndHandle(route, interface = "localhost", port = 9000)
