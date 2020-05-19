@@ -4,7 +4,7 @@ version := "0.1.1"
 
 val scalaV = "2.13.1"
 
-val akkaHttpVersion = "10.1.11"
+val akkaHttpVersion = "10.1.12"
 val analogwebVersion = "0.11.0"
 val http4sVersion = "0.21.3"
 val unfilteredVersion = "0.10.0-M4"
@@ -13,10 +13,11 @@ val finchVersion = "0.32.1"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
       scalaVersion := scalaV,
+      scalacOptions ++= Seq("-deprecation", "-feature"),
       libraryDependencies ++= Seq(
         "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
         "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
-        "com.typesafe.akka" %% "akka-stream"          % "2.6.0"
+        "com.typesafe.akka" %% "akka-stream"          % "2.6.5"
       ))
 
 // lazy val analogweb = (project in file("analogweb")).settings(
@@ -98,7 +99,7 @@ lazy val scalatra = (project in file("scalatra")).settings(
       libraryDependencies ++= Seq(
         "org.scalatra" %% "scalatra" % ScalatraVersion,
         "org.scalatra" %% "scalatra-json" % ScalatraVersion,
-        "org.json4s"   %% "json4s-jackson" % "3.6.7",        
+        "org.json4s"   %% "json4s-jackson" % "3.6.8",
         "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
         "org.eclipse.jetty" % "jetty-webapp" % "9.4.19.v20190610" % "container;compile",
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
@@ -108,9 +109,12 @@ lazy val `service-container` = (project in file("service-container")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq("com.github.vonnagy" %% "service-container" % "2.1.0"))
 
-// lazy val cask = (project in file("cask")).settings(
-//   scalaVersion := scalaV,
-//   libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.1.9"))
+lazy val cask = (project in file("cask")).settings(
+  scalaVersion := scalaV,
+  libraryDependencies ++= Seq(
+    "com.lihaoyi" %% "cask"     % "0.6.3",
+    "com.lihaoyi" %% "upickle"  % "0.9.5"
+  ))
 
 lazy val unfiltered = (project in file("unfiltered")).settings(
       scalaVersion := scalaV,
@@ -128,7 +132,13 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 //         "io.scalene" %% "scalene-routing" % "0.1.0"
 //       ))
 
+lazy val uzhttp = (project in file("uzhttp")).settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "org.polynote" %% "uzhttp" % "0.2.0"
+      ))
+
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play, scalatra, finch))
+  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play, scalatra, finch, cask, uzhttp))
 
 enablePlugins(ScalatraPlugin)

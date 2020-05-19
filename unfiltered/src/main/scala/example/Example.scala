@@ -9,9 +9,12 @@ import org.json4s.JsonDSL._
 import org.json4s.native.JsonMethods._
 
 @io.netty.channel.ChannelHandler.Sharable
-object Example extends cycle.Plan with cycle.SynchronousExecution with ServerErrorResponse {
+object Example
+    extends cycle.Plan
+    with cycle.SynchronousExecution
+    with ServerErrorResponse {
   def intent = {
-    case GET(Path("/")) => Ok ~> Json(List(1, 2, 3))
+    case GET(Path("/"))                => Ok ~> Json(List(1, 2, 3))
     case GET(Path(Seg(string :: Nil))) => Ok ~> ResponseString(string)
   }
 }
