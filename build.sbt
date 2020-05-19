@@ -109,9 +109,9 @@ lazy val `service-container` = (project in file("service-container")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq("com.github.vonnagy" %% "service-container" % "2.1.0"))
 
-// lazy val cask = (project in file("cask")).settings(
-//   scalaVersion := scalaV,
-//   libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.1.9"))
+lazy val cask = (project in file("cask")).settings(
+  scalaVersion := scalaV,
+  libraryDependencies ++= Seq("com.lihaoyi" %% "cask" % "0.6.3"))
 
 lazy val unfiltered = (project in file("unfiltered")).settings(
       scalaVersion := scalaV,
@@ -129,7 +129,13 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 //         "io.scalene" %% "scalene-routing" % "0.1.0"
 //       ))
 
+lazy val uzhttp = (project in file("uzhttp")).settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "org.polynote" %% "uzhttp" % "0.2.0"
+      ))
+
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play, scalatra, finch))
+  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play, scalatra, finch, cask, uzhttp))
 
 enablePlugins(ScalatraPlugin)
