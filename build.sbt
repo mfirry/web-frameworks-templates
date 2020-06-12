@@ -136,7 +136,7 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 lazy val uzhttp = (project in file("uzhttp")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
-        "org.polynote" %% "uzhttp" % "0.2.2"
+        "org.polynote" %% "uzhttp" % "0.2.3"
       ))
 
 lazy val root = (project.in(file(".")).
