@@ -4,17 +4,17 @@ import org.scalatra.json._
 
 class HelloWorldApp extends ScalatraServlet with JacksonJsonSupport {
   import HelloWorldApp._
-  
+
   import org.json4s.{DefaultFormats, Formats}
 
   implicit lazy val jsonFormats: Formats = DefaultFormats
-  
+
   before() {
     contentType = formats("json")
   }
 
   get("/") {
-    List(1,2,3)
+    List(1, 2, 3)
   }
 
   get("/json") {

@@ -20,8 +20,9 @@ object Messenger {
     }
   }
 
-  def impl[F[_]: Applicative]: Messenger[F] = new Messenger[F] {
-    def message(m: Message): F[Message] = Message(m.message).pure[F]
-  }
+  def impl[F[_]: Applicative]: Messenger[F] =
+    new Messenger[F] {
+      def message(m: Message): F[Message] = Message(m.message).pure[F]
+    }
 
 }
