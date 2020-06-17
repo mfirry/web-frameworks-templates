@@ -5,7 +5,7 @@ version := "0.1.1"
 val scalaV = "2.13.1"
 
 val akkaHttpVersion = "10.1.12"
-val analogwebVersion = "0.11.0"
+val analogwebVersion = "0.12.0"
 val http4sVersion = "0.21.3"
 val unfilteredVersion = "0.10.0-M4"
 val ScalatraVersion = "2.7.0"
@@ -20,13 +20,12 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
         "com.typesafe.akka" %% "akka-stream"          % "2.6.6"
       ))
 
-// lazy val analogweb = (project in file("analogweb")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "org.analogweb" %% "analogweb-scala" % analogwebVersion,
-//         "org.analogweb" %% "analogweb-circe" % analogwebVersion,
-//         "org.analogweb" %  "analogweb-netty" % analogwebVersion
-//       ))
+lazy val analogweb = (project in file("analogweb")).settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "org.analogweb" %% "analogweb-scala" % analogwebVersion,
+        "org.analogweb" %% "analogweb-circe" % analogwebVersion
+      ))
 
 // lazy val colossus = (project in file("colossus")).settings(
 //       scalaVersion := scalaV,
@@ -51,13 +50,6 @@ lazy val finch = (project in file("finch")).settings(
         "io.circe" %% "circe-generic" % "0.13.0",
         "io.circe" %% "circe-jawn" % "0.13.0"
       ))
-
-// lazy val fintrospect = (project in file("fintrospect")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "io.fintrospect" %% "fintrospect-core" % "14.22.0",
-//         "io.fintrospect" %% "fintrospect-circe" % "14.22.0"
-//       ))
 
 lazy val http4s = (project in file("http4s")).settings(
       scalaVersion := scalaV,
@@ -140,6 +132,6 @@ lazy val uzhttp = (project in file("uzhttp")).settings(
       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, unfiltered, `service-container`, http4s, play, scalatra, finch, cask, uzhttp))
+  aggregate(`akka-http`, analogweb, unfiltered, `service-container`, http4s, play, scalatra, finch, cask, uzhttp))
 
 enablePlugins(ScalatraPlugin)
