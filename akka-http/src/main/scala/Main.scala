@@ -41,6 +41,6 @@ object Main extends App with SprayJsonSupport {
         }
     }
 
-  Http().bindAndHandle(route, interface = "localhost", port = 9000)
+  Http().newServerAt(interface = "localhost", port = 9000).bind(route)
 
 }
