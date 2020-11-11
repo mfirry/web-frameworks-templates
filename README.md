@@ -13,7 +13,6 @@ At the end of the day all the examples should have:
 - [cask](https://github.com/lihaoyi/cask)
 - [finch](https://finagle.github.io/finch/)
 - [http4s](https://http4s.org/)
-- [lift](https://liftweb.net/)
 - [play](https://www.playframework.com/)
 - [scalatra](https://scalatra.org/)
 - [service-container](https://github.com/vonnagy/service-container)
