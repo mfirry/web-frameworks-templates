@@ -35,7 +35,7 @@ object Main extends App with SprayJsonSupport {
           complete("Hello, World!")
         } ~
         path("say-hi") {
-          parameter('whom) { whom =>
+          parameters("whom") { whom =>
             complete(s"Hello $whom")
           }
         }
