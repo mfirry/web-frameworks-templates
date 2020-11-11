@@ -10,17 +10,15 @@ At the end of the day all the examples should have:
 
 - [akka-http](https://doc.akka.io/docs/akka-http/current/)
 - [analogweb](http://analogweb.github.io/)
-- [colossus](https://github.com/tumblr/colossus)
-- [finatra](https://twitter.github.io/finatra/)
+- [cask](https://github.com/lihaoyi/cask)
 - [finch](https://finagle.github.io/finch/)
-- [fintrospect](http://fintrospect.io/)
 - [http4s](https://http4s.org/)
 - [lift](https://liftweb.net/)
 - [play](https://www.playframework.com/)
+- [scalatra](https://scalatra.org/)
 - [service-container](https://github.com/vonnagy/service-container)
 - [unfiltered](http://unfiltered.ws/)
-
-[![Build Status](https://travis-ci.org/mfirry/web-frameworks-templates.png?branch=master)](https://travis-ci.org/mfirry/web-frameworks-templates)
+- [uzhttp](https://github.com/polynote/uzhttp)
 
 
 ### High-Level Server Frameworks
