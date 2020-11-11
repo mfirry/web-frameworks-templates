@@ -8,3 +8,4 @@ project/target
 project/.bloop/
 .java-version
 project/metals.sbt
+.vscode/
