@@ -2,7 +2,7 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.13.1"
+val scalaV = "2.13.3"
 
 val akkaHttpVersion = "10.1.12"
 val analogwebVersion = "0.12.0"
@@ -26,6 +26,13 @@ lazy val analogweb = (project in file("analogweb")).settings(
         "org.analogweb" %% "analogweb-scala" % analogwebVersion,
         "org.analogweb" %% "analogweb-circe" % analogwebVersion
       ))
+
+lazy val cask = (project in file("cask")).settings(
+  scalaVersion := scalaV,
+  libraryDependencies ++= Seq(
+    "com.lihaoyi" %% "cask"     % "0.7.5",
+    "com.lihaoyi" %% "upickle"  % "1.2.0"
+  ))
 
 // lazy val colossus = (project in file("colossus")).settings(
 //       scalaVersion := scalaV,
@@ -100,13 +107,6 @@ lazy val scalatra = (project in file("scalatra")).settings(
 lazy val `service-container` = (project in file("service-container")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq("com.github.vonnagy" %% "service-container" % "2.1.0"))
-
-lazy val cask = (project in file("cask")).settings(
-  scalaVersion := scalaV,
-  libraryDependencies ++= Seq(
-    "com.lihaoyi" %% "cask"     % "0.7.5",
-    "com.lihaoyi" %% "upickle"  % "1.2.0"
-  ))
 
 lazy val unfiltered = (project in file("unfiltered")).settings(
       scalaVersion := scalaV,
