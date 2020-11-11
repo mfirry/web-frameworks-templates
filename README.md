@@ -23,9 +23,9 @@ At the end of the day all the examples should have:
 
 ### High-Level Server Frameworks
 
-| Name         | akka-http                                                                     | finch  | http4s | Play | cask |
-|--------------|----------|--------|--------|--------------------------------------------------------------------------------------|
-| Version      | 10.1.12 | 0.32.1 | 0.21.3 | 2.8.0 | 0.7.5                                           |
-| License | ![akka-http](https://img.shields.io/github/license/akka/akka-http.svg?label=%20) | ![finch](https://img.shields.io/github/license/finagle/finch.svg?label=%20)   | ![http4s](https://img.shields.io/github/license/http4s/http4s.svg?label=%20)   | ![Play!](https://img.shields.io/github/license/playframework/playframework.svg?label=%20) | ![cask](https://img.shields.io/github/license/lihaoyi/cask.svg?label=%20)
-| Github Stars | ![akka-http](https://img.shields.io/github/stars/akka/akka-http.svg?label=%20) | ![finch](https://img.shields.io/github/stars/finagle/finch.svg?label=%20)   | ![http4s](https://img.shields.io/github/stars/http4s/http4s.svg?label=%20)   | ![Play!](https://img.shields.io/github/stars/playframework/playframework.svg?label=%20) | ![cask](https://img.shields.io/github/stars/lihaoyi/cask.svg?label=%20)
+| Name         | akka-http                                                                     | finch  | http4s | Play                                                                                 |
+|--------------|-------------------------------------------------------------------------------|--------|--------|--------------------------------------------------------------------------------------|
+| Version      | 10.1.12                                                                       | 0.32.1 | 0.21.3 | 2.8.0                                                                               |
+| License | ![akka-http](https://img.shields.io/github/license/akka/akka-http.svg?label=%20) | ![finch](https://img.shields.io/github/license/finagle/finch.svg?label=%20)   | ![http4s](https://img.shields.io/github/license/http4s/http4s.svg?label=%20)   | ![Play!](https://img.shields.io/github/license/playframework/playframework.svg?label=%20) |
+| Github Stars | ![akka-http](https://img.shields.io/github/stars/akka/akka-http.svg?label=%20) | ![finch](https://img.shields.io/github/stars/finagle/finch.svg?label=%20)   | ![http4s](https://img.shields.io/github/stars/http4s/http4s.svg?label=%20)   | ![Play!](https://img.shields.io/github/stars/playframework/playframework.svg?label=%20) |
 | Contributors | ![akka-http](https://img.shields.io/github/contributors/akka/akka-http.svg?label=%20) | ![finch](https://img.shields.io/github/contributors/finagle/finch.svg?label=%20)   | ![http4s](https://img.shields.io/github/contributors/http4s/http4s.svg?label=%20)   | ![Play!](https://img.shields.io/github/contributors/playframework/playframework.svg?label=%20) |
