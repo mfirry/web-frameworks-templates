@@ -131,7 +131,17 @@ lazy val uzhttp = (project in file("uzhttp")).settings(
         "org.polynote" %% "uzhttp" % "0.2.5"
       ))
 
+lazy val snunit = (project in file("snunit")).settings(
+      scalaVersion := "2.11.12",
+      libraryDependencies ++= Seq(
+        "com.github.lolgab" %%% "snunit" % "0.0.3",
+        "com.lihaoyi" %%% "upickle" % "1.2.2"
+      ),
+      nativeMode := "release-fast",
+      nativeLTO := "thin")
+      .enablePlugins(ScalaNativePlugin)
+
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, analogweb, unfiltered, `service-container`, http4s, play, scalatra, finch, cask, uzhttp))
+  aggregate(`akka-http`, analogweb, unfiltered, `service-container`, http4s, play, scalatra, finch, cask, uzhttp, snunit))
 
 enablePlugins(ScalatraPlugin)
