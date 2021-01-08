@@ -30,7 +30,7 @@ lazy val analogweb = (project in file("analogweb")).settings(
 lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
-    "com.lihaoyi" %% "cask"     % "0.7.7",
+    "com.lihaoyi" %% "cask"     % "0.7.8",
     "com.lihaoyi" %% "upickle"  % "1.2.0"
   ))
 
