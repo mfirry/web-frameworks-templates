@@ -42,11 +42,11 @@ lazy val cask = (project in file("cask")).settings(
 //         "io.circe"    %% "circe-generic"  % "0.9.0-M2"
 //       ))
 
-// lazy val finatra = (project in file("finatra")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "com.twitter" %% "finatra-http" % "19.5.0"
-//       ))
+lazy val finatra = (project in file("finatra")).settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "com.twitter" %% "finatra-http" % "21.1.0"
+      ))
 
 lazy val finch = (project in file("finch")).settings(
       scalaVersion := scalaV,
@@ -132,6 +132,6 @@ lazy val uzhttp = (project in file("uzhttp")).settings(
       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, analogweb, unfiltered, `service-container`, http4s, play, scalatra, finch, cask, uzhttp))
+  aggregate(`akka-http`, analogweb, unfiltered, `service-container`, finatra, http4s, play, scalatra, finch, cask, uzhttp))
 
 enablePlugins(ScalatraPlugin)

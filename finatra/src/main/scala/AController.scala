@@ -1,6 +1,6 @@
 import com.twitter.finatra.http.Controller
 import com.twitter.finagle.http.Request
-import com.twitter.finatra.request.{QueryParam, RouteParam}
+import com.twitter.finatra.http.annotations.QueryParam
 
 case class Message(message: String)
 
