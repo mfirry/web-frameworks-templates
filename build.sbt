@@ -31,7 +31,7 @@ lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
     "com.lihaoyi" %% "cask"     % "0.7.7",
-    "com.lihaoyi" %% "upickle"  % "1.2.0"
+    "com.lihaoyi" %% "upickle"  % "1.2.3"
   ))
 
 // lazy val colossus = (project in file("colossus")).settings(
