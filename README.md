@@ -1,3 +1,5 @@
+![Scala CI](https://github.com/mfirry/web-frameworks-templates/workflows/Scala%20CI/badge.svg)
+
 EXPERIMENTS on the look-and-feel (from the point of view of the *developer experience*) of a few frameworks/libraries used to develop web services in Scala.
 
 At the end of the day all the examples should have:
