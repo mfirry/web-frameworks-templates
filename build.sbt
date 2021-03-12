@@ -11,12 +11,6 @@ val unfilteredVersion = "0.10.0"
 val ScalatraVersion = "2.7.0"
 val finchVersion = "0.32.1"
 
-lazy val z = (project in file("z")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "dev.zio" %% "zio-web-core" % "0.0.0+65-374c66c1"
-      ))
-
 lazy val `akka-http` = (project in file("akka-http")).settings(
       scalaVersion := scalaV,
       scalacOptions ++= Seq("-deprecation", "-feature"),
@@ -91,6 +85,7 @@ lazy val http4s = (project in file("http4s")).settings(
 lazy val play = (project in file("play"))
   .settings(
     scalaVersion := scalaV,
+    scalacOptions += s"-Wconf:src=${target.value}/.*:s",
     libraryDependencies ++= Seq(
       guice,
       "com.typesafe.play" %% "play-json" % "2.8.0"
@@ -130,6 +125,9 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 //         "io.scalene" %% "scalene-routing" % "0.1.0"
 
 //       ))
+
+lazy val zhttp = ProjectRef(uri(s"git://github.com/dream11/zio-http.git"), "zhttp")
+lazy val z = (project in file("z")).dependsOn(zhttp)
 
 lazy val uzhttp = (project in file("uzhttp")).settings(
       scalaVersion := scalaV,

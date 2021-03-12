@@ -2,11 +2,12 @@ import cats.effect.Sync
 import cats.implicits._
 import org.http4s.HttpRoutes
 import org.http4s.dsl.Http4sDsl
+import scala.annotation.unused
 
 object Routes {
 
   @SuppressWarnings(Array("all"))
-  def myRoutes[F[_]: Sync](M: Messenger[F]): HttpRoutes[F] = {
+  def myRoutes[F[_]: Sync](@unused M: Messenger[F]): HttpRoutes[F] = {
     val dsl = new Http4sDsl[F] {}
     import dsl._
     HttpRoutes.of[F] {
