@@ -127,7 +127,7 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 //       ))
 
 lazy val zhttp = ProjectRef(uri(s"git://github.com/dream11/zio-http.git"), "zhttp")
-lazy val z = (project in file("z")).dependsOn(zhttp)
+lazy val `zio-http` = (project in file("z")).dependsOn(zhttp)
 
 lazy val uzhttp = (project in file("uzhttp")).settings(
       scalaVersion := scalaV,
@@ -136,6 +136,6 @@ lazy val uzhttp = (project in file("uzhttp")).settings(
       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(z, `akka-http`, analogweb, unfiltered, `service-container`, finatra, http4s, play, scalatra, finch, cask, uzhttp))
+  aggregate(`zio-http`, `akka-http`, analogweb, unfiltered, `service-container`, finatra, http4s, play, scalatra, finch, cask, uzhttp))
 
 enablePlugins(ScalatraPlugin)
