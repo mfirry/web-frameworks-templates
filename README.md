@@ -22,6 +22,7 @@ At the end of the day all the examples should have:
 - [service-container](https://github.com/vonnagy/service-container)
 - [unfiltered](http://unfiltered.ws/)
 - [uzhttp](https://github.com/polynote/uzhttp)
+- [zio-http](https://github.com/dream11/zio-http)
 
 
 ### High-Level Server Frameworks
