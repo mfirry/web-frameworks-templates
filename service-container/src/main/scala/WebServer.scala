@@ -1,9 +1,8 @@
-import akka.actor.{ActorRefFactory, ActorSystem}
+import akka.actor.ActorSystem
 import com.github.vonnagy.service.container.ContainerBuilder
 import com.github.vonnagy.service.container.http.routing._
-import akka.http.scaladsl.marshalling.{Marshaller, ToEntityMarshaller}
+import akka.http.scaladsl.marshalling.ToEntityMarshaller
 import com.typesafe.config.ConfigFactory
-import akka.http.scaladsl.model.MediaTypes
 
 import scala.concurrent.ExecutionContext
 
@@ -18,7 +17,7 @@ object WebServer extends App {
     .withRoutes(classOf[TestEndpoints])
     .build
 
-  service.start
+  service.start()
 }
 
 class TestEndpoints(implicit system: ActorSystem, executor: ExecutionContext)

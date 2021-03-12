@@ -5,6 +5,7 @@ import org.http4s.dsl.Http4sDsl
 
 object Routes {
 
+  @SuppressWarnings(Array("all"))
   def myRoutes[F[_]: Sync](M: Messenger[F]): HttpRoutes[F] = {
     val dsl = new Http4sDsl[F] {}
     import dsl._

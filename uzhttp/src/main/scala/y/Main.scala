@@ -2,7 +2,7 @@ package y
 
 import java.net.InetSocketAddress
 import uzhttp.server.Server
-import uzhttp.{Request, Response, RefineOps}
+import uzhttp.Response
 import uzhttp.websocket.Frame
 import zio.{App, ZIO, Task, ExitCode}
 

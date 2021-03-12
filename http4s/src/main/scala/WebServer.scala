@@ -4,8 +4,6 @@ import fs2.Stream
 import org.http4s.server.blaze.BlazeServerBuilder
 import org.http4s.implicits._
 
-import scala.concurrent.ExecutionContext.global
-
 object WebServer {
 
   def stream[F[_]: ConcurrentEffect](implicit
@@ -16,7 +14,7 @@ object WebServer {
     val httpApp = Routes.myRoutes[F](messengerAlg).orNotFound
     for {
       exitCode <-
-        BlazeServerBuilder[F]
+        BlazeServerBuilder[F](scala.concurrent.ExecutionContext.global)
           .bindHttp(8080, "0.0.0.0")
           .withHttpApp(httpApp)
           .serve

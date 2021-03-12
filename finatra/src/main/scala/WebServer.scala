@@ -1,5 +1,3 @@
-import com.twitter.finatra._
-
 import com.twitter.finatra.http.HttpServer
 import com.twitter.finatra.http.routing.HttpRouter
 
@@ -10,7 +8,6 @@ class WebServer extends HttpServer {
   override val defaultHttpPort: String = ":9000"
 
   override def configureHttp(router: HttpRouter) = {
-    router.
-      add(new AController)
+    val _ = router.add(new AController)
   }
 }

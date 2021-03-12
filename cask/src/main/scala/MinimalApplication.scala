@@ -9,7 +9,6 @@ object MinimalApplication extends cask.MainRoutes {
 
   @cask.getJson("/json")
   def j() = {
-    import upickle._
     import upickle.default._
     cask.Response(data = write(Message("Hello World!")))
   }
