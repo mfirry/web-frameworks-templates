@@ -126,8 +126,10 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 
 //       ))
 
-lazy val zhttp = ProjectRef(uri(s"git://github.com/dream11/zio-http.git"), "zhttp")
-lazy val `zio-http` = (project in file("z")).dependsOn(zhttp)
+lazy val `zio-http` = (project in file("zio-http")).settings(
+  scalaVersion := scalaV,
+  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC13"
+)
 
 lazy val uzhttp = (project in file("uzhttp")).settings(
       scalaVersion := scalaV,
