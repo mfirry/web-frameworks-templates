@@ -4,9 +4,7 @@ import unfiltered.request._
 import unfiltered.response._
 import unfiltered.netty._
 
-import org.json4s._
 import org.json4s.JsonDSL._
-import org.json4s.native.JsonMethods._
 
 @io.netty.channel.ChannelHandler.Sharable
 object Example

@@ -2,12 +2,12 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.13.4"
+val scalaV = "2.13.5"
 
 val akkaHttpVersion = "10.2.2"
 val analogwebVersion = "0.12.0"
-val http4sVersion = "0.21.14"
-val unfilteredVersion = "0.10.1"
+val http4sVersion = "0.21.22"
+val unfilteredVersion = "0.10.0"
 val ScalatraVersion = "2.7.0"
 val finchVersion = "0.32.1"
 
@@ -17,7 +17,7 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
       libraryDependencies ++= Seq(
         "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
         "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
-        "com.typesafe.akka" %% "akka-stream"          % "2.6.6"
+        "com.typesafe.akka" %% "akka-stream"          % "2.6.13"
       ))
 
 lazy val analogweb = (project in file("analogweb")).settings(
@@ -42,11 +42,11 @@ lazy val cask = (project in file("cask")).settings(
 //         "io.circe"    %% "circe-generic"  % "0.9.0-M2"
 //       ))
 
-// lazy val finatra = (project in file("finatra")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "com.twitter" %% "finatra-http" % "19.5.0"
-//       ))
+lazy val finatra = (project in file("finatra")).settings(
+      scalaVersion := scalaV,
+      libraryDependencies ++= Seq(
+        "com.twitter" %% "finatra-http-server" % "21.3.0"
+      ))
 
 lazy val finch = (project in file("finch")).settings(
       scalaVersion := scalaV,
@@ -85,6 +85,7 @@ lazy val http4s = (project in file("http4s")).settings(
 lazy val play = (project in file("play"))
   .settings(
     scalaVersion := scalaV,
+    scalacOptions += s"-Wconf:src=${target.value}/.*:s",
     libraryDependencies ++= Seq(
       guice,
       "com.typesafe.play" %% "play-json" % "2.8.0"
@@ -125,6 +126,11 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 
 //       ))
 
+lazy val `zio-http` = (project in file("zio-http")).settings(
+  scalaVersion := scalaV,
+  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC15"
+)
+
 lazy val uzhttp = (project in file("uzhttp")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
@@ -132,6 +138,6 @@ lazy val uzhttp = (project in file("uzhttp")).settings(
       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(`akka-http`, analogweb, unfiltered, `service-container`, http4s, play, scalatra, finch, cask, uzhttp))
+  aggregate(`zio-http`, `akka-http`, analogweb, unfiltered, `service-container`, finatra, http4s, play, scalatra, finch, cask, uzhttp))
 
 enablePlugins(ScalatraPlugin)

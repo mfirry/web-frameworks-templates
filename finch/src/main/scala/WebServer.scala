@@ -1,5 +1,3 @@
-import java.net.InetSocketAddress
-
 import com.twitter.io.Buf
 import com.twitter.finagle.Service
 import com.twitter.finagle.Http

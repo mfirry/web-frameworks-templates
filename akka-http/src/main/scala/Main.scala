@@ -3,12 +3,9 @@ package com.example
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
 import akka.http.scaladsl.server.Directives._
-import akka.stream.ActorMaterializer
 
 import spray.json._
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
-
-import spray.json.DefaultJsonProtocol._
 
 object Main extends App with SprayJsonSupport {
 

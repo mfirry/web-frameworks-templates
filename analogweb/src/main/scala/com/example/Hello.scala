@@ -1,9 +1,6 @@
 package com.example
 
 import analogweb._, circe._, io.circe._, generic.semiauto._
-import org.analogweb._
-import org.analogweb.core._
-import org.analogweb.scala._
 
 object Hello {
 
@@ -18,18 +15,18 @@ object Hello {
 
   implicit val messageEncoder: Encoder[Message] = deriveEncoder[Message]
 
-  val routes = 
+  val routes =
     get("/json") { _ =>
       Ok(asJson(Message("Hello, World!")))
-    } ++ 
-    get("/plaintext") { _ =>
-      "Hello, World!"
     } ++
-    get("/") { _ =>
-      Ok(asJson(List(1,2,3)))
-    } ++
-    get("/say-hi") { implicit r =>
-      s"Hi: ${r.query("whom")}"
-    }
+      get("/plaintext") { _ =>
+        "Hello, World!"
+      } ++
+      get("/") { _ =>
+        Ok(asJson(List(1, 2, 3)))
+      } ++
+      get("/say-hi") { implicit r =>
+        s"Hi: ${r.query("whom")}"
+      }
 
 }

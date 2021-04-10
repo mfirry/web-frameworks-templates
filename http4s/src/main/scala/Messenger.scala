@@ -1,8 +1,6 @@
 import cats.Applicative
 import cats.implicits._
 import io.circe.{Encoder, Json}
-import org.http4s.EntityEncoder
-import org.http4s.circe._
 
 trait Messenger[F[_]] {
   def message(m: Messenger.Message): F[Messenger.Message]
