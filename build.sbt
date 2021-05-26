@@ -53,9 +53,9 @@ lazy val finch = (project in file("finch")).settings(
       libraryDependencies ++= Seq(
         "com.github.finagle" %% "finchx-core" % finchVersion,
         "com.github.finagle" %% "finchx-circe" % finchVersion,
-        "io.circe" %% "circe-core" % "0.13.0",
-        "io.circe" %% "circe-generic" % "0.13.0",
-        "io.circe" %% "circe-jawn" % "0.13.0"
+        "io.circe" %% "circe-core" % "0.14.0",
+        "io.circe" %% "circe-generic" % "0.14.0",
+        "io.circe" %% "circe-jawn" % "0.14.0"
       ))
 
 lazy val http4s = (project in file("http4s")).settings(
