@@ -4,7 +4,7 @@ version := "0.1.1"
 
 val scalaV = "2.13.6"
 
-val akkaHttpVersion = "10.2.2"
+val akkaHttpVersion = "10.2.6"
 val analogwebVersion = "0.12.0"
 val http4sVersion = "0.21.22"
 val unfilteredVersion = "0.10.3"
