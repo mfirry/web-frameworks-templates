@@ -1,7 +1,7 @@
 import cats.effect.{ConcurrentEffect, Timer}
 import cats.effect.ContextShift
 import fs2.Stream
-import org.http4s.server.blaze.BlazeServerBuilder
+import org.http4s.blaze.server.BlazeServerBuilder
 import org.http4s.implicits._
 import scala.annotation.unused
 
