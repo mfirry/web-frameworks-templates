@@ -1,5 +1,4 @@
-import cats.effect.{ConcurrentEffect, Timer}
-import cats.effect.ContextShift
+import cats.effect.{Async, Resource}
 import fs2.Stream
 import org.http4s.blaze.server.BlazeServerBuilder
 import org.http4s.implicits._
@@ -7,10 +6,7 @@ import scala.annotation.unused
 
 object WebServer {
 
-  def stream[F[_]: ConcurrentEffect](implicit
-      T: Timer[F],
-      @unused C: ContextShift[F]
-  ): Stream[F, Nothing] = {
+  def stream[F[_]: Async]: Stream[F, Nothing] = {
     val messengerAlg = Messenger.impl[F]
     val httpApp = Routes.myRoutes[F](messengerAlg).orNotFound
     for {
