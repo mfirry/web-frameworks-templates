@@ -14,7 +14,6 @@ At the end of the day all the examples should have:
 | Name       | Version      | License                                                                    | Github Stars                                                             |
 |------------|--------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | [akka-http](https://doc.akka.io/docs/akka-http/current/)  | 10.2.7       | ![GitHub](https://img.shields.io/github/license/akka/akka-http)            | ![GitHub](https://img.shields.io/github/stars/akka/akka-http)            |
-| [analogweb](http://analogweb.github.io/)  | 0.12.0       | ![GitHub](https://img.shields.io/github/license/analogweb/analogweb-scala) | ![GitHub](https://img.shields.io/github/stars/analogweb/analogweb-scala) |
 | [cask](https://github.com/lihaoyi/cask)       | 0.7.18       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
 | [finatra](https://github.com/twitter/finatra)    | 21.10.0       | ![GitHub](https://img.shields.io/github/license/twitter/finatra)           | ![GitHub](https://img.shields.io/github/stars/twitter/finatra)           |
 | [finch](https://finagle.github.io/finch/)      | 0.32.1       | ![GitHub](https://img.shields.io/github/license/finagle/finch)             | ![GitHub](https://img.shields.io/github/stars/finagle/finch)             |
