@@ -2,7 +2,7 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.13.6"
+val scalaV = "2.13.7"
 
 val akkaHttpVersion = "10.2.7"
 val analogwebVersion = "0.12.0"
@@ -36,14 +36,6 @@ lazy val cask = (project in file("cask")).settings(
     "com.lihaoyi" %% "upickle" % "1.2.0"
   )
 )
-
-// lazy val colossus = (project in file("colossus")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "com.tumblr"  %% "colossus"       % "0.11.0",
-//         "io.circe"    %% "circe-core"     % "0.9.0-M2",
-//         "io.circe"    %% "circe-generic"  % "0.9.0-M2"
-//       ))
 
 lazy val finatra = (project in file("finatra")).settings(
   scalaVersion := scalaV,
@@ -79,15 +71,6 @@ lazy val http4s = (project in file("http4s")).settings(
   )
 )
 
-// lazy val lift = (project in file("lift")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq())
-
-// lazy val peregrine = (project in file("peregrine")).settings(
-//   scalaVersion := scalaV,
-//   resolvers += "Twitter" at "http://maven.twttr.com",
-//   libraryDependencies += "com.github.dvarelap" %% "peregrine" % "1.2.2")
-
 lazy val play = (project in file("play"))
   .settings(
     scalaVersion := scalaV,
@@ -112,13 +95,6 @@ lazy val scalatra = (project in file("scalatra")).settings(
   )
 )
 
-lazy val `service-container` = (project in file("service-container")).settings(
-  scalaVersion := scalaV,
-  libraryDependencies ++= Seq(
-    "com.github.vonnagy" %% "service-container" % "2.1.0"
-  )
-)
-
 lazy val unfiltered = (project in file("unfiltered")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
@@ -127,15 +103,6 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
     "ws.unfiltered" %% "unfiltered-json4s" % unfilteredVersion
   )
 )
-
-// lazy val scalene = (project in file("scalene")).settings(
-//       scalacOptions += "-target:jvm-1.9",
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "io.scalene" %% "scalene" % "0.1.0",
-//         "io.scalene" %% "scalene-routing" % "0.1.0"
-
-//       ))
 
 lazy val `zio-http` = (project in file("zio-http")).settings(
   scalaVersion := scalaV,
@@ -149,21 +116,7 @@ lazy val uzhttp = (project in file("uzhttp")).settings(
   )
 )
 
-lazy val root = (project
-  .in(file("."))
-  .aggregate(
-    `zio-http`,
-    `akka-http`,
-    analogweb,
-    unfiltered,
-    `service-container`,
-    finatra,
-    http4s,
-    play,
-    scalatra,
-    finch,
-    cask,
-    uzhttp
-  ))
+lazy val root = (project.in(file(".")).
+  aggregate(`zio-http`, `akka-http`, analogweb, unfiltered, finatra, http4s, play, scalatra, finch, cask, uzhttp))
 
 enablePlugins(ScalatraPlugin)

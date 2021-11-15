@@ -6,14 +6,17 @@ import scala.annotation.unused
 
 object Routes {
 
+  import io.circe.syntax._
+  import org.http4s.circe._
+
+  val s = "Ciao"
+
   @SuppressWarnings(Array("all"))
   def myRoutes[F[_]: Sync](@unused M: Messenger[F]): HttpRoutes[F] = {
     val dsl = new Http4sDsl[F] {}
     import dsl._
     HttpRoutes.of[F] {
       case GET -> Root =>
-        import io.circe.syntax._
-        import org.http4s.circe._
         for {
           resp <- Ok((List(1, 2, 3)).asJson)
         } yield resp
@@ -24,8 +27,6 @@ object Routes {
         } yield resp
 
       case GET -> Root / "json" =>
-        import io.circe.syntax._
-        import org.http4s.circe._
         for {
           resp <- Ok(Messenger.Message("Hello, World!").asJson)
         } yield resp
