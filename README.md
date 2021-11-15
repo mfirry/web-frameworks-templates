@@ -15,21 +15,27 @@ At the end of the day all the examples should have:
 - [akka-http](https://doc.akka.io/docs/akka-http/current/)
 - [analogweb](http://analogweb.github.io/)
 - [cask](https://github.com/lihaoyi/cask)
+- [finatra](https://github.com/twitter/finatra)
 - [finch](https://finagle.github.io/finch/)
 - [http4s](https://http4s.org/)
 - [play](https://www.playframework.com/)
 - [scalatra](https://scalatra.org/)
-- [service-container](https://github.com/vonnagy/service-container)
 - [unfiltered](http://unfiltered.ws/)
 - [uzhttp](https://github.com/polynote/uzhttp)
 - [zio-http](https://github.com/dream11/zio-http)
 
-
 ### High-Level Server Frameworks
 
-| Name         | akka-http                                                                     | finch  | http4s | Play                                                                                 |
-|--------------|-------------------------------------------------------------------------------|--------|--------|--------------------------------------------------------------------------------------|
-| Version      | 10.1.12                                                                       | 0.32.1 | 0.21.3 | 2.8.0                                                                               |
-| License | ![akka-http](https://img.shields.io/github/license/akka/akka-http.svg?label=%20) | ![finch](https://img.shields.io/github/license/finagle/finch.svg?label=%20)   | ![http4s](https://img.shields.io/github/license/http4s/http4s.svg?label=%20)   | ![Play!](https://img.shields.io/github/license/playframework/playframework.svg?label=%20) |
-| Github Stars | ![akka-http](https://img.shields.io/github/stars/akka/akka-http.svg?label=%20) | ![finch](https://img.shields.io/github/stars/finagle/finch.svg?label=%20)   | ![http4s](https://img.shields.io/github/stars/http4s/http4s.svg?label=%20)   | ![Play!](https://img.shields.io/github/stars/playframework/playframework.svg?label=%20) |
-| Contributors | ![akka-http](https://img.shields.io/github/contributors/akka/akka-http.svg?label=%20) | ![finch](https://img.shields.io/github/contributors/finagle/finch.svg?label=%20)   | ![http4s](https://img.shields.io/github/contributors/http4s/http4s.svg?label=%20)   | ![Play!](https://img.shields.io/github/contributors/playframework/playframework.svg?label=%20) |
+| Name       | Version      | License                                                                    | Github Stars                                                             |
+|------------|--------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------|
+| akka-http  | 10.2.6       | ![GitHub](https://img.shields.io/github/license/akka/akka-http)            | ![GitHub](https://img.shields.io/github/stars/akka/akka-http)            |
+| analogweb  | 0.12.0       | ![GitHub](https://img.shields.io/github/license/analogweb/analogweb-scala) | ![GitHub](https://img.shields.io/github/stars/analogweb/analogweb-scala) |
+| cask       | 0.7.12       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
+| finatra    | 21.9.0       | ![GitHub](https://img.shields.io/github/license/twitter/finatra)           | ![GitHub](https://img.shields.io/github/stars/twitter/finatra)           |
+| finch      | 0.32.1       | ![GitHub](https://img.shields.io/github/license/finagle/finch)             | ![GitHub](https://img.shields.io/github/stars/finagle/finch)             |
+| http4s     | 0.23.4       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/license/http4s/http4s)          |
+| play       | 2.8.0        | ![GitHub](https://img.shields.io/github/license/play/play)                 | ![GitHub](https://img.shields.io/github/stars/play/play)                 |
+| scalatra   | 2.7.0        | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
+| unfiltered | 0.10.3       | ![GitHub](https://img.shields.io/github/license/unfiltered/unfiltered)     | ![GitHub](https://img.shields.io/github/stars/unfiltered/unfiltered)     |
+| zio-http   | 1.0.0.0-RC17 | ![GitHub](https://img.shields.io/github/license/dream11/zio-http)          | ![GitHub](https://img.shields.io/github/stars/dream11/zio-http)          |
+| uzhttp     | 0.2.8        | ![GitHub](https://img.shields.io/github/license/polynote/uzhttp)           | ![GitHub](https://img.shields.io/github/stars/polynote/uzhttp)           |

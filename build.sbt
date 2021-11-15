@@ -2,7 +2,7 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.13.6"
+val scalaV = "2.13.7"
 
 val akkaHttpVersion = "10.2.6"
 val analogwebVersion = "0.12.0"
@@ -105,10 +105,6 @@ lazy val scalatra = (project in file("scalatra")).settings(
         "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
       ))
 
-lazy val `service-container` = (project in file("service-container")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq("com.github.vonnagy" %% "service-container" % "2.1.0"))
-
 lazy val unfiltered = (project in file("unfiltered")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
@@ -138,6 +134,6 @@ lazy val uzhttp = (project in file("uzhttp")).settings(
       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(`zio-http`, `akka-http`, analogweb, unfiltered, `service-container`, finatra, http4s, play, scalatra, finch, cask, uzhttp))
+  aggregate(`zio-http`, `akka-http`, analogweb, unfiltered, finatra, http4s, play, scalatra, finch, cask, uzhttp))
 
 enablePlugins(ScalatraPlugin)
