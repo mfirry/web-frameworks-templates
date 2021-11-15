@@ -18,7 +18,7 @@ At the end of the day all the examples should have:
 | [cask](https://github.com/lihaoyi/cask)       | 0.7.12       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
 | [finatra](https://github.com/twitter/finatra)    | 21.9.0       | ![GitHub](https://img.shields.io/github/license/twitter/finatra)           | ![GitHub](https://img.shields.io/github/stars/twitter/finatra)           |
 | [finch](https://finagle.github.io/finch/)      | 0.32.1       | ![GitHub](https://img.shields.io/github/license/finagle/finch)             | ![GitHub](https://img.shields.io/github/stars/finagle/finch)             |
-| [http4s](https://http4s.org/)     | 0.23.4       | ![GitHub](https://img.shields.io/github/stars/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/license/http4s/http4s)          |
+| [http4s](https://http4s.org/)     | 0.23.4       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/stars/http4s/http4s)          |
 | [play](https://www.playframework.com/)       | 2.8.0        | ![GitHub](https://img.shields.io/github/license/play/play)                 | ![GitHub](https://img.shields.io/github/stars/play/play)                 |
 | [scalatra](https://scalatra.org/)   | 2.7.0        | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
 | [unfiltered](http://unfiltered.ws/) | 0.10.3       | ![GitHub](https://img.shields.io/github/license/unfiltered/unfiltered)     | ![GitHub](https://img.shields.io/github/stars/unfiltered/unfiltered)     |
