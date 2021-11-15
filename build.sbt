@@ -5,7 +5,6 @@ version := "0.1.1"
 val scalaV = "2.13.6"
 
 val akkaHttpVersion = "10.2.7"
-val analogwebVersion = "0.12.0"
 val http4sVersion = "0.23.6"
 val unfilteredVersion = "0.10.4"
 val ScalatraVersion = "2.7.0"
@@ -18,13 +17,6 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
         "com.typesafe.akka" %% "akka-http"            % akkaHttpVersion,
         "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
         "com.typesafe.akka" %% "akka-stream"          % "2.6.16"
-      ))
-
-lazy val analogweb = (project in file("analogweb")).settings(
-      scalaVersion := scalaV,
-      libraryDependencies ++= Seq(
-        "org.analogweb" %% "analogweb-scala" % analogwebVersion,
-        "org.analogweb" %% "analogweb-circe" % analogwebVersion
       ))
 
 lazy val cask = (project in file("cask")).settings(
@@ -108,6 +100,6 @@ lazy val uzhttp = (project in file("uzhttp")).settings(
       ))
 
 lazy val root = (project.in(file(".")).
-  aggregate(`zio-http`, `akka-http`, analogweb, unfiltered, finatra, http4s, play, scalatra, finch, cask, uzhttp))
+  aggregate(`zio-http`, `akka-http`, unfiltered, finatra, http4s, play, scalatra, finch, cask, uzhttp))
 
 enablePlugins(ScalatraPlugin)
