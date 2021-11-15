@@ -34,14 +34,6 @@ lazy val cask = (project in file("cask")).settings(
     "com.lihaoyi" %% "upickle"  % "1.2.0"
   ))
 
-// lazy val colossus = (project in file("colossus")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "com.tumblr"  %% "colossus"       % "0.11.0",
-//         "io.circe"    %% "circe-core"     % "0.9.0-M2",
-//         "io.circe"    %% "circe-generic"  % "0.9.0-M2"
-//       ))
-
 lazy val finatra = (project in file("finatra")).settings(
       scalaVersion := scalaV,
       libraryDependencies ++= Seq(
@@ -73,15 +65,6 @@ lazy val http4s = (project in file("http4s")).settings(
         "org.http4s"  %% "http4s-dsl"           % http4sVersion
 ))
 
-// lazy val lift = (project in file("lift")).settings(
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq())
-
-// lazy val peregrine = (project in file("peregrine")).settings(
-//   scalaVersion := scalaV,
-//   resolvers += "Twitter" at "http://maven.twttr.com",
-//   libraryDependencies += "com.github.dvarelap" %% "peregrine" % "1.2.2")
-
 lazy val play = (project in file("play"))
   .settings(
     scalaVersion := scalaV,
@@ -112,15 +95,6 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
         "ws.unfiltered" %% "unfiltered-netty-server"  % unfilteredVersion,
         "ws.unfiltered" %% "unfiltered-json4s"        % unfilteredVersion
       ))
-
-// lazy val scalene = (project in file("scalene")).settings(
-//       scalacOptions += "-target:jvm-1.9",
-//       scalaVersion := scalaV,
-//       libraryDependencies ++= Seq(
-//         "io.scalene" %% "scalene" % "0.1.0",
-//         "io.scalene" %% "scalene-routing" % "0.1.0"
-
-//       ))
 
 lazy val `zio-http` = (project in file("zio-http")).settings(
   scalaVersion := scalaV,
