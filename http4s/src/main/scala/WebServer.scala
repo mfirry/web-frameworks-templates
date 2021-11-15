@@ -11,7 +11,8 @@ object WebServer {
     val httpApp = Routes.myRoutes[F](messengerAlg).orNotFound
     for {
       exitCode <-
-        BlazeServerBuilder[F](scala.concurrent.ExecutionContext.global)
+        BlazeServerBuilder[F]
+          .withExecutionContext(scala.concurrent.ExecutionContext.global)
           .bindHttp(8080, "0.0.0.0")
           .withHttpApp(httpApp)
           .serve
