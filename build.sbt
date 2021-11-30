@@ -68,7 +68,7 @@ lazy val play = (project in file("play"))
     scalacOptions += s"-Wconf:src=${target.value}/.*:s",
     libraryDependencies ++= Seq(
       guice,
-      "com.typesafe.play" %% "play-json" % "2.8.0"
+      "com.typesafe.play" %% "play-json" % "2.8.2"
     )
   )
   .enablePlugins(PlayScala)
