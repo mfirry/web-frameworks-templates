@@ -80,7 +80,7 @@ lazy val scalatra = (project in file("scalatra")).settings(
     "org.scalatra" %% "scalatra" % ScalatraVersion,
     "org.scalatra" %% "scalatra-json" % ScalatraVersion,
     "org.json4s" %% "json4s-jackson" % "3.6.9",
-    "ch.qos.logback" % "logback-classic" % "1.2.3" % "runtime",
+    "ch.qos.logback" % "logback-classic" % "1.2.9" % "runtime",
     "org.eclipse.jetty" % "jetty-webapp" % "9.4.19.v20190610" % "container;compile",
     "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
   )
