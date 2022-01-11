@@ -2,7 +2,7 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.13.6"
+val scalaV = "2.13.8"
 
 val akkaHttpVersion = "10.2.7"
 val http4sVersion = "0.23.7"
@@ -97,7 +97,7 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 
 lazy val `zio-http` = (project in file("zio-http")).settings(
   scalaVersion := scalaV,
-  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC19"
+  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC21"
 )
 
 lazy val uzhttp = (project in file("uzhttp")).settings(
