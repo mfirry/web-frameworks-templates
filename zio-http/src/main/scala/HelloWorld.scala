@@ -4,9 +4,9 @@ import zio._
 
 object HelloWorld extends App {
 
-  val app = Http.collect[Request] {
-    case Method.GET -> Root => Response.text(List(1,2,3).toString)
-    case Method.GET -> Root / "plaintext" => Response.text("Hello, World!")
+  val app: HttpApp[Any, Nothing] = Http.collect[Request] {
+    case Method.GET -> !! => Response.text(List(1,2,3).toString)
+    case Method.GET -> !! / "plaintext" => Response.text("Hello, World!")
   }
 
   override def run(args: List[String]): URIO[zio.ZEnv, ExitCode] =
