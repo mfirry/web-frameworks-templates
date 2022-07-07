@@ -5,9 +5,9 @@ version := "0.1.1"
 val scalaV = "2.13.8"
 
 val akkaHttpVersion = "10.2.9"
-val http4sVersion = "0.23.8"
+val http4sVersion = "0.23.12"
 val unfilteredVersion = "0.10.4"
-val ScalatraVersion = "2.7.0"
+val ScalatraVersion = "2.8.2"
 val finchVersion = "0.33.0"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
@@ -23,15 +23,15 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
 lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
-    "com.lihaoyi" %% "cask" % "0.8.0",
-    "com.lihaoyi" %% "upickle" % "1.2.0"
+    "com.lihaoyi" %% "cask" % "0.8.3",
+    "com.lihaoyi" %% "upickle" % "1.6.0"
   )
 )
 
 lazy val finatra = (project in file("finatra")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
-    "com.twitter" %% "finatra-http-server" % "22.3.0"
+    "com.twitter" %% "finatra-http-server" % "22.4.0"
   )
 )
 
@@ -79,7 +79,7 @@ lazy val scalatra = (project in file("scalatra")).settings(
   libraryDependencies ++= Seq(
     "org.scalatra" %% "scalatra" % ScalatraVersion,
     "org.scalatra" %% "scalatra-json" % ScalatraVersion,
-    "org.json4s" %% "json4s-jackson" % "3.6.12",
+    "org.json4s" %% "json4s-jackson" % "4.0.1",
     "ch.qos.logback" % "logback-classic" % "1.2.11" % "runtime",
     "org.eclipse.jetty" % "jetty-webapp" % "9.4.19.v20190610" % "container;compile",
     "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
@@ -97,7 +97,7 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 
 lazy val `zio-http` = (project in file("zio-http")).settings(
   scalaVersion := scalaV,
-  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC27"
+  libraryDependencies += "io.d11" %% "zhttp" % "1.0.0.0-RC29"
 )
 
 lazy val uzhttp = (project in file("uzhttp")).settings(
