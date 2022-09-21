@@ -11,9 +11,9 @@ import io.circe._
 import io.circe.generic.auto._
 import io.circe.syntax._
 
-import cats.effect.IO
+import cats.effect.{ExitCode, IO, IOApp}
 
-object WebServer extends App with Endpoint.Module[IO] {
+object WebServer extends IOApp with Endpoint.Module[IO] {
 
   case class Message(message: String)
 
@@ -36,16 +36,11 @@ object WebServer extends App with Endpoint.Module[IO] {
       Ok(Buf.Utf8(s"Hello $whom"))
   }
 
-  val api: Service[Request, Response] =
-    Bootstrap
-      .configure(includeDateHeader = true, includeServerHeader = true)
-      .serve[Application.Json](json)
-      .serve[Text.Plain](plaintext)
-      .serve[Application.Json](list)
-      .serve[Text.Plain](sayHi)
-      .toService
+    override def run(args: List[String]): IO[ExitCode] =
+      Bootstrap[IO]
+        .serve[Application.Json](json)
+        .serve[Text.Plain](plaintext)
+        .serve[Application.Json](list)
+        .serve[Text.Plain](sayHi).listen(":8081").useForever
 
-  Await.ready(
-    Http.serve("localhost:9000", api)
-  )
 }
