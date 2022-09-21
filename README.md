@@ -13,13 +13,13 @@ At the end of the day all the examples should have:
 
 | Name       | Version      | License                                                                    | Github Stars                                                             |
 |------------|--------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------|
-| [akka-http](https://doc.akka.io/docs/akka-http/current/)  | 10.2.7       | ![GitHub](https://img.shields.io/github/license/akka/akka-http)            | ![GitHub](https://img.shields.io/github/stars/akka/akka-http)            |
-| [cask](https://github.com/lihaoyi/cask)       | 0.7.18       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
-| [finatra](https://github.com/twitter/finatra)    | 21.10.0       | ![GitHub](https://img.shields.io/github/license/twitter/finatra)           | ![GitHub](https://img.shields.io/github/stars/twitter/finatra)           |
-| [finch](https://finagle.github.io/finch/)      | 0.32.1       | ![GitHub](https://img.shields.io/github/license/finagle/finch)             | ![GitHub](https://img.shields.io/github/stars/finagle/finch)             |
-| [http4s](https://http4s.org/)     | 0.23.6       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/stars/http4s/http4s)          |
+| [akka-http](https://doc.akka.io/docs/akka-http/current/)  | 10.2.10       | ![GitHub](https://img.shields.io/github/license/akka/akka-http)            | ![GitHub](https://img.shields.io/github/stars/akka/akka-http)            |
+| [cask](https://github.com/lihaoyi/cask)       | 0.8.3       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
+| [finatra](https://github.com/twitter/finatra)    | 22.7.0       | ![GitHub](https://img.shields.io/github/license/twitter/finatra)           | ![GitHub](https://img.shields.io/github/stars/twitter/finatra)           |
+| [finch](https://finagle.github.io/finch/)      | 0.34.0       | ![GitHub](https://img.shields.io/github/license/finagle/finch)             | ![GitHub](https://img.shields.io/github/stars/finagle/finch)             |
+| [http4s](https://http4s.org/)     | 0.23.12       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/stars/http4s/http4s)          |
 | [play](https://www.playframework.com/)       | 2.8.8        | ![GitHub](https://img.shields.io/github/license/play/play)                 | ![GitHub](https://img.shields.io/github/stars/play/play)                 |
-| [scalatra](https://scalatra.org/)   | 2.8.1       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
+| [scalatra](https://scalatra.org/)   | 2.8.2       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
 | [unfiltered](http://unfiltered.ws/) | 0.10.4       | ![GitHub](https://img.shields.io/github/license/unfiltered/unfiltered)     | ![GitHub](https://img.shields.io/github/stars/unfiltered/unfiltered)     |
-| [zio-http](https://github.com/dream11/zio-http)   | 1.0.0.0-RC17 | ![GitHub](https://img.shields.io/github/license/dream11/zio-http)          | ![GitHub](https://img.shields.io/github/stars/dream11/zio-http)          |
+| [zio-http](https://github.com/dream11/zio-http)   | 2.0.0-RC2 | ![GitHub](https://img.shields.io/github/license/dream11/zio-http)          | ![GitHub](https://img.shields.io/github/stars/dream11/zio-http)          |
 | [uzhttp](https://github.com/polynote/uzhttp)     | 0.2.8        | ![GitHub](https://img.shields.io/github/license/polynote/uzhttp)           | ![GitHub](https://img.shields.io/github/stars/polynote/uzhttp)           |
