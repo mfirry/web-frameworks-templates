@@ -8,7 +8,7 @@ val akkaHttpVersion = "10.2.10"
 val http4sVersion = "0.23.12"
 val unfilteredVersion = "0.10.4"
 val ScalatraVersion = "2.8.2"
-val finchVersion = "0.34.0"
+val finchVersion = "0.34.1"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
   scalaVersion := scalaV,
