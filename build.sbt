@@ -4,11 +4,11 @@ version := "0.1.1"
 
 val scalaV = "2.13.8"
 
-val akkaHttpVersion = "10.2.10"
-val http4sVersion = "0.23.12"
+val akkaHttpVersion = "10.4.0"
+val http4sVersion = "0.23.13"
 val unfilteredVersion = "0.10.4"
 val ScalatraVersion = "2.8.2"
-val finchVersion = "0.34.0"
+val finchVersion = "0.34.1"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
   scalaVersion := scalaV,
@@ -16,7 +16,7 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
   libraryDependencies ++= Seq(
     "com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
     "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
-    "com.typesafe.akka" %% "akka-stream" % "2.6.20"
+    "com.typesafe.akka" %% "akka-stream" % "2.7.0"
   )
 )
 
