@@ -40,9 +40,9 @@ lazy val finch = (project in file("finch")).settings(
   libraryDependencies ++= Seq(
     "com.github.finagle" %% "finch-core" % finchVersion,
     "com.github.finagle" %% "finch-circe" % finchVersion,
-    "io.circe" %% "circe-core" % "0.14.1",
-    "io.circe" %% "circe-generic" % "0.14.1",
-    "io.circe" %% "circe-jawn" % "0.14.1"
+    "io.circe" %% "circe-core" % "0.14.4",
+    "io.circe" %% "circe-generic" % "0.14.4",
+    "io.circe" %% "circe-jawn" % "0.14.4"
   )
 )
 
