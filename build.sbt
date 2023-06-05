@@ -117,7 +117,6 @@ lazy val root = (project
     http4s,
     play,
     scalatra,
-    finch,
     cask,
     uzhttp
   ))
