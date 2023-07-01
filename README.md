@@ -22,4 +22,3 @@ At the end of the day all the examples should have:
 | [scalatra](https://scalatra.org/)   | 2.8.2       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
 | [unfiltered](http://unfiltered.ws/) | 0.10.4       | ![GitHub](https://img.shields.io/github/license/unfiltered/unfiltered)     | ![GitHub](https://img.shields.io/github/stars/unfiltered/unfiltered)     |
 | [zio-http](https://github.com/dream11/zio-http)   | 2.0.0-RC2 | ![GitHub](https://img.shields.io/github/license/dream11/zio-http)          | ![GitHub](https://img.shields.io/github/stars/dream11/zio-http)          |
-| [uzhttp](https://github.com/polynote/uzhttp)     | 0.2.8        | ![GitHub](https://img.shields.io/github/license/polynote/uzhttp)           | ![GitHub](https://img.shields.io/github/stars/polynote/uzhttp)           |
