@@ -1,8 +1,7 @@
-import cats.effect.{Async, Resource}
+import cats.effect.Async
 import fs2.Stream
 import org.http4s.blaze.server.BlazeServerBuilder
 import org.http4s.implicits._
-import scala.annotation.unused
 
 object WebServer {
 

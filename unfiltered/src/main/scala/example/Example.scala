@@ -11,8 +11,9 @@ object Example
     extends cycle.Plan
     with cycle.SynchronousExecution
     with ServerErrorResponse {
+  @scala.annotation.nowarn
   def intent = {
-    case GET(Path("/"))                => Ok ~> Json(List(1, 2, 3))
     case GET(Path(Seg(string :: Nil))) => Ok ~> ResponseString(string)
+    case GET(Path("/"))                => Ok ~> Json(List(1, 2, 3))
   }
 }

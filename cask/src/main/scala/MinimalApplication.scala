@@ -1,11 +1,10 @@
 package example
 
+@scala.annotation.nowarn // https://github.com/com-lihaoyi/cask/issues/62
 object MinimalApplication extends cask.MainRoutes {
 
   @cask.get("/plaintext")
-  def plaintext() = {
-    "Hello World!"
-  }
+  def plaintext(): String = "Hello World!"
 
   @cask.getJson("/json")
   def j() = {
