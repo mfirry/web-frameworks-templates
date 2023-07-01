@@ -2,10 +2,10 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.13.8"
+val scalaV = "2.13.11"
 
 val akkaHttpVersion = "10.4.0"
-val http4sVersion = "0.23.13"
+val http4sVersion = "1.0.0-M39"
 val unfilteredVersion = "0.10.4"
 val ScalatraVersion = "2.8.2"
 val finchVersion = "0.34.1"
@@ -56,7 +56,7 @@ lazy val http4s = (project in file("http4s")).settings(
     "-feature"
   ),
   libraryDependencies ++= Seq(
-    "org.http4s" %% "http4s-blaze-server" % http4sVersion,
+    "org.http4s" %% "http4s-ember-server" % http4sVersion,
     "org.http4s" %% "http4s-circe" % http4sVersion,
     "org.http4s" %% "http4s-dsl" % http4sVersion
   )

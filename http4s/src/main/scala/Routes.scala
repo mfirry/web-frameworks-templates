@@ -1,36 +1,27 @@
-import cats.effect.Sync
-import cats.implicits._
+import cats.Monad
+import cats.syntax.all._
 import org.http4s.HttpRoutes
 import org.http4s.dsl.Http4sDsl
-import scala.annotation.unused
+import io.circe.syntax._
+import io.circe.{Encoder, Json}
+import org.http4s.circe._
+
+final case class Message(message: String)
+
+object Message {
+  implicit val messageEncoder: Encoder[Message] = (m: Message) =>
+    Json.obj(("message", Json.fromString(m.message)))
+}
+
+class Routes[F[_]: Monad] extends Http4sDsl[F] {
+  def routes: HttpRoutes[F] =
+    HttpRoutes.of[F] {
+      case GET -> Root               => Ok(List(1, 2, 3).asJson)
+      case GET -> Root / "plaintext" => Ok("Hello, World!")
+      case GET -> Root / "json"      => Ok(Message("Hello, World!").asJson)
+    }
+}
 
 object Routes {
-
-  import io.circe.syntax._
-  import org.http4s.circe._
-
-  val s = "Ciao"
-
-  @SuppressWarnings(Array("all"))
-  def myRoutes[F[_]: Sync](@unused M: Messenger[F]): HttpRoutes[F] = {
-    val dsl = new Http4sDsl[F] {}
-    import dsl._
-    HttpRoutes.of[F] {
-      case GET -> Root =>
-        for {
-          resp <- Ok((List(1, 2, 3)).asJson)
-        } yield resp
-
-      case GET -> Root / "plaintext" =>
-        for {
-          resp <- Ok("Hello, World!")
-        } yield resp
-
-      case GET -> Root / "json" =>
-        for {
-          resp <- Ok(Messenger.Message("Hello, World!").asJson)
-        } yield resp
-
-    }
-  }
+  def apply[F[_]: Monad]: Routes[F] = new Routes[F]
 }
