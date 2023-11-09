@@ -16,7 +16,6 @@ At the end of the day all the examples should have:
 | [akka-http](https://doc.akka.io/docs/akka-http/current/)  | 10.5.2       | ![GitHub](https://img.shields.io/github/license/akka/akka-http)            | ![GitHub](https://img.shields.io/github/stars/akka/akka-http)            |
 | [cask](https://github.com/lihaoyi/cask)       | 0.9.1       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
 | [finatra](https://github.com/twitter/finatra)    | 22.7.0       | ![GitHub](https://img.shields.io/github/license/twitter/finatra)           | ![GitHub](https://img.shields.io/github/stars/twitter/finatra)           |
-| [finch](https://finagle.github.io/finch/)      | 0.34.0       | ![GitHub](https://img.shields.io/github/license/finagle/finch)             | ![GitHub](https://img.shields.io/github/stars/finagle/finch)             |
 | [http4s](https://http4s.org/)     | 0.23.12       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/stars/http4s/http4s)          |
 | [play](https://www.playframework.com/)       | 2.8.8        | ![GitHub](https://img.shields.io/github/license/play/play)                 | ![GitHub](https://img.shields.io/github/stars/play/play)                 |
 | [scalatra](https://scalatra.org/)   | 2.8.2       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
