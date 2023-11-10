@@ -7,8 +7,7 @@ val scalaV = "2.13.12"
 val akkaHttpVersion = "10.5.2"
 val http4sVersion = "0.23.13"
 val unfilteredVersion = "0.10.4"
-val ScalatraVersion = "2.8.2"
-val finchVersion = "0.34.1"
+val ScalatraVersion = "3.0.0"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
   scalaVersion := scalaV,
@@ -32,17 +31,6 @@ lazy val finatra = (project in file("finatra")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
     "com.twitter" %% "finatra-http-server" % "22.7.0"
-  )
-)
-
-lazy val finch = (project in file("finch")).settings(
-  scalaVersion := scalaV,
-  libraryDependencies ++= Seq(
-    "com.github.finagle" %% "finch-core" % finchVersion,
-    "com.github.finagle" %% "finch-circe" % finchVersion,
-    "io.circe" %% "circe-core" % "0.14.1",
-    "io.circe" %% "circe-generic" % "0.14.1",
-    "io.circe" %% "circe-jawn" % "0.14.1"
   )
 )
 
@@ -77,8 +65,8 @@ lazy val play = (project in file("play"))
 lazy val scalatra = (project in file("scalatra")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
-    "org.scalatra" %% "scalatra" % ScalatraVersion,
-    "org.scalatra" %% "scalatra-json" % ScalatraVersion,
+    "org.scalatra" %% "scalatra-javax" % ScalatraVersion,
+    "org.scalatra" %% "scalatra-json" % "3.0.0-M5-javax",
     "org.json4s" %% "json4s-jackson" % "4.0.1",
     "ch.qos.logback" % "logback-classic" % "1.2.11" % "runtime",
     "org.eclipse.jetty" % "jetty-webapp" % "9.4.48.v20220622" % "container;compile",
@@ -100,13 +88,6 @@ lazy val `zio-http` = (project in file("zio-http")).settings(
   libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC2"
 )
 
-lazy val uzhttp = (project in file("uzhttp")).settings(
-  scalaVersion := scalaV,
-  libraryDependencies ++= Seq(
-    "org.polynote" %% "uzhttp" % "0.2.8"
-  )
-)
-
 lazy val root = (project
   .in(file("."))
   .aggregate(
@@ -118,7 +99,6 @@ lazy val root = (project
     play,
     scalatra,
     cask,
-    uzhttp
   ))
 
 enablePlugins(ScalatraPlugin)
