@@ -85,7 +85,7 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 
 lazy val `zio-http` = (project in file("zio-http")).settings(
   scalaVersion := scalaV,
-  libraryDependencies += "io.d11" %% "zhttp" % "2.0.0-RC2"
+  libraryDependencies += "dev.zio" %% "zio-http" % "3.0.0-RC3"
 )
 
 lazy val root = (project
