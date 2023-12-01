@@ -85,7 +85,7 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 
 lazy val `zio-http` = (project in file("zio-http")).settings(
   scalaVersion := scalaV,
-  libraryDependencies += "dev.zio" %% "zio-http" % "3.0.0-RC3"
+  libraryDependencies += "dev.zio" %% "zio-http" % "3.0.0-RC4"
 )
 
 lazy val root = (project
@@ -98,7 +98,7 @@ lazy val root = (project
     http4s,
     play,
     scalatra,
-    cask,
+    cask
   ))
 
 enablePlugins(ScalatraPlugin)
