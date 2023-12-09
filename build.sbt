@@ -67,7 +67,7 @@ lazy val scalatra = (project in file("scalatra")).settings(
   libraryDependencies ++= Seq(
     "org.scalatra" %% "scalatra-javax" % ScalatraVersion,
     "org.scalatra" %% "scalatra-json" % "3.0.0-M5-javax",
-    "org.json4s" %% "json4s-jackson" % "4.0.1",
+    "org.json4s" %% "json4s-jackson" % "4.0.7",
     "ch.qos.logback" % "logback-classic" % "1.2.11" % "runtime",
     "org.eclipse.jetty" % "jetty-webapp" % "9.4.48.v20220622" % "container;compile",
     "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
@@ -98,7 +98,7 @@ lazy val root = (project
     http4s,
     play,
     scalatra,
-    cask,
+    cask
   ))
 
 enablePlugins(ScalatraPlugin)
