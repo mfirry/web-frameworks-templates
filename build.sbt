@@ -2,7 +2,8 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.13.12"
+val scala2V = "2.13.12"
+val scalaV = "3.3.1"
 
 val akkaHttpVersion = "10.5.2"
 val http4sVersion = "0.23.13"
@@ -28,7 +29,7 @@ lazy val cask = (project in file("cask")).settings(
 )
 
 lazy val finatra = (project in file("finatra")).settings(
-  scalaVersion := scalaV,
+  scalaVersion := scala2V,
   libraryDependencies ++= Seq(
     "com.twitter" %% "finatra-http-server" % "22.7.0"
   )
@@ -56,7 +57,7 @@ lazy val play = (project in file("play"))
     scalacOptions += s"-Wconf:src=${target.value}/.*:s",
     libraryDependencies ++= Seq(
       guice,
-      "com.typesafe.play" %% "play-json" % "2.9.3"
+      "org.playframework" %% "play-json" % "3.0.1"
     )
   )
   .enablePlugins(PlayScala)
@@ -67,7 +68,7 @@ lazy val scalatra = (project in file("scalatra")).settings(
   libraryDependencies ++= Seq(
     "org.scalatra" %% "scalatra-javax" % ScalatraVersion,
     "org.scalatra" %% "scalatra-json" % "3.0.0-M5-javax",
-    "org.json4s" %% "json4s-jackson" % "4.0.1",
+    "org.json4s" %% "json4s-jackson" % "4.0.7",
     "ch.qos.logback" % "logback-classic" % "1.2.11" % "runtime",
     "org.eclipse.jetty" % "jetty-webapp" % "9.4.48.v20220622" % "container;compile",
     "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
