@@ -2,7 +2,7 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.13.12"
+val scalaV = "2.13.13"
 
 val akkaHttpVersion = "10.5.2"
 val http4sVersion = "0.23.13"
@@ -98,7 +98,7 @@ lazy val root = (project
     http4s,
     play,
     scalatra,
-    cask,
+    cask
   ))
 
 enablePlugins(ScalatraPlugin)
