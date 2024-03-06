@@ -5,7 +5,7 @@ version := "0.1.1"
 val scalaV = "2.13.12"
 
 val akkaHttpVersion = "10.5.2"
-val http4sVersion = "0.23.13"
+val http4sVersion = "0.23.26"
 val unfilteredVersion = "0.10.4"
 val ScalatraVersion = "3.0.0"
 
@@ -98,7 +98,7 @@ lazy val root = (project
     http4s,
     play,
     scalatra,
-    cask,
+    cask
   ))
 
 enablePlugins(ScalatraPlugin)
