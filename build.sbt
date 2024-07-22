@@ -22,7 +22,7 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
 lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
-    "com.lihaoyi" %% "cask" % "0.9.1",
+    "com.lihaoyi" %% "cask" % "0.9.4",
     "com.lihaoyi" %% "upickle" % "3.0.0"
   )
 )
@@ -98,7 +98,7 @@ lazy val root = (project
     http4s,
     play,
     scalatra,
-    cask,
+    cask
   ))
 
 enablePlugins(ScalatraPlugin)
