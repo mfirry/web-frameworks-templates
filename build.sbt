@@ -28,13 +28,6 @@ lazy val cask = (project in file("cask")).settings(
   )
 )
 
-lazy val finatra = (project in file("finatra")).settings(
-  scalaVersion := scalaV,
-  libraryDependencies ++= Seq(
-    "com.twitter" %% "finatra-http-server" % "22.7.0"
-  )
-)
-
 lazy val http4s = (project in file("http4s")).settings(
   scalaVersion := scalaV,
   scalafmtOnCompile := true,
@@ -95,7 +88,6 @@ lazy val root = (project
     `zio-http`,
     `akka-http`,
     unfiltered,
-    finatra,
     http4s,
     play,
     scalatra,
