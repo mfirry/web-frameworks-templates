@@ -2,9 +2,9 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "2.13.12"
+val scalaV = "2.13.14"
 
-val akkaHttpVersion = "10.5.2"
+val akkaHttpVersion = "10.6.3"
 val http4sVersion = "0.23.13"
 val unfilteredVersion = "0.10.4"
 val ScalatraVersion = "3.0.0"
@@ -12,10 +12,12 @@ val ScalatraVersion = "3.0.0"
 lazy val `akka-http` = (project in file("akka-http")).settings(
   scalaVersion := scalaV,
   scalacOptions ++= Seq("-deprecation", "-feature"),
+  resolvers += "Akka library repository".at("https://repo.akka.io/maven"),
   libraryDependencies ++= Seq(
     "com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
     "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
-    "com.typesafe.akka" %% "akka-stream" % "2.7.0"
+    "com.typesafe.akka" %% "akka-stream" % "2.9.3",
+    "com.typesafe.akka" %% "akka-actor-typed" % "2.9.3"
   )
 )
 
@@ -100,5 +102,6 @@ lazy val root = (project
     scalatra,
     cask,
   ))
+
 
 enablePlugins(ScalatraPlugin)
