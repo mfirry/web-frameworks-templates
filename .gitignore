@@ -10,3 +10,4 @@ project/.bloop/
 project/metals.sbt
 .vscode/
 .bsp/
+tmp
