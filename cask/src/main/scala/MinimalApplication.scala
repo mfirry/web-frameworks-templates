@@ -1,6 +1,13 @@
 package example
 
-object MinimalApplication extends cask.MainRoutes {
+case class MinimalRoutes()(implicit cc: castor.Context, log: cask.Logger)
+    extends cask.Routes {
+
+  @cask.get("/")
+  def list() = {
+    import upickle.default._
+    cask.Response(data = write(List(1,2,3)))
+  }      
 
   @cask.get("/plaintext")
   def plaintext() = {
@@ -14,4 +21,7 @@ object MinimalApplication extends cask.MainRoutes {
   }
 
   initialize()
+}
+object MinimalApplication extends cask.Main {
+  val allRoutes = Seq(MinimalRoutes())
 }
