@@ -1,7 +1,6 @@
 package example
 
-case class MinimalRoutes()(implicit cc: castor.Context, log: cask.Logger)
-    extends cask.Routes {
+object MinimalRoutes extends cask.MainRoutes {
 
   @cask.get("/")
   def list() = {
@@ -21,7 +20,4 @@ case class MinimalRoutes()(implicit cc: castor.Context, log: cask.Logger)
   }
 
   initialize()
-}
-object MinimalApplication extends cask.Main {
-  val allRoutes = Seq(MinimalRoutes())
 }
