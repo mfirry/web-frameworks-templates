@@ -5,7 +5,7 @@ version := "0.1.1"
 val scalaV = "2.13.15"
 
 val akkaHttpVersion = "10.6.3"
-val http4sVersion = "0.23.13"
+val http4sVersion = "0.23.30"
 val unfilteredVersion = "0.10.4"
 val ScalatraVersion = "3.1.0"
 
