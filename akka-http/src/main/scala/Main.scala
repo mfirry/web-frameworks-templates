@@ -17,13 +17,13 @@ import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 
 object Main extends App with SprayJsonSupport {
 
-  implicit val system = ActorSystem(Behaviors.empty, "my-system")
-  implicit val executionContext = system.executionContext
+  implicit val system: ActorSystem[Any] = ActorSystem(Behaviors.empty, "my-system")
+  implicit val executionContext: ExecutionContextExecutor = system.executionContext
 
   case class Message(message: String)
 
   object MessageProtocol extends DefaultJsonProtocol {
-    implicit val messageFormat = jsonFormat1(Message)
+    implicit val messageFormat: RootJsonFormat[Message] = jsonFormat1(Message)
   }
 
   import MessageProtocol._
