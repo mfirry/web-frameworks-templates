@@ -2,7 +2,7 @@ ThisBuild / libraryDependencySchemes += "org.scala-lang.modules" %% "scala-xml" 
 
 resolvers += "Typesafe repository" at "https://repo.typesafe.com/typesafe/releases/"
 
-addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.6")
+addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.7")
 
 addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.9")
 
