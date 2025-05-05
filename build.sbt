@@ -7,7 +7,7 @@ val scalaV = "2.13.16"
 val akkaHttpVersion = "10.6.3"
 val http4sVersion = "0.23.30"
 val unfilteredVersion = "0.10.4"
-val ScalatraVersion = "3.1.0"
+val ScalatraVersion = "3.1.2"
 
 lazy val `akka-http` = (project in file("akka-http")).settings(
   scalaVersion := scalaV,
@@ -49,7 +49,7 @@ lazy val play = (project in file("play"))
     scalaVersion := scalaV,
     scalacOptions += s"-Wconf:src=${target.value}/.*:s",
     libraryDependencies ++= Seq(
-      guice,
+      guice
     )
   )
   .enablePlugins(PlayScala)
