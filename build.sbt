@@ -59,11 +59,11 @@ lazy val scalatra = (project in file("scalatra")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
     "org.scalatra" %% "scalatra-javax" % ScalatraVersion,
-    "org.scalatra" %% "scalatra-json" % "3.0.0-M5-javax",
-    "org.json4s" %% "json4s-jackson" % "4.0.2",
+    "org.scalatra" %% "scalatra-json-javax" % ScalatraVersion,
+    "org.json4s" %% "json4s-jackson" % "4.1.0-M8",
     "ch.qos.logback" % "logback-classic" % "1.2.11" % "runtime",
-    "org.eclipse.jetty" % "jetty-webapp" % "9.4.48.v20220622" % "container;compile",
-    "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
+    "org.eclipse.jetty" % "jetty-webapp" % "11.0.15" % "container;compile",
+    "javax.servlet" % "javax.servlet-api" % "4.0.1" % "provided"
   )
 )
 
