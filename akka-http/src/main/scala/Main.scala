@@ -23,7 +23,7 @@ object Main extends App with SprayJsonSupport {
   case class Message(message: String)
 
   object MessageProtocol extends DefaultJsonProtocol {
-    implicit val messageFormat: RootJsonFormat[Message] = jsonFormat1(Message)
+    implicit val messageFormat: RootJsonFormat[Message] = jsonFormat1(Message.apply)
   }
 
   import MessageProtocol._
@@ -31,7 +31,7 @@ object Main extends App with SprayJsonSupport {
   lazy val route =
     get {
       pathSingleSlash {
-        complete(List(1, 2, 3))
+        complete(List(1, 2, 3).toJson)
       } ~
         path("json") {
           complete(Message("Hello, World!").toJson)
