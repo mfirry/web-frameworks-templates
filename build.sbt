@@ -40,7 +40,10 @@ lazy val http4s = (project in file("http4s")).settings(
   libraryDependencies ++= Seq(
     "org.http4s" %% "http4s-ember-server" % http4sVersion,
     "org.http4s" %% "http4s-circe" % http4sVersion,
-    "org.http4s" %% "http4s-dsl" % http4sVersion
+    "org.http4s" %% "http4s-dsl" % http4sVersion,
+    "io.circe" %% "circe-parser" % "0.14.9" % Test,
+    "org.scalameta" %% "munit" % "0.7.29" % Test,
+    "org.typelevel" %% "munit-cats-effect-3" % "1.0.7" % Test
   )
 )
 
