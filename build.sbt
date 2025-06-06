@@ -23,8 +23,11 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
 
 lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
+  testFrameworks += new TestFramework("utest.runner.Framework"),
   libraryDependencies ++= Seq(
-    "com.lihaoyi" %% "cask" % "0.10.2"
+    "com.lihaoyi" %% "cask" % "0.10.2",
+    "com.lihaoyi" %% "utest" % "0.8.1" % Test,
+    "com.lihaoyi" %% "requests" % "0.8.0" % Test    
   )
 )
 
