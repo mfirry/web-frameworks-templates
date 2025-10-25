@@ -24,7 +24,7 @@ lazy val `akka-http` = (project in file("akka-http")).settings(
 lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
-    "com.lihaoyi" %% "cask" % "0.10.2"
+    "com.lihaoyi" %% "cask" % "0.11.3"
   )
 )
 
