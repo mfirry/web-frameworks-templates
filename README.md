@@ -14,9 +14,9 @@ At the end of the day all the examples should have:
 | Name       | Version      | License                                                                    | Github Stars                                                             |
 |------------|--------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | [akka-http](https://doc.akka.io/docs/akka-http/current/)  | 10.6.3       | ![GitHub](https://img.shields.io/github/license/akka/akka-http)            | ![GitHub](https://img.shields.io/github/stars/akka/akka-http)            |
-| [cask](https://github.com/lihaoyi/cask)       | 0.9.4       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
-| [http4s](https://http4s.org/)     | 0.23.12       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/stars/http4s/http4s)          |
+| [cask](https://github.com/lihaoyi/cask)       | 0.11.3       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
+| [http4s](https://http4s.org/)     | 0.23.33       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/stars/http4s/http4s)          |
 | [play](https://www.playframework.com/)       | 2.8.8        | ![GitHub](https://img.shields.io/github/license/play/play)                 | ![GitHub](https://img.shields.io/github/stars/play/play)                 |
 | [scalatra](https://scalatra.org/)   | 2.8.2       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
 | [unfiltered](http://unfiltered.ws/) | 0.10.4       | ![GitHub](https://img.shields.io/github/license/unfiltered/unfiltered)     | ![GitHub](https://img.shields.io/github/stars/unfiltered/unfiltered)     |
-| [zio-http](https://github.com/dream11/zio-http)   | 2.0.0-RC2 | ![GitHub](https://img.shields.io/github/license/dream11/zio-http)          | ![GitHub](https://img.shields.io/github/stars/dream11/zio-http)          |
+| [zio-http](https://github.com/zio/zio-http)   | 3.7.3 | ![GitHub](https://img.shields.io/github/license/dream11/zio-http)          | ![GitHub](https://img.shields.io/github/stars/dream11/zio-http)          |
