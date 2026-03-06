@@ -9,6 +9,8 @@ val http4sVersion = "0.23.33"
 val unfilteredVersion = "0.10.4"
 val ScalatraVersion = "3.1.2"
 
+scalaVersion := scalaV
+
 // lazy val `akka-http` = (project in file("akka-http")).settings(
 //   scalaVersion := scalaV,
 //   scalacOptions ++= Seq("-deprecation", "-feature"),
