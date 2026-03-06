@@ -11,18 +11,6 @@ val ScalatraVersion = "3.1.2"
 
 scalaVersion := scalaV
 
-// lazy val `akka-http` = (project in file("akka-http")).settings(
-//   scalaVersion := scalaV,
-//   scalacOptions ++= Seq("-deprecation", "-feature"),
-//   resolvers += "Akka library repository".at("https://repo.akka.io/maven"),
-//   libraryDependencies ++= Seq(
-//     "com.typesafe.akka" %% "akka-http" % akkaHttpVersion,
-//     "com.typesafe.akka" %% "akka-http-spray-json" % akkaHttpVersion,
-//     "com.typesafe.akka" %% "akka-stream" % "2.9.3",
-//     "com.typesafe.akka" %% "akka-actor-typed" % "2.9.3"
-//   )
-// )
-
 lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
   libraryDependencies ++= Seq(
@@ -87,7 +75,6 @@ lazy val root = (project
   .in(file("."))
   .aggregate(
     `zio-http`,
-    // `akka-http`,
     unfiltered,
     http4s,
     play,
