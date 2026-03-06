@@ -14,12 +14,9 @@ object Messenger {
   // e.g. Messenger[IO] instead of summon[Messenger[IO]].
   def apply[F[_]](using ev: Messenger[F]): Messenger[F] = ev
 
-  // The data model: a simple value class wrapping a string to give it a meaningful type.
   final case class Message(message: String) extends AnyVal
 
   object Message {
-    // Circe encoder: teaches circe how to serialize a Message to JSON,
-    // producing {"message": "..."}.
     given Encoder[Message] with
       def apply(m: Message): Json =
         Json.obj(("message", Json.fromString(m.message)))
