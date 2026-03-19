@@ -19,3 +19,4 @@ At the end of the day all the examples should have:
 | [scalatra](https://scalatra.org/)   | 3.1.2       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
 | [unfiltered](http://unfiltered.ws/) | 0.10.4       | ![GitHub](https://img.shields.io/github/license/unfiltered/unfiltered)     | ![GitHub](https://img.shields.io/github/stars/unfiltered/unfiltered)     |
 | [zio-http](https://github.com/zio/zio-http)   | 3.7.4 | ![GitHub](https://img.shields.io/github/license/dream11/zio-http)          | ![GitHub](https://img.shields.io/github/stars/dream11/zio-http)          |
+| [yaes-http](https://github.com/rcardin/yaes)  | 0.16.0 | ![GitHub](https://img.shields.io/github/license/rcardin/yaes)              | ![GitHub](https://img.shields.io/github/stars/rcardin/yaes)              |

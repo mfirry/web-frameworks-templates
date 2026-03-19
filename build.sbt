@@ -71,10 +71,23 @@ lazy val `zio-http` = (project in file("zio-http")).settings(
   libraryDependencies += "dev.zio" %% "zio-http" % "3.9.0"
 )
 
+lazy val `yaes-http` = (project in file("yaes-http")).settings(
+  scalaVersion := "3.8.1",
+  scalacOptions += "-target:25",
+  javacOptions ++= Seq("-source", "25", "-target", "25"),
+  libraryDependencies ++= Seq(
+    "in.rcard.yaes" %% "yaes-http-server" % "0.16.0",
+    "in.rcard.yaes" %% "yaes-http-circe"  % "0.16.0",
+    "io.circe"      %% "circe-generic"    % "0.14.15",
+    "org.slf4j"      % "slf4j-simple"     % "2.0.17"
+  )
+)
+
 lazy val root = (project
   .in(file("."))
   .aggregate(
     `zio-http`,
+    `yaes-http`,
     unfiltered,
     http4s,
     play,
