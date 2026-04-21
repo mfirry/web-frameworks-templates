@@ -5,8 +5,8 @@ version := "0.1.1"
 val scalaV = "3.3.7"
 
 val akkaHttpVersion = "10.7.1"
-val http4sVersion = "0.23.33"
-val unfilteredVersion = "0.13.0-M5"
+val http4sVersion = "0.23.34"
+val unfilteredVersion = "0.13.0-M4"
 val ScalatraVersion = "3.1.2"
 
 scalaVersion := scalaV
@@ -68,7 +68,7 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 
 lazy val `zio-http` = (project in file("zio-http")).settings(
   scalaVersion := scalaV,
-  libraryDependencies += "dev.zio" %% "zio-http" % "3.9.0"
+  libraryDependencies += "dev.zio" %% "zio-http" % "3.10.1"
 )
 
 lazy val root = (project
