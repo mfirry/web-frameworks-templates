@@ -15,7 +15,7 @@ At the end of the day all the examples should have:
 |------------|--------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | [cask](https://github.com/lihaoyi/cask)       | 0.11.3       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
 | [http4s](https://http4s.org/)     | 0.23.34       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/stars/http4s/http4s)          |
-| [play](https://www.playframework.com/)       | 3.0.9        | ![GitHub](https://img.shields.io/github/license/play/play)                 | ![GitHub](https://img.shields.io/github/stars/play/play)                 |
+| [play](https://www.playframework.com/)       | 3.0.11        | ![GitHub](https://img.shields.io/github/license/play/play)                 | ![GitHub](https://img.shields.io/github/stars/play/play)                 |
 | [scalatra](https://scalatra.org/)   | 3.1.2       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
 | [unfiltered](http://unfiltered.ws/) | 0.13.0-M6       | ![GitHub](https://img.shields.io/github/license/unfiltered/unfiltered)     | ![GitHub](https://img.shields.io/github/stars/unfiltered/unfiltered)     |
 | [zio-http](https://github.com/zio/zio-http)   | 3.11.2 | ![GitHub](https://img.shields.io/github/license/dream11/zio-http)          | ![GitHub](https://img.shields.io/github/stars/dream11/zio-http)          |
