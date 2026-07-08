@@ -71,6 +71,12 @@ lazy val `zio-http` = (project in file("zio-http")).settings(
   libraryDependencies += "dev.zio" %% "zio-http" % "3.11.3"
 )
 
+lazy val sharaf = (project in file("sharaf")).settings(
+  scalaVersion := "3.7.3",
+  scalacOptions ++= Seq("-Yretain-trees"),
+  libraryDependencies += "ba.sake" %% "sharaf-undertow" % "0.18.0"
+)
+
 lazy val root = (project
   .in(file("."))
   .aggregate(
