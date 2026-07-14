@@ -85,7 +85,8 @@ lazy val root = (project
     http4s,
     play,
     scalatra,
-    cask
+    cask,
+    sharaf
   ))
 
 enablePlugins(ScalatraPlugin)
