@@ -2,7 +2,7 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "3.3.8"
+val scalaV = "3.9.0"
 
 val akkaHttpVersion = "10.7.1"
 val http4sVersion = "0.23.35"
