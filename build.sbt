@@ -18,6 +18,11 @@ lazy val cask = (project in file("cask")).settings(
   )
 )
 
+lazy val eezo = (project in file("eezo")).settings(
+  scalaVersion := scalaV,
+  libraryDependencies += "io.eezo" %% "eezo-http" % "0.1.0"
+).enablePlugins(EezoPlugin)
+
 lazy val http4s = (project in file("http4s")).settings(
   scalaVersion := scalaV,
   scalafmtOnCompile := true,
@@ -79,7 +84,8 @@ lazy val root = (project
     http4s,
     play,
     scalatra,
-    cask
+    cask,
+    eezo
   ))
 
 enablePlugins(ScalatraPlugin)
