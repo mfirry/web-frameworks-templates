@@ -8,6 +8,7 @@ val akkaHttpVersion = "10.7.1"
 val http4sVersion = "0.23.38"
 val unfilteredVersion = "0.13.0-M6"
 val ScalatraVersion = "3.1.2"
+val eezoVersion = "0.3.0"
 
 scalaVersion := scalaV
 
@@ -71,10 +72,25 @@ lazy val `zio-http` = (project in file("zio-http")).settings(
   libraryDependencies += "dev.zio" %% "zio-http" % "3.11.6"
 )
 
+// eezo targets JDK 25: its jars are compiled with `-release 25`, so the build needs a JDK 25 or
+// newer. The plugin generates the route table from the files under `src/main/scala/app`.
+lazy val eezo = (project in file("eezo"))
+  .enablePlugins(EezoPlugin)
+  .settings(
+    scalaVersion := scalaV,
+    scalacOptions ++= Seq("-release", "25", "-deprecation", "-feature", "-unchecked"),
+    run / fork := true,
+    libraryDependencies ++= Seq(
+      "io.eezo" %% "eezo-http" % eezoVersion,
+      "io.eezo" %% "eezo-upickle" % eezoVersion
+    )
+  )
+
 lazy val root = (project
   .in(file("."))
   .aggregate(
     `zio-http`,
+    eezo,
     unfiltered,
     http4s,
     play,
