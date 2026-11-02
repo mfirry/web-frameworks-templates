@@ -9,11 +9,14 @@ At the end of the day all the examples should have:
 - a '/json' that would return {'message':'Hello, World!'} (json)
 - a '/plaintext' that would return Hello, World!' (plaintext)
 
+The build needs a JDK 25 or newer, because eezo ships jars compiled for JDK 25.
+
 ### High-Level Server Frameworks
 
 | Name       | Version      | License                                                                    | Github Stars                                                             |
 |------------|--------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | [cask](https://github.com/lihaoyi/cask)       | 0.11.3       | ![GitHub](https://img.shields.io/github/license/com-lihaoyi/cask)          | ![GitHub](https://img.shields.io/github/stars/com-lihaoyi/cask)          |
+| [eezo](https://eezo.io)       | 0.3.0        | ![GitHub](https://img.shields.io/github/license/Eezo-framework/eezo)       | ![GitHub](https://img.shields.io/github/stars/Eezo-framework/eezo)       |
 | [http4s](https://http4s.org/)     | 0.23.38       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/stars/http4s/http4s)          |
 | [play](https://www.playframework.com/)       | 3.0.12        | ![GitHub](https://img.shields.io/github/license/play/play)                 | ![GitHub](https://img.shields.io/github/stars/play/play)                 |
 | [scalatra](https://scalatra.org/)   | 3.1.2       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
