@@ -2,7 +2,7 @@ name := """web-frameworks-templates"""
 
 version := "0.1.1"
 
-val scalaV = "3.9.0"
+val scalaV = "3.8.4"
 
 val akkaHttpVersion = "10.7.1"
 val http4sVersion = "0.23.38"
@@ -13,14 +13,20 @@ scalaVersion := scalaV
 
 lazy val cask = (project in file("cask")).settings(
   scalaVersion := scalaV,
+  scalacOptions ++= Seq("-release", "25", "-deprecation", "-feature", "-unchecked", "-no-indent"),
   libraryDependencies ++= Seq(
     "com.lihaoyi" %% "cask" % "0.11.3"
   )
 )
 
 lazy val eezo = (project in file("eezo")).settings(
+  // run / fork           := true,
+  // run / outputStrategy := Some(OutputStrategy.StdoutOutput),
   scalaVersion := scalaV,
-  libraryDependencies += "io.eezo" %% "eezo-http" % "0.1.0"
+  libraryDependencies ++= Seq(
+    "io.eezo" %% "eezo" % "0.3.0",
+    "io.eezo" %% "eezo-upickle" % "0.3.0"
+  )
 ).enablePlugins(EezoPlugin)
 
 lazy val http4s = (project in file("http4s")).settings(
