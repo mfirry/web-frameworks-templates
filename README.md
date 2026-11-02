@@ -19,6 +19,6 @@ The build needs a JDK 25 or newer, because eezo ships jars compiled for JDK 25.
 | [eezo](https://eezo.io)       | 0.3.0        | ![GitHub](https://img.shields.io/github/license/Eezo-framework/eezo)       | ![GitHub](https://img.shields.io/github/stars/Eezo-framework/eezo)       |
 | [http4s](https://http4s.org/)     | 0.23.38       | ![GitHub](https://img.shields.io/github/license/http4s/http4s)             | ![GitHub]( https://img.shields.io/github/stars/http4s/http4s)          |
 | [play](https://www.playframework.com/)       | 3.0.12        | ![GitHub](https://img.shields.io/github/license/play/play)                 | ![GitHub](https://img.shields.io/github/stars/play/play)                 |
-| [scalatra](https://scalatra.org/)   | 3.1.2       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
+| [scalatra](https://scalatra.org/)   | 3.2.1       | ![GitHub](https://img.shields.io/github/license/scalatra/scalatra)         | ![GitHub](https://img.shields.io/github/stars/scalatra/scalatra)         |
 | [unfiltered](http://unfiltered.ws/) | 0.13.0-M6       | ![GitHub](https://img.shields.io/github/license/unfiltered/unfiltered)     | ![GitHub](https://img.shields.io/github/stars/unfiltered/unfiltered)     |
 | [zio-http](https://github.com/zio/zio-http)   | 3.11.2 | ![GitHub](https://img.shields.io/github/license/dream11/zio-http)          | ![GitHub](https://img.shields.io/github/stars/dream11/zio-http)          |
