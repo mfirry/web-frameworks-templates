@@ -12,7 +12,7 @@ object JettyLauncher { // this is my entry object as specified in sbt project de
 
     val server = new Server(port)
     val context = new WebAppContext()
-    context setContextPath "/"
+    context.setContextPath("/")
     context.setResourceBase("scalatra/src/main/webapp")
     context.setInitParameter(
       ScalatraListener.LifeCycleKey,
