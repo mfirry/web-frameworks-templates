@@ -8,7 +8,7 @@ val akkaHttpVersion = "10.7.1"
 val http4sVersion = "0.23.38"
 val unfilteredVersion = "0.13.0-M6"
 val ScalatraVersion = "3.2.1"
-val eezoVersion = "0.3.0"
+val eezoVersion = "0.4.2"
 
 scalaVersion := scalaV
 
