@@ -19,6 +19,12 @@ lazy val cask = (project in file("cask")).settings(
   )
 )
 
+lazy val `sharaf-undertow` = (project in file("sharaf-undertow")).settings(
+  scalaVersion := scalaV,
+  run / fork := true,
+  libraryDependencies += "ba.sake" %% "sharaf-undertow" % "0.21.0"
+)
+
 lazy val http4s = (project in file("http4s")).settings(
   scalaVersion := scalaV,
   scalafmtOnCompile := true,
@@ -95,7 +101,8 @@ lazy val root = (project
     http4s,
     play,
     scalatra,
-    cask
+    cask,
+    `sharaf-undertow`
   ))
 
 enablePlugins(ScalatraPlugin)
