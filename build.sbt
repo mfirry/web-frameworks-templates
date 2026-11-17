@@ -22,7 +22,7 @@ lazy val cask = (project in file("cask")).settings(
 lazy val `sharaf-undertow` = (project in file("sharaf-undertow")).settings(
   scalaVersion := scalaV,
   run / fork := true,
-  libraryDependencies += "ba.sake" %% "sharaf-undertow" % "0.21.0"
+  libraryDependencies += "ba.sake" %% "sharaf-undertow" % "0.22.0"
 )
 
 lazy val http4s = (project in file("http4s")).settings(
