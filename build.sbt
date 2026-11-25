@@ -75,7 +75,7 @@ lazy val unfiltered = (project in file("unfiltered")).settings(
 
 lazy val `zio-http` = (project in file("zio-http")).settings(
   scalaVersion := scalaV,
-  libraryDependencies += "dev.zio" %% "zio-http" % "3.11.6"
+  libraryDependencies += "dev.zio" %% "zio-http" % "3.12.0"
 )
 
 // eezo targets JDK 25: its jars are compiled with `-release 25`, so the build needs a JDK 25 or
